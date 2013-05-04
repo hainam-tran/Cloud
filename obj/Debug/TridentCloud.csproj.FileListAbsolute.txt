@@ -1,5 +1,0 @@
-C:\Users\NamTH\Documents\GitHub\Trident\bin\TridentCloud.dll
-C:\Users\NamTH\Documents\GitHub\Trident\bin\TridentCloud.pdb
-C:\Users\NamTH\Documents\GitHub\Trident\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\NamTH\Documents\GitHub\Trident\obj\Debug\TridentCloud.dll
-C:\Users\NamTH\Documents\GitHub\Trident\obj\Debug\TridentCloud.pdb
