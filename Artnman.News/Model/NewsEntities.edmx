@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="NewsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="NewsModelStoreContainer">
+          <EntitySet Name="News" EntityType="NewsModel.Store.News" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="NewsCategory" EntityType="NewsModel.Store.NewsCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="NewsComment" EntityType="NewsModel.Store.NewsComment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="NewsStatus" EntityType="NewsModel.Store.NewsStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RssProvider" EntityType="NewsModel.Store.RssProvider" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RssSource" EntityType="NewsModel.Store.RssSource" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="NewsId" />
+          </Key>
+          <Property Name="NewsId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LanguageId" Type="nvarchar" MaxLength="5" />
+          <Property Name="NewsCategoryId" Type="uniqueidentifier" />
+          <Property Name="NewsStatusId" Type="uniqueidentifier" />
+          <Property Name="Title" Type="nvarchar" MaxLength="256" />
+          <Property Name="Subtitle" Type="nvarchar" MaxLength="256" />
+          <Property Name="Exerpt" Type="ntext" />
+          <Property Name="Picture" Type="varchar" MaxLength="256" />
+          <Property Name="Content" Type="ntext" />
+          <Property Name="Tags" Type="nvarchar" MaxLength="512" />
+          <Property Name="TotalViews" Type="int" />
+          <Property Name="TotalRates" Type="int" />
+          <Property Name="Order" Type="int" />
+          <Property Name="Visible" Type="bit" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+          <Property Name="LastUpdateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="NewsCategory">
+          <Key>
+            <PropertyRef Name="NewsCategoryId" />
+          </Key>
+          <Property Name="NewsCategoryId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LanguageId" Type="nvarchar" MaxLength="5" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+          <Property Name="Description" Type="nvarchar" MaxLength="512" />
+          <Property Name="ParrentId" Type="uniqueidentifier" />
+          <Property Name="Order" Type="int" />
+          <Property Name="Visible" Type="bit" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+          <Property Name="LastUpdateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="NewsComment">
+          <Key>
+            <PropertyRef Name="NewsCommentId" />
+          </Key>
+          <Property Name="NewsCommentId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LanguageId" Type="nvarchar" MaxLength="5" />
+          <Property Name="NewsId" Type="uniqueidentifier" />
+          <Property Name="Fullname" Type="nvarchar" MaxLength="256" />
+          <Property Name="Content" Type="nvarchar" MaxLength="256" />
+          <Property Name="Order" Type="int" />
+          <Property Name="Visible" Type="bit" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+          <Property Name="LastUpdateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="NewsStatus">
+          <Key>
+            <PropertyRef Name="NewsStatusId" />
+          </Key>
+          <Property Name="NewsStatusId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+          <Property Name="Description" Type="nvarchar" MaxLength="256" />
+          <Property Name="IsPublished" Type="bit" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+          <Property Name="LastUpdateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="RssProvider">
+          <Key>
+            <PropertyRef Name="RssProviderId" />
+          </Key>
+          <Property Name="RssProviderId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LanguageId" Type="nvarchar" MaxLength="5" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+          <Property Name="Order" Type="int" />
+          <Property Name="Visible" Type="bit" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+          <Property Name="LastUpdateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="RssSource">
+          <Key>
+            <PropertyRef Name="RssSourceId" />
+          </Key>
+          <Property Name="RssSourceId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LanguageId" Type="nvarchar" MaxLength="5" />
+          <Property Name="NewsCategoryId" Type="uniqueidentifier" />
+          <Property Name="RssProviderId" Type="uniqueidentifier" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+          <Property Name="SourceLink" Type="nvarchar" MaxLength="256" />
+          <Property Name="Order" Type="int" />
+          <Property Name="Visible" Type="bit" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+          <Property Name="LastUpdateDate" Type="datetime" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NewsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="NewsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="News" EntityType="NewsModel.News" />
+          <EntitySet Name="NewsCategory" EntityType="NewsModel.NewsCategory" />
+          <EntitySet Name="NewsComment" EntityType="NewsModel.NewsComment" />
+          <EntitySet Name="NewsStatus" EntityType="NewsModel.NewsStatus" />
+          <EntitySet Name="RssProvider" EntityType="NewsModel.RssProvider" />
+          <EntitySet Name="RssSource" EntityType="NewsModel.RssSource" />
+        </EntityContainer>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="NewsId" />
+          </Key>
+          <Property Type="Guid" Name="NewsId" Nullable="false" />
+          <Property Type="String" Name="LanguageId" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="NewsCategoryId" />
+          <Property Type="Guid" Name="NewsStatusId" />
+          <Property Type="String" Name="Title" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Subtitle" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Exerpt" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Picture" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Content" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Tags" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="TotalViews" />
+          <Property Type="Int32" Name="TotalRates" />
+          <Property Type="Int32" Name="Order" />
+          <Property Type="Boolean" Name="Visible" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="Guid" Name="LastUpdateUser" />
+          <Property Type="DateTime" Name="LastUpdateDate" />
+        </EntityType>
+        <EntityType Name="NewsCategory">
+          <Key>
+            <PropertyRef Name="NewsCategoryId" />
+          </Key>
+          <Property Type="Guid" Name="NewsCategoryId" Nullable="false" />
+          <Property Type="String" Name="LanguageId" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="ParrentId" />
+          <Property Type="Int32" Name="Order" />
+          <Property Type="Boolean" Name="Visible" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="Guid" Name="LastUpdateUser" />
+          <Property Type="DateTime" Name="LastUpdateDate" />
+        </EntityType>
+        <EntityType Name="NewsComment">
+          <Key>
+            <PropertyRef Name="NewsCommentId" />
+          </Key>
+          <Property Type="Guid" Name="NewsCommentId" Nullable="false" />
+          <Property Type="String" Name="LanguageId" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="NewsId" />
+          <Property Type="String" Name="Fullname" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Content" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Order" />
+          <Property Type="Boolean" Name="Visible" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="Guid" Name="LastUpdateUser" />
+          <Property Type="DateTime" Name="LastUpdateDate" />
+        </EntityType>
+        <EntityType Name="NewsStatus">
+          <Key>
+            <PropertyRef Name="NewsStatusId" />
+          </Key>
+          <Property Type="Guid" Name="NewsStatusId" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsPublished" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="Guid" Name="LastUpdateUser" />
+          <Property Type="DateTime" Name="LastUpdateDate" />
+        </EntityType>
+        <EntityType Name="RssProvider">
+          <Key>
+            <PropertyRef Name="RssProviderId" />
+          </Key>
+          <Property Type="Guid" Name="RssProviderId" Nullable="false" />
+          <Property Type="String" Name="LanguageId" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Order" />
+          <Property Type="Boolean" Name="Visible" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="Guid" Name="LastUpdateUser" />
+          <Property Type="DateTime" Name="LastUpdateDate" />
+        </EntityType>
+        <EntityType Name="RssSource">
+          <Key>
+            <PropertyRef Name="RssSourceId" />
+          </Key>
+          <Property Type="Guid" Name="RssSourceId" Nullable="false" />
+          <Property Type="String" Name="LanguageId" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="NewsCategoryId" />
+          <Property Type="Guid" Name="RssProviderId" />
+          <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SourceLink" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Order" />
+          <Property Type="Boolean" Name="Visible" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="Guid" Name="LastUpdateUser" />
+          <Property Type="DateTime" Name="LastUpdateDate" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NewsModelStoreContainer" CdmEntityContainer="NewsEntities">
+          <EntitySetMapping Name="News">
+            <EntityTypeMapping TypeName="NewsModel.News">
+              <MappingFragment StoreEntitySet="News">
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+                <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Visible" ColumnName="Visible" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="TotalRates" ColumnName="TotalRates" />
+                <ScalarProperty Name="TotalViews" ColumnName="TotalViews" />
+                <ScalarProperty Name="Tags" ColumnName="Tags" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Exerpt" ColumnName="Exerpt" />
+                <ScalarProperty Name="Subtitle" ColumnName="Subtitle" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="NewsStatusId" ColumnName="NewsStatusId" />
+                <ScalarProperty Name="NewsCategoryId" ColumnName="NewsCategoryId" />
+                <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+                <ScalarProperty Name="NewsId" ColumnName="NewsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NewsCategory">
+            <EntityTypeMapping TypeName="NewsModel.NewsCategory">
+              <MappingFragment StoreEntitySet="NewsCategory">
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+                <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Visible" ColumnName="Visible" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="ParrentId" ColumnName="ParrentId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+                <ScalarProperty Name="NewsCategoryId" ColumnName="NewsCategoryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NewsComment">
+            <EntityTypeMapping TypeName="NewsModel.NewsComment">
+              <MappingFragment StoreEntitySet="NewsComment">
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+                <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Visible" ColumnName="Visible" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+                <ScalarProperty Name="NewsId" ColumnName="NewsId" />
+                <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+                <ScalarProperty Name="NewsCommentId" ColumnName="NewsCommentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NewsStatus">
+            <EntityTypeMapping TypeName="NewsModel.NewsStatus">
+              <MappingFragment StoreEntitySet="NewsStatus">
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+                <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="IsPublished" ColumnName="IsPublished" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="NewsStatusId" ColumnName="NewsStatusId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RssProvider">
+            <EntityTypeMapping TypeName="NewsModel.RssProvider">
+              <MappingFragment StoreEntitySet="RssProvider">
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+                <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Visible" ColumnName="Visible" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+                <ScalarProperty Name="RssProviderId" ColumnName="RssProviderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RssSource">
+            <EntityTypeMapping TypeName="NewsModel.RssSource">
+              <MappingFragment StoreEntitySet="RssSource">
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+                <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Visible" ColumnName="Visible" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="SourceLink" ColumnName="SourceLink" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="RssProviderId" ColumnName="RssProviderId" />
+                <ScalarProperty Name="NewsCategoryId" ColumnName="NewsCategoryId" />
+                <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+                <ScalarProperty Name="RssSourceId" ColumnName="RssSourceId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="NewsEntities" ZoomLevel="95">
+        <EntityTypeShape EntityType="NewsModel.News" Width="1.5" PointX="0.75" PointY="0.75" Height="4.480205078125" />
+        <EntityTypeShape EntityType="NewsModel.NewsCategory" Width="1.5" PointX="2.75" PointY="0.75" Height="3.1340950520833317" />
+        <EntityTypeShape EntityType="NewsModel.NewsComment" Width="1.5" PointX="4.75" PointY="0.75" Height="3.1340950520833317" />
+        <EntityTypeShape EntityType="NewsModel.NewsStatus" Width="1.5" PointX="2.75" PointY="4.75" Height="2.5571907552083353" />
+        <EntityTypeShape EntityType="NewsModel.RssProvider" Width="1.5" PointX="4.75" PointY="4.75" Height="2.7494921875000031" />
+        <EntityTypeShape EntityType="NewsModel.RssSource" Width="1.5" PointX="6.75" PointY="0.75" Height="3.3263964843750031" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

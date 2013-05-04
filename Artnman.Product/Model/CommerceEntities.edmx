@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CommerceModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="CommerceModelStoreContainer">
+          <EntitySet Name="Cart" EntityType="CommerceModel.Store.Cart" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Customer" EntityType="CommerceModel.Store.Customer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Order" EntityType="CommerceModel.Store.Order" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OrderDetail" EntityType="CommerceModel.Store.OrderDetail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Product" EntityType="CommerceModel.Store.Product" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductCategory" EntityType="CommerceModel.Store.ProductCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductImage" EntityType="CommerceModel.Store.ProductImage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductInfo" EntityType="CommerceModel.Store.ProductInfo" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Cart">
+          <Key>
+            <PropertyRef Name="CartId" />
+          </Key>
+          <Property Name="CartId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+          <Property Name="ListProducts" Type="ntext" />
+          <Property Name="Code" Type="nvarchar" MaxLength="256" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="256" />
+          <Property Name="Address" Type="nvarchar" MaxLength="256" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="256" />
+          <Property Name="Mobilephone" Type="nvarchar" MaxLength="256" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+          <Property Name="Code" Type="nvarchar" MaxLength="256" />
+          <Property Name="Address" Type="nvarchar" MaxLength="256" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="256" />
+          <Property Name="Mobilephone" Type="nvarchar" MaxLength="256" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="TotalBuyPrice" Type="bigint" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+          <Property Name="Code" Type="nvarchar" MaxLength="256" />
+          <Property Name="CustomerId" Type="uniqueidentifier" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="TotalPrice" Type="bigint" />
+          <Property Name="Discount" Type="bigint" />
+          <Property Name="FinalPrice" Type="bigint" />
+          <Property Name="Status" Type="int" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+          <Property Name="LastUpdateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="OrderId" />
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="OrderId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SellPrice" Type="bigint" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+          <Property Name="Code" Type="nvarchar" MaxLength="256" />
+          <Property Name="ExistStatus" Type="bit" />
+          <Property Name="ProductInfoId" Type="uniqueidentifier" />
+          <Property Name="Description" Type="nvarchar" MaxLength="256" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+          <Property Name="LastUpdateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ProductCategory">
+          <Key>
+            <PropertyRef Name="ProductCategoryId" />
+            <PropertyRef Name="LanguageId" />
+          </Key>
+          <Property Name="ProductCategoryId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LanguageId" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+          <Property Name="Description" Type="nvarchar" MaxLength="512" />
+          <Property Name="ParrentId" Type="uniqueidentifier" />
+          <Property Name="Order" Type="int" />
+          <Property Name="Visible" Type="bit" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+          <Property Name="LastUpdateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ProductImage">
+          <Key>
+            <PropertyRef Name="ProductImageID" />
+          </Key>
+          <Property Name="ProductImageID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+          <Property Name="Link" Type="nvarchar" MaxLength="256" />
+          <Property Name="Description" Type="nvarchar" MaxLength="256" />
+          <Property Name="Path" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Order" Type="int" />
+          <Property Name="ProductInfoId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductInfo">
+          <Key>
+            <PropertyRef Name="ProductInfoId" />
+            <PropertyRef Name="LanguageId" />
+          </Key>
+          <Property Name="ProductInfoId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductCategoryId" Type="uniqueidentifier" />
+          <Property Name="LanguageId" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+          <Property Name="Code" Type="nvarchar" MaxLength="256" />
+          <Property Name="Picture" Type="nvarchar" MaxLength="256" />
+          <Property Name="Content" Type="ntext" />
+          <Property Name="Price" Type="bigint" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="Order" Type="int" />
+          <Property Name="Visible" Type="bit" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+          <Property Name="LastUpdateDate" Type="datetime" />
+        </EntityType>
+        <Function Name="ProductInfo_GetByProductCategoryId_Child_Paging" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LanguageId" Type="nvarchar" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+          <Parameter Name="PageNumber" Type="int" Mode="In" />
+          <Parameter Name="ProductCategoryId" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="ProductInfo_GetByProductCategoryId_Child_Paging_Visible" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LanguageId" Type="nvarchar" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+          <Parameter Name="PageNumber" Type="int" Mode="In" />
+          <Parameter Name="ProductCategoryId" Type="uniqueidentifier" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CommerceModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="CommerceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cart" EntityType="CommerceModel.Cart" />
+          <EntitySet Name="Customer" EntityType="CommerceModel.Customer" />
+          <EntitySet Name="Order" EntityType="CommerceModel.Order" />
+          <EntitySet Name="OrderDetail" EntityType="CommerceModel.OrderDetail" />
+          <EntitySet Name="Product" EntityType="CommerceModel.Product" />
+          <EntitySet Name="ProductCategory" EntityType="CommerceModel.ProductCategory" />
+          <EntitySet Name="ProductImage" EntityType="CommerceModel.ProductImage" />
+          <EntitySet Name="ProductInfo" EntityType="CommerceModel.ProductInfo" />
+          <FunctionImport Name="ProductInfo_GetByProductCategoryId_Child_Paging" EntitySet="ProductInfo" ReturnType="Collection(CommerceModel.ProductInfo)">
+            <Parameter Name="LanguageId" Mode="In" Type="String" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+            <Parameter Name="PageNumber" Mode="In" Type="Int32" />
+            <Parameter Name="ProductCategoryId" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="ProductInfo_GetByProductCategoryId_Child_Paging_Visible" EntitySet="ProductInfo" ReturnType="Collection(CommerceModel.ProductInfo)">
+            <Parameter Name="LanguageId" Mode="In" Type="String" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+            <Parameter Name="PageNumber" Mode="In" Type="Int32" />
+            <Parameter Name="ProductCategoryId" Mode="In" Type="Guid" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="Cart">
+          <Key>
+            <PropertyRef Name="CartId" />
+          </Key>
+          <Property Type="Int32" Name="CartId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListProducts" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Code" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FullName" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Telephone" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mobilephone" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Type="Guid" Name="CustomerId" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Code" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Telephone" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mobilephone" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="TotalBuyPrice" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Type="Guid" Name="OrderId" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Code" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="CustomerId" />
+          <Property Type="Int32" Name="Quantity" />
+          <Property Type="Int64" Name="TotalPrice" />
+          <Property Type="Int64" Name="Discount" />
+          <Property Type="Int64" Name="FinalPrice" />
+          <Property Type="Int32" Name="Status" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="Guid" Name="LastUpdateUser" />
+          <Property Type="DateTime" Name="LastUpdateDate" />
+        </EntityType>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="OrderId" />
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Type="Guid" Name="OrderId" Nullable="false" />
+          <Property Type="Guid" Name="ProductId" Nullable="false" />
+          <Property Type="Int64" Name="SellPrice" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Type="Guid" Name="ProductId" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Code" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="ExistStatus" />
+          <Property Type="Guid" Name="ProductInfoId" />
+          <Property Type="String" Name="Description" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="Guid" Name="LastUpdateUser" />
+          <Property Type="DateTime" Name="LastUpdateDate" />
+        </EntityType>
+        <EntityType Name="ProductCategory">
+          <Key>
+            <PropertyRef Name="ProductCategoryId" />
+            <PropertyRef Name="LanguageId" />
+          </Key>
+          <Property Type="Guid" Name="ProductCategoryId" Nullable="false" />
+          <Property Type="String" Name="LanguageId" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="ParrentId" />
+          <Property Type="Int32" Name="Order" />
+          <Property Type="Boolean" Name="Visible" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="Guid" Name="LastUpdateUser" />
+          <Property Type="DateTime" Name="LastUpdateDate" />
+        </EntityType>
+        <EntityType Name="ProductImage">
+          <Key>
+            <PropertyRef Name="ProductImageID" />
+          </Key>
+          <Property Type="Guid" Name="ProductImageID" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Link" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Path" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Order" />
+          <Property Type="Guid" Name="ProductInfoId" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductInfo">
+          <Key>
+            <PropertyRef Name="ProductInfoId" />
+            <PropertyRef Name="LanguageId" />
+          </Key>
+          <Property Type="Guid" Name="ProductInfoId" Nullable="false" />
+          <Property Type="Guid" Name="ProductCategoryId" />
+          <Property Type="String" Name="LanguageId" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Code" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Picture" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Content" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="Price" />
+          <Property Type="Int32" Name="Quantity" />
+          <Property Type="Int32" Name="Order" />
+          <Property Type="Boolean" Name="Visible" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="Guid" Name="LastUpdateUser" />
+          <Property Type="DateTime" Name="LastUpdateDate" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CommerceModelStoreContainer" CdmEntityContainer="CommerceEntities">
+          <EntitySetMapping Name="Cart">
+            <EntityTypeMapping TypeName="CommerceModel.Cart">
+              <MappingFragment StoreEntitySet="Cart">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobilephone" ColumnName="Mobilephone" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ListProducts" ColumnName="ListProducts" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CartId" ColumnName="CartId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customer">
+            <EntityTypeMapping TypeName="CommerceModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="TotalBuyPrice" ColumnName="TotalBuyPrice" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobilephone" ColumnName="Mobilephone" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Order">
+            <EntityTypeMapping TypeName="CommerceModel.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+                <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="FinalPrice" ColumnName="FinalPrice" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderDetail">
+            <EntityTypeMapping TypeName="CommerceModel.OrderDetail">
+              <MappingFragment StoreEntitySet="OrderDetail">
+                <ScalarProperty Name="SellPrice" ColumnName="SellPrice" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Product">
+            <EntityTypeMapping TypeName="CommerceModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+                <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ProductInfoId" ColumnName="ProductInfoId" />
+                <ScalarProperty Name="ExistStatus" ColumnName="ExistStatus" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductCategory">
+            <EntityTypeMapping TypeName="CommerceModel.ProductCategory">
+              <MappingFragment StoreEntitySet="ProductCategory">
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+                <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Visible" ColumnName="Visible" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="ParrentId" ColumnName="ParrentId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+                <ScalarProperty Name="ProductCategoryId" ColumnName="ProductCategoryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductImage">
+            <EntityTypeMapping TypeName="CommerceModel.ProductImage">
+              <MappingFragment StoreEntitySet="ProductImage">
+                <ScalarProperty Name="ProductInfoId" ColumnName="ProductInfoId" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ProductImageID" ColumnName="ProductImageID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductInfo">
+            <EntityTypeMapping TypeName="CommerceModel.ProductInfo">
+              <MappingFragment StoreEntitySet="ProductInfo">
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+                <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Visible" ColumnName="Visible" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+                <ScalarProperty Name="ProductCategoryId" ColumnName="ProductCategoryId" />
+                <ScalarProperty Name="ProductInfoId" ColumnName="ProductInfoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="ProductInfo_GetByProductCategoryId_Child_Paging" FunctionName="CommerceModel.Store.ProductInfo_GetByProductCategoryId_Child_Paging" />
+          <FunctionImportMapping FunctionImportName="ProductInfo_GetByProductCategoryId_Child_Paging_Visible" FunctionName="CommerceModel.Store.ProductInfo_GetByProductCategoryId_Child_Paging_Visible" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="CommerceEntities" ZoomLevel="83">
+        <EntityTypeShape EntityType="CommerceModel.Cart" Width="1.5" PointX="0.75" PointY="0.75" Height="2.7494921874999996" />
+        <EntityTypeShape EntityType="CommerceModel.Customer" Width="1.5" PointX="2.75" PointY="0.75" Height="2.5571907552083353" />
+        <EntityTypeShape EntityType="CommerceModel.Order" Width="1.5" PointX="4.75" PointY="0.75" Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="CommerceModel.OrderDetail" Width="1.5" PointX="0.75" PointY="4.75" Height="1.5956835937500031" />
+        <EntityTypeShape EntityType="CommerceModel.Product" Width="1.5" PointX="2.75" PointY="5.75" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="CommerceModel.ProductCategory" Width="1.5" PointX="4.75" PointY="5.75" Height="3.1340950520833388" />
+        <EntityTypeShape EntityType="CommerceModel.ProductImage" Width="1.5" PointX="6.75" PointY="0.75" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="CommerceModel.ProductInfo" Width="1.5" PointX="6.75" PointY="4.75" Height="3.9033007812500031" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
