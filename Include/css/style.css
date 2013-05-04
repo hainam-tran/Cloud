@@ -1,0 +1,77 @@
+﻿/*Global Style
+  ================================================*/
+body
+{
+    padding-top: 80px;
+    padding-bottom: 40px;
+    background-color: #FFFFFF;
+}
+
+
+a:hover
+{
+    text-decoration: none;
+}
+/*Structure
+  ================================================*/
+.main-image
+{
+    background-color: #FFFFFF;
+}
+
+
+/*Custom Attributes
+  ================================================*/
+.bgcolor-white
+{
+    background-color: white;
+}
+
+/*Padding
+  ================================================*/
+.padding-left-10
+{
+    padding-left: 10px;
+}
+
+.padding-left-20
+{
+    padding-left: 20px;
+}
+
+/*Text Format
+  ================================================*/
+.textcolor-grey
+{
+    color: #999;
+}
+
+.textsize-small
+{
+    font-size: 11px;
+}
+
+.border-rounded
+{
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: solid #CCC 1px;
+}
+.padding-default
+{
+    padding: 10px 10px 10px 15px;
+}
+
+.placeholder
+{
+    background-color: #BFB;
+    border: 1px dashed #666;
+    margin-bottom: 5px;
+}
+
+.zero-margin-left
+{
+    margin-left: 0px !important;
+}
+
+

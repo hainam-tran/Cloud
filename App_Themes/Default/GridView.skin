@@ -1,0 +1,3 @@
+﻿<asp:GridView SkinID="BE-Normal" runat="server" CssClass="table table-striped table-condensed gridview" AutoGenerateColumns="False" CellSpacing="0">
+    <HeaderStyle CssClass="gridview-header"/>
+</asp:GridView>
