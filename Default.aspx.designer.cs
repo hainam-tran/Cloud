@@ -13,24 +13,6 @@ namespace Website.Cloud {
     public partial class Default {
         
         /// <summary>
-        /// CssLoader control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Website.Cloud.Control.CssLoader CssLoader;
-        
-        /// <summary>
-        /// JavaScriptLoader control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Website.Cloud.Control.JavaScriptLoader JavaScriptLoader;
-        
-        /// <summary>
         /// ArtnmanForm control.
         /// </summary>
         /// <remarks>
@@ -38,23 +20,5 @@ namespace Website.Cloud {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm ArtnmanForm;
-        
-        /// <summary>
-        /// NavBarLoader control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Website.Cloud.Control.PageComponent.NavBarLoader NavBarLoader;
-        
-        /// <summary>
-        /// SocialNetworkLoader control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Website.Cloud.Control.PageComponent.SocialNetworkLoader SocialNetworkLoader;
     }
 }
