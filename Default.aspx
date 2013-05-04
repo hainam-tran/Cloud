@@ -8,7 +8,7 @@
     TagName="SocialNetworkLoader" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Inspiration</title>
+    <title>Tran Hai Nam's personal cloud</title>
     <%--//Include Css and Java Scripts
         ================================================--%>
     <uc:CssLoader ID="CssLoader" runat="server"></uc:CssLoader>
