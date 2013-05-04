@@ -98,46 +98,6 @@
     <Content Include="Upload\Image\logo-greenwich.gif" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_GlobalResources\LinkResource.Designer.cs">
-      <DependentUpon>LinkResource.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="App_GlobalResources\LinkResource.vi-VN.designer.cs">
-      <DependentUpon>LinkResource.vi-VN.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="App_GlobalResources\MessageResource.designer.cs">
-      <DependentUpon>MessageResource.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="App_GlobalResources\MessageResource.vi-VN.designer.cs">
-      <DependentUpon>MessageResource.vi-VN.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="App_GlobalResources\TextResource.designer.cs">
-      <DependentUpon>TextResource.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="App_GlobalResources\TextResource.vi-VN.designer.cs">
-      <DependentUpon>TextResource.vi-VN.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="App_GlobalResources\WebResource.Designer.cs">
-      <DependentUpon>WebResource.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="App_GlobalResources\WebResource.vi-VN.designer.cs">
-      <DependentUpon>WebResource.vi-VN.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Control\CssLoader.ascx.cs">
       <DependentUpon>CssLoader.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -176,7 +136,9 @@
     <Folder Include="Upload\Image\Thumb\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.Debug.config">
@@ -186,54 +148,6 @@
   <ItemGroup>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_GlobalResources\LinkResource.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>LinkResource.Designer.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_GlobalResources\LinkResource.vi-VN.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>LinkResource.vi-VN.designer.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_GlobalResources\MessageResource.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>MessageResource.designer.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_GlobalResources\MessageResource.vi-VN.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>MessageResource.vi-VN.designer.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_GlobalResources\TextResource.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>TextResource.designer.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_GlobalResources\TextResource.vi-VN.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>TextResource.vi-VN.designer.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_GlobalResources\WebResource.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>WebResource.Designer.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_GlobalResources\WebResource.vi-VN.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>WebResource.vi-VN.designer.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
