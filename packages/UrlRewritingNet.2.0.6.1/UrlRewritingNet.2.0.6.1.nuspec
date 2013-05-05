@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>UrlRewritingNet</id>
+    <version>2.0.6.1</version>
+    <title>UrlRewritingNet.UrlRewrite</title>
+    <authors>Albert Weinert &amp; Thomas Bandt</authors>
+    <owners>Albert Weinert &amp; Thomas Bandt</owners>
+    <projectUrl>http://www.urlrewriting.net/149/en/home.html</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>UrlRewritingNet.UrlRewrite is an Open Source Component for easy and reliable rewriting URLs with ASP.NET</description>
+    <summary>The component was designed and developed in 2006 for running with ASP.NET 2.0, but it works with ASP.NET 3.5 as well.</summary>
+    <copyright>© 2006-2013</copyright>
+  </metadata>
+</package>
