@@ -18,8 +18,8 @@
             <img src="/Upload/Image/Content/Icon/twitter_16.png" width="16" height="16" alt="PyramidVN Twitter" /></a>
     </div>
     <div style="display: inline-block">
-        <a href="http://www.facebook.com/PyramidVN" target="new_page">
-            <img src="/Upload/Image/Content/Icon/facebook_16.png" width="16" height="16" alt="PyramidVN FaceBook" /></a>
+        <a href="http://www.facebook.com/Artnman" target="new_page">
+            <img src="/Upload/Image/Content/Icon/facebook_16.png" width="16" height="16" alt="NamTH FaceBook" /></a>
     </div>
     <img src="/Upload/Image/Content/Icon/google_plus_16.png"
         width="16" height="16" />

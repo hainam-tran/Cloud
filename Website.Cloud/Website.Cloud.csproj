@@ -130,6 +130,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Upload\Image\Logo\logo.png" />
+    <Content Include="Upload\Image\Misc\herounit1.jpg" />
+    <Content Include="Upload\Image\Misc\herounit2.jpg" />
+    <Content Include="Upload\Image\Misc\herounit3.jpg" />
     <Content Include="Upload\Image\Misc\img-test.png" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

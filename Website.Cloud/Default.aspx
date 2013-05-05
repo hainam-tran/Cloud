@@ -44,25 +44,18 @@
                     <!-- Carousel items -->
                     <div class="carousel-inner">
                         <div class="active item">
-                            <div class="hero-unit">
-                                <h1 class="padding-left-20">
-                                    Heading</h1>
+                            <div class="hero-unit hero-unit-custom" style="background-image: url(/Upload/Image/Misc/herounit1.jpg);">
+                                <%--<h1 class="padding-left-20">
+                                </h1>
                                 <p class="padding-left-20">
-                                    Tagline</p>
+                                    Pont de Albert Loupe</p>
                                 <p class="padding-left-20">
                                     <a class="btn btn-primary btn-large">Learn more </a>
-                                </p>
+                                </p>--%>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="hero-unit">
-                                <h1 class="padding-left-20">
-                                    Heading</h1>
-                                <p class="padding-left-20">
-                                    Tagline</p>
-                                <p class="padding-left-20">
-                                    <a class="btn btn-primary btn-large">Learn more </a>
-                                </p>
+                            <div class="hero-unit hero-unit-custom" style="background-image: url(/Upload/Image/Misc/herounit3.jpg);">
                             </div>
                         </div>
                     </div>
@@ -110,7 +103,7 @@
                 <div class="row">
                     <div class="span4">
                         <h2>
-                            Images</h2>
+                            Gallery</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -128,12 +121,15 @@
             </div>
             <div class="span2">
                 <h2>
-                    Heading</h2>
+                    Blog</h2>
                 <p>
                     met risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
                 </p>
                 <p>
                     <a class="btn" href="#">View details »</a></p>
+                <h2>
+                    Connect</h2>
+                <uc:SocialNetworkLoader ID="SocialNetworkLoader" runat="server"></uc:SocialNetworkLoader>
             </div>
         </div>
         <%--//Footer
@@ -146,7 +142,6 @@
                 <a href="http://en.wikipedia.org/wiki/Copyright">© NamTH</a>
             </div>
             <div class="span2" style="text-align: right">
-                <uc:SocialNetworkLoader ID="SocialNetworkLoader" runat="server"></uc:SocialNetworkLoader>
             </div>
         </div>
     </div>

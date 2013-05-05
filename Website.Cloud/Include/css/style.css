@@ -74,4 +74,10 @@ a:hover
     margin-left: 0px !important;
 }
 
-
+/*Hero Unit
+  ================================================*/
+.hero-unit-custom
+{
+    background-size: 100% auto;
+    height: 170px;
+}
