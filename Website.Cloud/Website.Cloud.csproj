@@ -53,6 +53,7 @@
   <ItemGroup>
     <Content Include="Control\CssLoader.ascx" />
     <Content Include="Control\JavaScriptLoader.ascx" />
+    <Content Include="Control\PageComponent\MenuBarLoader.ascx" />
     <Content Include="Control\PageComponent\NavBarLoader.ascx" />
     <Content Include="Control\PageComponent\SocialNetworkLoader.ascx" />
     <Content Include="Default.aspx" />
@@ -81,9 +82,6 @@
     <Content Include="Upload\Image\Content\Icon\twitter_32.png" />
     <Content Include="Upload\Image\Content\Icon\youtube_16.png" />
     <Content Include="Upload\Image\Content\Icon\youtube_32.png" />
-    <Content Include="Upload\Image\img_test_01.jpg" />
-    <Content Include="Upload\Image\img_test_02.jpg" />
-    <Content Include="Upload\Image\logo-greenwich.gif" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Control\CssLoader.ascx.cs">
@@ -93,6 +91,13 @@
     <Compile Include="Control\JavaScriptLoader.ascx.cs">
       <DependentUpon>JavaScriptLoader.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\PageComponent\MenuBarLoader.ascx.cs">
+      <DependentUpon>MenuBarLoader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\PageComponent\MenuBarLoader.ascx.designer.cs">
+      <DependentUpon>MenuBarLoader.ascx</DependentUpon>
     </Compile>
     <Compile Include="Control\PageComponent\NavBarLoader.ascx.cs">
       <DependentUpon>NavBarLoader.ascx</DependentUpon>
@@ -124,6 +129,8 @@
     <Folder Include="Upload\Image\Thumb\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Upload\Image\Logo\logo.png" />
+    <Content Include="Upload\Image\Misc\img-test.png" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

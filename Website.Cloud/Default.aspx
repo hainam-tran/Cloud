@@ -4,6 +4,7 @@
 <%@ Register TagPrefix="uc" Src="~/Control/CssLoader.ascx" TagName="CssLoader" %>
 <%@ Register TagPrefix="uc" Src="~/Control/JavaScriptLoader.ascx" TagName="JavaScriptLoader" %>
 <%@ Register TagPrefix="uc" Src="~/Control/PageComponent/NavBarLoader.ascx" TagName="NavBarLoader" %>
+<%@ Register TagPrefix="uc" Src="~/Control/PageComponent/MenuBarLoader.ascx" TagName="MenuBarLoader" %>
 <%@ Register TagPrefix="uc" Src="~/Control/PageComponent/SocialNetworkLoader.ascx"
     TagName="SocialNetworkLoader" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -24,61 +25,14 @@
     <div class="container">
         <div class="row">
             <div class="offset1 padding-default">
-                <img src="Upload/Image/logo-greenwich.gif" />
+                <%--<img src="Upload/Image/Logo/logo.png"/>--%>
             </div>
         </div>
         <div class="row">
             <div class="navbar span10 offset1" style="margin-bottom: 0">
-                <%--//Nav bar
+                <%--//Menu bar
                     ================================================--%>
-                <div class="navbar-inner">
-                    <ul class="nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Study
-                            at Greenwich <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a tabindex="-1" href="#">Programmes</a></li>
-                                <li><a tabindex="-1" href="#">Accomodation</a></li>
-                                <li><a tabindex="-1" href="#">Fees & finance</a></li>
-                                <li><a tabindex="-1" href="#">How to apply</a></li>
-                                <li class="divider"></li>
-                                <li><a tabindex="-1" href="#">Student support & services</a></li>
-                                <li><a tabindex="-1" href="#">Open days</a></li>
-                                <li><a tabindex="-1" href="#">Ask Greenwich</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Students
-                            <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a tabindex="-1" href="#">Prospective student</a></li>
-                                <li><a tabindex="-1" href="#">New students</a></li>
-                                <li class="divider"></li>
-                                <li><a tabindex="-1" href="#">International students</a></li>
-                                <li><a tabindex="-1" href="#">Current students</a></li>
-                                <li><a tabindex="-1" href="#">Mature students</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Alumni
-                            <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a tabindex="-1" href="#">Staying in touch</a></li>
-                                <li><a tabindex="-1" href="#">Our alumni</a></li>
-                                <li class="divider"></li>
-                                <li><a tabindex="-1" href="#">Events and reunions</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">About
-                            Greenwich <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a tabindex="-1" href="#">News</a></li>
-                                <li><a tabindex="-1" href="#">Travel & transport</a></li>
-                                <li><a tabindex="-1" href="#">Our campuses</a></li>
-                                <li class="divider"></li>
-                                <li><a tabindex="-1" href="#">Contact us</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                <uc:MenuBarLoader ID="MenuBarLoader" runat="server"></uc:MenuBarLoader>
                 <br />
                 <%--//Hero unit
                     ================================================--%>
@@ -141,7 +95,7 @@
                 </div>
                 <div class="row ">
                     <div class="span4">
-                        <iframe width="370" height="250" src="http://www.youtube.com/embed/NW6Pmwf34DA" frameborder="0"
+                        <iframe width="370" height="250" src="http://www.youtube.com/embed/kBqWtdMpies" frameborder="0"
                             allowfullscreen></iframe>
                     </div>
                     <div class="span2">
@@ -161,7 +115,7 @@
                 </div>
                 <div class="row">
                     <div class="span4">
-                        <img src="http://www2.gre.ac.uk/__data/assets/image/0009/689058/great-feature-1.jpg" />
+                        <img src="/Upload/Image/Misc/img-test.png" />
                     </div>
                     <div class="span2">
                         Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
@@ -189,7 +143,7 @@
                 <hr />
             </div>
             <div class="span8 offset1">
-                <a href="http://www.gre.ac.uk/copyright">© University of Greenwich</a>
+                <a href="http://en.wikipedia.org/wiki/Copyright">© NamTH</a>
             </div>
             <div class="span2" style="text-align: right">
                 <uc:SocialNetworkLoader ID="SocialNetworkLoader" runat="server"></uc:SocialNetworkLoader>

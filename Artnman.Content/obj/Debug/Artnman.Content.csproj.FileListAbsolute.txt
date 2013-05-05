@@ -8,3 +8,13 @@ E:\Work\Artnman\Artnman\Artnman.Content\bin\Debug\Artnman.Core.pdb
 E:\Work\Artnman\Artnman\Artnman.Content\bin\Debug\Artnman.Content.dll.config
 E:\Work\Artnman\Artnman\Artnman.Content\bin\Debug\log4net.dll
 E:\Work\Artnman\Artnman\Artnman.Content\bin\Debug\log4net.xml
+E:\Work\Artnman\Artnman\Cloud\Artnman.Content\bin\Debug\Artnman.Content.dll.config
+E:\Work\Artnman\Artnman\Cloud\Artnman.Content\bin\Debug\Artnman.Content.dll
+E:\Work\Artnman\Artnman\Cloud\Artnman.Content\bin\Debug\Artnman.Content.pdb
+E:\Work\Artnman\Artnman\Cloud\Artnman.Content\bin\Debug\Artnman.Core.dll
+E:\Work\Artnman\Artnman\Cloud\Artnman.Content\bin\Debug\log4net.dll
+E:\Work\Artnman\Artnman\Cloud\Artnman.Content\bin\Debug\Artnman.Core.pdb
+E:\Work\Artnman\Artnman\Cloud\Artnman.Content\bin\Debug\log4net.xml
+E:\Work\Artnman\Artnman\Cloud\Artnman.Content\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Artnman\Artnman\Cloud\Artnman.Content\obj\Debug\Artnman.Content.dll
+E:\Work\Artnman\Artnman\Cloud\Artnman.Content\obj\Debug\Artnman.Content.pdb

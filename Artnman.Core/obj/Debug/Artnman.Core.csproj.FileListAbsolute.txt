@@ -8,3 +8,13 @@ E:\Work\Artnman\Artnman\Artnman.Core\bin\Debug\log4net.xml
 E:\Work\Artnman\Artnman\Artnman.Core\bin\Debug\Artnman.Core.dll.config
 E:\Work\Artnman\Artnman\Artnman.Core\bin\Debug\HtmlAgilityPack.dll
 E:\Work\Artnman\Artnman\Artnman.Core\bin\Debug\SanitizerProviders.dll
+E:\Work\Artnman\Artnman\Cloud\Artnman.Core\bin\Debug\Artnman.Core.dll.config
+E:\Work\Artnman\Artnman\Cloud\Artnman.Core\bin\Debug\Artnman.Core.dll
+E:\Work\Artnman\Artnman\Cloud\Artnman.Core\bin\Debug\Artnman.Core.pdb
+E:\Work\Artnman\Artnman\Cloud\Artnman.Core\bin\Debug\HtmlAgilityPack.dll
+E:\Work\Artnman\Artnman\Cloud\Artnman.Core\bin\Debug\log4net.dll
+E:\Work\Artnman\Artnman\Cloud\Artnman.Core\bin\Debug\SanitizerProviders.dll
+E:\Work\Artnman\Artnman\Cloud\Artnman.Core\bin\Debug\log4net.xml
+E:\Work\Artnman\Artnman\Cloud\Artnman.Core\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Artnman\Artnman\Cloud\Artnman.Core\obj\Debug\Artnman.Core.dll
+E:\Work\Artnman\Artnman\Cloud\Artnman.Core\obj\Debug\Artnman.Core.pdb
