@@ -33,16 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AjaxControlToolkit">
-      <HintPath>..\packages\AjaxControlToolkit.7.0429\lib\40\AjaxControlToolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="HtmlAgilityPack">
-      <HintPath>..\packages\AjaxControlToolkit.7.0429\lib\40\SanitizerProviders\HtmlAgilityPack.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="SanitizerProviders">
-      <HintPath>..\packages\AjaxControlToolkit.7.0429\lib\40\SanitizerProviders\SanitizerProviders.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
@@ -58,9 +49,6 @@
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="UrlRewritingNet.UrlRewriter">
-      <HintPath>..\packages\UrlRewritingNet.2.0.6.1\lib\UrlRewritingNet.UrlRewriter.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Control\CssLoader.ascx" />

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CommerceModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="CommerceModelStoreContainer">
+    <EntitySet Name="Cart" EntityType="CommerceModel.Store.Cart" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Customer" EntityType="CommerceModel.Store.Customer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Order" EntityType="CommerceModel.Store.Order" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrderDetail" EntityType="CommerceModel.Store.OrderDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Product" EntityType="CommerceModel.Store.Product" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductCategory" EntityType="CommerceModel.Store.ProductCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductImage" EntityType="CommerceModel.Store.ProductImage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductInfo" EntityType="CommerceModel.Store.ProductInfo" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Cart">
+    <Key>
+      <PropertyRef Name="CartId" />
+    </Key>
+    <Property Name="CartId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" />
+    <Property Name="ListProducts" Type="ntext" />
+    <Property Name="Code" Type="nvarchar" MaxLength="256" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="256" />
+    <Property Name="Address" Type="nvarchar" MaxLength="256" />
+    <Property Name="Telephone" Type="nvarchar" MaxLength="256" />
+    <Property Name="Mobilephone" Type="nvarchar" MaxLength="256" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" />
+    <Property Name="Code" Type="nvarchar" MaxLength="256" />
+    <Property Name="Address" Type="nvarchar" MaxLength="256" />
+    <Property Name="Telephone" Type="nvarchar" MaxLength="256" />
+    <Property Name="Mobilephone" Type="nvarchar" MaxLength="256" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="TotalBuyPrice" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" />
+    <Property Name="Code" Type="nvarchar" MaxLength="256" />
+    <Property Name="CustomerId" Type="uniqueidentifier" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="TotalPrice" Type="bigint" />
+    <Property Name="Discount" Type="bigint" />
+    <Property Name="FinalPrice" Type="bigint" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="OrderId" />
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="OrderId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProductId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SellPrice" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" />
+    <Property Name="Code" Type="nvarchar" MaxLength="256" />
+    <Property Name="ExistStatus" Type="bit" />
+    <Property Name="ProductInfoId" Type="uniqueidentifier" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ProductCategory">
+    <Key>
+      <PropertyRef Name="ProductCategoryId" />
+      <PropertyRef Name="LanguageId" />
+    </Key>
+    <Property Name="ProductCategoryId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LanguageId" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" />
+    <Property Name="Description" Type="nvarchar" MaxLength="512" />
+    <Property Name="ParrentId" Type="uniqueidentifier" />
+    <Property Name="Order" Type="int" />
+    <Property Name="Visible" Type="bit" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ProductImage">
+    <Key>
+      <PropertyRef Name="ProductImageID" />
+    </Key>
+    <Property Name="ProductImageID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" />
+    <Property Name="Link" Type="nvarchar" MaxLength="256" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+    <Property Name="Path" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="Order" Type="int" />
+    <Property Name="ProductInfoId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductInfo">
+    <Key>
+      <PropertyRef Name="ProductInfoId" />
+      <PropertyRef Name="LanguageId" />
+    </Key>
+    <Property Name="ProductInfoId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProductCategoryId" Type="uniqueidentifier" />
+    <Property Name="LanguageId" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" />
+    <Property Name="Code" Type="nvarchar" MaxLength="256" />
+    <Property Name="Picture" Type="nvarchar" MaxLength="256" />
+    <Property Name="Content" Type="ntext" />
+    <Property Name="Price" Type="bigint" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Order" Type="int" />
+    <Property Name="Visible" Type="bit" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+  </EntityType>
+  <Function Name="ProductInfo_GetByProductCategoryId_Child_Paging" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LanguageId" Type="nvarchar" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="PageNumber" Type="int" Mode="In" />
+    <Parameter Name="ProductCategoryId" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="ProductInfo_GetByProductCategoryId_Child_Paging_Visible" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LanguageId" Type="nvarchar" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="PageNumber" Type="int" Mode="In" />
+    <Parameter Name="ProductCategoryId" Type="uniqueidentifier" Mode="In" />
+  </Function>
+</Schema>

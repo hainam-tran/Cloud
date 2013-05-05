@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ContentModelStoreContainer" CdmEntityContainer="ContentEntities">
+    <EntitySetMapping Name="EmailForm">
+      <EntityTypeMapping TypeName="ContentModel.EmailForm">
+        <MappingFragment StoreEntitySet="EmailForm">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="EmailFormId" ColumnName="EmailFormId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmailReceiver">
+      <EntityTypeMapping TypeName="ContentModel.EmailReceiver">
+        <MappingFragment StoreEntitySet="EmailReceiver">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EmailReceiverId" ColumnName="EmailReceiverId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Image">
+      <EntityTypeMapping TypeName="ContentModel.Image">
+        <MappingFragment StoreEntitySet="Image">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="AlbumId" ColumnName="AlbumId" />
+          <ScalarProperty Name="ImageId" ColumnName="ImageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImageAlbum">
+      <EntityTypeMapping TypeName="ContentModel.ImageAlbum">
+        <MappingFragment StoreEntitySet="ImageAlbum">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateTaken" ColumnName="DateTaken" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="ImageAlbumId" ColumnName="ImageAlbumId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registration">
+      <EntityTypeMapping TypeName="ContentModel.Registration">
+        <MappingFragment StoreEntitySet="Registration">
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="KnownFrom" ColumnName="KnownFrom" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="TimeSlot" ColumnName="TimeSlot" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CurrentJob" ColumnName="CurrentJob" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="RegistrationId" ColumnName="RegistrationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SpecialImage">
+      <EntityTypeMapping TypeName="ContentModel.SpecialImage">
+        <MappingFragment StoreEntitySet="SpecialImage">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+          <ScalarProperty Name="NavigateURL" ColumnName="NavigateURL" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SpecialImageTypeId" ColumnName="SpecialImageTypeId" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="SpecialImageId" ColumnName="SpecialImageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SpecialImageType">
+      <EntityTypeMapping TypeName="ContentModel.SpecialImageType">
+        <MappingFragment StoreEntitySet="SpecialImageType">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="SpecialImageTypeId" ColumnName="SpecialImageTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StaticContentType">
+      <EntityTypeMapping TypeName="ContentModel.StaticContentType">
+        <MappingFragment StoreEntitySet="StaticContentType">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="StaticContentTypeId" ColumnName="StaticContentTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypicalStudent">
+      <EntityTypeMapping TypeName="ContentModel.TypicalStudent">
+        <MappingFragment StoreEntitySet="TypicalStudent">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Course" ColumnName="Course" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="TypicalStudentId" ColumnName="TypicalStudentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Video">
+      <EntityTypeMapping TypeName="ContentModel.Video">
+        <MappingFragment StoreEntitySet="Video">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="AlbumId" ColumnName="AlbumId" />
+          <ScalarProperty Name="VideoId" ColumnName="VideoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VideoAlbum">
+      <EntityTypeMapping TypeName="ContentModel.VideoAlbum">
+        <MappingFragment StoreEntitySet="VideoAlbum">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateTaken" ColumnName="DateTaken" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="VideoAlbumId" ColumnName="VideoAlbumId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StaticContent">
+      <EntityTypeMapping TypeName="ContentModel.StaticContent">
+        <MappingFragment StoreEntitySet="StaticContent">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="StaticContentTypeId" ColumnName="StaticContentTypeId" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="StaticContentId" ColumnName="StaticContentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupportType">
+      <EntityTypeMapping TypeName="ContentModel.SupportType">
+        <MappingFragment StoreEntitySet="SupportType">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="SupportTypeId" ColumnName="SupportTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Support">
+      <EntityTypeMapping TypeName="ContentModel.Support">
+        <MappingFragment StoreEntitySet="Support">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SupportTypeId" ColumnName="SupportTypeId" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="SupportId" ColumnName="SupportId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

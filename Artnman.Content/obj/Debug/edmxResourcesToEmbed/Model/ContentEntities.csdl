@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ContentModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ContentEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="EmailForm" EntityType="ContentModel.EmailForm" />
+    <EntitySet Name="EmailReceiver" EntityType="ContentModel.EmailReceiver" />
+    <EntitySet Name="Image" EntityType="ContentModel.Image" />
+    <EntitySet Name="ImageAlbum" EntityType="ContentModel.ImageAlbum" />
+    <EntitySet Name="Registration" EntityType="ContentModel.Registration" />
+    <EntitySet Name="SpecialImage" EntityType="ContentModel.SpecialImage" />
+    <EntitySet Name="SpecialImageType" EntityType="ContentModel.SpecialImageType" />
+    <EntitySet Name="StaticContentType" EntityType="ContentModel.StaticContentType" />
+    <EntitySet Name="TypicalStudent" EntityType="ContentModel.TypicalStudent" />
+    <EntitySet Name="Video" EntityType="ContentModel.Video" />
+    <EntitySet Name="VideoAlbum" EntityType="ContentModel.VideoAlbum" />
+    <EntitySet Name="StaticContent" EntityType="ContentModel.StaticContent" />
+    <EntitySet Name="SupportType" EntityType="ContentModel.SupportType" />
+    <EntitySet Name="Support" EntityType="ContentModel.Support" />
+  </EntityContainer>
+  <EntityType Name="EmailForm">
+    <Key>
+      <PropertyRef Name="EmailFormId" />
+    </Key>
+    <Property Type="Guid" Name="EmailFormId" Nullable="false" />
+    <Property Type="String" Name="LanguageId" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Content" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="Guid" Name="LastUpdateUser" />
+    <Property Type="DateTime" Name="LastUpdateDate" />
+  </EntityType>
+  <EntityType Name="EmailReceiver">
+    <Key>
+      <PropertyRef Name="EmailReceiverId" />
+    </Key>
+    <Property Type="Guid" Name="EmailReceiverId" Nullable="false" />
+    <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="UserId" />
+    <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="Guid" Name="LastUpdateUser" />
+    <Property Type="DateTime" Name="LastUpdateDate" />
+  </EntityType>
+  <EntityType Name="Image">
+    <Key>
+      <PropertyRef Name="ImageId" />
+      <PropertyRef Name="LanguageId" />
+    </Key>
+    <Property Type="Guid" Name="ImageId" Nullable="false" />
+    <Property Type="Guid" Name="AlbumId" />
+    <Property Type="String" Name="LanguageId" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Location" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Order" />
+    <Property Type="Boolean" Name="Visible" />
+    <Property Type="String" Name="Description" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="Guid" Name="LastUpdateUser" />
+    <Property Type="DateTime" Name="LastUpdateDate" />
+  </EntityType>
+  <EntityType Name="ImageAlbum">
+    <Key>
+      <PropertyRef Name="ImageAlbumId" />
+      <PropertyRef Name="LanguageId" />
+    </Key>
+    <Property Type="Guid" Name="ImageAlbumId" Nullable="false" />
+    <Property Type="String" Name="LanguageId" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DateTaken" />
+    <Property Type="String" Name="Description" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Order" />
+    <Property Type="Boolean" Name="Visible" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="Guid" Name="LastUpdateUser" />
+    <Property Type="DateTime" Name="LastUpdateDate" />
+  </EntityType>
+  <EntityType Name="Registration">
+    <Key>
+      <PropertyRef Name="RegistrationId" />
+    </Key>
+    <Property Type="Guid" Name="RegistrationId" Nullable="false" />
+    <Property Type="String" Name="Fullname" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Gender" />
+    <Property Type="DateTime" Name="DOB" />
+    <Property Type="String" Name="CurrentJob" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="TimeSlot" />
+    <Property Type="Int16" Name="Location" />
+    <Property Type="Int16" Name="KnownFrom" />
+    <Property Type="String" Name="Content" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateDate" />
+  </EntityType>
+  <EntityType Name="SpecialImage">
+    <Key>
+      <PropertyRef Name="SpecialImageId" />
+      <PropertyRef Name="LanguageId" />
+    </Key>
+    <Property Type="Guid" Name="SpecialImageId" Nullable="false" />
+    <Property Type="String" Name="LanguageId" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="SpecialImageTypeId" />
+    <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Location" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NavigateURL" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Target" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Order" />
+    <Property Type="Boolean" Name="Visible" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="Guid" Name="LastUpdateUser" />
+    <Property Type="DateTime" Name="LastUpdateDate" />
+  </EntityType>
+  <EntityType Name="SpecialImageType">
+    <Key>
+      <PropertyRef Name="SpecialImageTypeId" />
+      <PropertyRef Name="LanguageId" />
+    </Key>
+    <Property Type="Guid" Name="SpecialImageTypeId" Nullable="false" />
+    <Property Type="String" Name="LanguageId" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Order" />
+    <Property Type="Boolean" Name="Visible" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="Guid" Name="LastUpdateUser" />
+    <Property Type="DateTime" Name="LastUpdateDate" />
+  </EntityType>
+  <EntityType Name="StaticContentType">
+    <Key>
+      <PropertyRef Name="StaticContentTypeId" />
+      <PropertyRef Name="LanguageId" />
+    </Key>
+    <Property Type="Guid" Name="StaticContentTypeId" Nullable="false" />
+    <Property Type="String" Name="LanguageId" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Order" />
+    <Property Type="Boolean" Name="Visible" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="Guid" Name="LastUpdateUser" />
+    <Property Type="DateTime" Name="LastUpdateDate" />
+  </EntityType>
+  <EntityType Name="TypicalStudent">
+    <Key>
+      <PropertyRef Name="TypicalStudentId" />
+    </Key>
+    <Property Type="Guid" Name="TypicalStudentId" Nullable="false" />
+    <Property Type="String" Name="LanguageId" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Fullname" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DOB" />
+    <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tel" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Course" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Picture" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Visible" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="Guid" Name="LastUpdateUser" />
+    <Property Type="DateTime" Name="LastUpdateDate" />
+  </EntityType>
+  <EntityType Name="Video">
+    <Key>
+      <PropertyRef Name="VideoId" />
+    </Key>
+    <Property Type="Guid" Name="VideoId" Nullable="false" />
+    <Property Type="Guid" Name="AlbumId" />
+    <Property Type="String" Name="LanguageId" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Location" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Order" />
+    <Property Type="String" Name="Description" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Visible" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="Guid" Name="LastUpdateUser" />
+    <Property Type="DateTime" Name="LastUpdateDate" />
+  </EntityType>
+  <EntityType Name="VideoAlbum">
+    <Key>
+      <PropertyRef Name="VideoAlbumId" />
+    </Key>
+    <Property Type="Guid" Name="VideoAlbumId" Nullable="false" />
+    <Property Type="String" Name="LanguageId" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DateTaken" />
+    <Property Type="String" Name="Description" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Order" />
+    <Property Type="Boolean" Name="Visible" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="Guid" Name="LastUpdateUser" />
+    <Property Type="DateTime" Name="LastUpdateDate" />
+  </EntityType>
+  <EntityType Name="StaticContent">
+    <Key>
+      <PropertyRef Name="StaticContentId" />
+      <PropertyRef Name="LanguageId" />
+    </Key>
+    <Property Type="Guid" Name="StaticContentId" Nullable="false" />
+    <Property Type="String" Name="LanguageId" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="StaticContentTypeId" />
+    <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Content" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Order" />
+    <Property Type="Boolean" Name="Visible" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="Guid" Name="LastUpdateUser" />
+    <Property Type="DateTime" Name="LastUpdateDate" />
+  </EntityType>
+  <EntityType Name="SupportType">
+    <Key>
+      <PropertyRef Name="SupportTypeId" />
+      <PropertyRef Name="LanguageId" />
+    </Key>
+    <Property Type="Guid" Name="SupportTypeId" Nullable="false" />
+    <Property Type="String" Name="LanguageId" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Order" />
+    <Property Type="Boolean" Name="Visible" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="Guid" Name="LastUpdateUser" />
+    <Property Type="DateTime" Name="LastUpdateDate" />
+  </EntityType>
+  <EntityType Name="Support">
+    <Key>
+      <PropertyRef Name="SupportId" />
+    </Key>
+    <Property Type="Guid" Name="SupportId" Nullable="false" />
+    <Property Type="String" Name="LanguageId" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="SupportTypeId" />
+    <Property Type="String" Name="Name" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Account" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Order" />
+    <Property Type="Boolean" Name="Visible" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="Guid" Name="LastUpdateUser" />
+    <Property Type="DateTime" Name="LastUpdateDate" />
+  </EntityType>
+</Schema>

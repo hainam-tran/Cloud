@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CommerceModelStoreContainer" CdmEntityContainer="CommerceEntities">
+    <EntitySetMapping Name="Cart">
+      <EntityTypeMapping TypeName="CommerceModel.Cart">
+        <MappingFragment StoreEntitySet="Cart">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobilephone" ColumnName="Mobilephone" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ListProducts" ColumnName="ListProducts" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CartId" ColumnName="CartId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customer">
+      <EntityTypeMapping TypeName="CommerceModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="TotalBuyPrice" ColumnName="TotalBuyPrice" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobilephone" ColumnName="Mobilephone" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order">
+      <EntityTypeMapping TypeName="CommerceModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="FinalPrice" ColumnName="FinalPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetail">
+      <EntityTypeMapping TypeName="CommerceModel.OrderDetail">
+        <MappingFragment StoreEntitySet="OrderDetail">
+          <ScalarProperty Name="SellPrice" ColumnName="SellPrice" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="CommerceModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProductInfoId" ColumnName="ProductInfoId" />
+          <ScalarProperty Name="ExistStatus" ColumnName="ExistStatus" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductCategory">
+      <EntityTypeMapping TypeName="CommerceModel.ProductCategory">
+        <MappingFragment StoreEntitySet="ProductCategory">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="ParrentId" ColumnName="ParrentId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="ProductCategoryId" ColumnName="ProductCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductImage">
+      <EntityTypeMapping TypeName="CommerceModel.ProductImage">
+        <MappingFragment StoreEntitySet="ProductImage">
+          <ScalarProperty Name="ProductInfoId" ColumnName="ProductInfoId" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProductImageID" ColumnName="ProductImageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductInfo">
+      <EntityTypeMapping TypeName="CommerceModel.ProductInfo">
+        <MappingFragment StoreEntitySet="ProductInfo">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="ProductCategoryId" ColumnName="ProductCategoryId" />
+          <ScalarProperty Name="ProductInfoId" ColumnName="ProductInfoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ProductInfo_GetByProductCategoryId_Child_Paging" FunctionName="CommerceModel.Store.ProductInfo_GetByProductCategoryId_Child_Paging" />
+    <FunctionImportMapping FunctionImportName="ProductInfo_GetByProductCategoryId_Child_Paging_Visible" FunctionName="CommerceModel.Store.ProductInfo_GetByProductCategoryId_Child_Paging_Visible" />
+  </EntityContainerMapping>
+</Mapping>

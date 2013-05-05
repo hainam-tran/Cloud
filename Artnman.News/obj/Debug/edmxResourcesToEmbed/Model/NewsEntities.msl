@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NewsModelStoreContainer" CdmEntityContainer="NewsEntities">
+    <EntitySetMapping Name="News">
+      <EntityTypeMapping TypeName="NewsModel.News">
+        <MappingFragment StoreEntitySet="News">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="TotalRates" ColumnName="TotalRates" />
+          <ScalarProperty Name="TotalViews" ColumnName="TotalViews" />
+          <ScalarProperty Name="Tags" ColumnName="Tags" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Exerpt" ColumnName="Exerpt" />
+          <ScalarProperty Name="Subtitle" ColumnName="Subtitle" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="NewsStatusId" ColumnName="NewsStatusId" />
+          <ScalarProperty Name="NewsCategoryId" ColumnName="NewsCategoryId" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="NewsId" ColumnName="NewsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewsCategory">
+      <EntityTypeMapping TypeName="NewsModel.NewsCategory">
+        <MappingFragment StoreEntitySet="NewsCategory">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="ParrentId" ColumnName="ParrentId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="NewsCategoryId" ColumnName="NewsCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewsComment">
+      <EntityTypeMapping TypeName="NewsModel.NewsComment">
+        <MappingFragment StoreEntitySet="NewsComment">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="NewsId" ColumnName="NewsId" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="NewsCommentId" ColumnName="NewsCommentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewsStatus">
+      <EntityTypeMapping TypeName="NewsModel.NewsStatus">
+        <MappingFragment StoreEntitySet="NewsStatus">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="IsPublished" ColumnName="IsPublished" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NewsStatusId" ColumnName="NewsStatusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RssProvider">
+      <EntityTypeMapping TypeName="NewsModel.RssProvider">
+        <MappingFragment StoreEntitySet="RssProvider">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="RssProviderId" ColumnName="RssProviderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RssSource">
+      <EntityTypeMapping TypeName="NewsModel.RssSource">
+        <MappingFragment StoreEntitySet="RssSource">
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdateUser" ColumnName="LastUpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="SourceLink" ColumnName="SourceLink" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="RssProviderId" ColumnName="RssProviderId" />
+          <ScalarProperty Name="NewsCategoryId" ColumnName="NewsCategoryId" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="RssSourceId" ColumnName="RssSourceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

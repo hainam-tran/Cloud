@@ -1,0 +1,10 @@
+E:\Work\Artnman\Artnman\Artnman.Product\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Artnman\Artnman\Artnman.Product\bin\Debug\Artnman.Commerce.dll.config
+E:\Work\Artnman\Artnman\Artnman.Product\bin\Debug\Artnman.Commerce.dll
+E:\Work\Artnman\Artnman\Artnman.Product\bin\Debug\Artnman.Commerce.pdb
+E:\Work\Artnman\Artnman\Artnman.Product\bin\Debug\Artnman.Core.dll
+E:\Work\Artnman\Artnman\Artnman.Product\bin\Debug\Artnman.Core.pdb
+E:\Work\Artnman\Artnman\Artnman.Product\obj\Debug\Artnman.Commerce.dll
+E:\Work\Artnman\Artnman\Artnman.Product\obj\Debug\Artnman.Commerce.pdb
+E:\Work\Artnman\Artnman\Artnman.Product\bin\Debug\log4net.dll
+E:\Work\Artnman\Artnman\Artnman.Product\bin\Debug\log4net.xml

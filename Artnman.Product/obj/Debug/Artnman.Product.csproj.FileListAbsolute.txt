@@ -1,0 +1,5 @@
+E:\Work\Artnman\Artnman\Artnman.Product\bin\Debug\Artnman.Product.dll
+E:\Work\Artnman\Artnman\Artnman.Product\bin\Debug\Artnman.Product.pdb
+E:\Work\Artnman\Artnman\Artnman.Product\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Artnman\Artnman\Artnman.Product\obj\Debug\Artnman.Product.dll
+E:\Work\Artnman\Artnman\Artnman.Product\obj\Debug\Artnman.Product.pdb

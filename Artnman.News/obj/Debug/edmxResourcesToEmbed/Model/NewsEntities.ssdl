@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NewsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="NewsModelStoreContainer">
+    <EntitySet Name="News" EntityType="NewsModel.Store.News" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NewsCategory" EntityType="NewsModel.Store.NewsCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NewsComment" EntityType="NewsModel.Store.NewsComment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NewsStatus" EntityType="NewsModel.Store.NewsStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RssProvider" EntityType="NewsModel.Store.RssProvider" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RssSource" EntityType="NewsModel.Store.RssSource" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="NewsId" />
+    </Key>
+    <Property Name="NewsId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LanguageId" Type="nvarchar" MaxLength="5" />
+    <Property Name="NewsCategoryId" Type="uniqueidentifier" />
+    <Property Name="NewsStatusId" Type="uniqueidentifier" />
+    <Property Name="Title" Type="nvarchar" MaxLength="256" />
+    <Property Name="Subtitle" Type="nvarchar" MaxLength="256" />
+    <Property Name="Exerpt" Type="ntext" />
+    <Property Name="Picture" Type="varchar" MaxLength="256" />
+    <Property Name="Content" Type="ntext" />
+    <Property Name="Tags" Type="nvarchar" MaxLength="512" />
+    <Property Name="TotalViews" Type="int" />
+    <Property Name="TotalRates" Type="int" />
+    <Property Name="Order" Type="int" />
+    <Property Name="Visible" Type="bit" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NewsCategory">
+    <Key>
+      <PropertyRef Name="NewsCategoryId" />
+    </Key>
+    <Property Name="NewsCategoryId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LanguageId" Type="nvarchar" MaxLength="5" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" />
+    <Property Name="Description" Type="nvarchar" MaxLength="512" />
+    <Property Name="ParrentId" Type="uniqueidentifier" />
+    <Property Name="Order" Type="int" />
+    <Property Name="Visible" Type="bit" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NewsComment">
+    <Key>
+      <PropertyRef Name="NewsCommentId" />
+    </Key>
+    <Property Name="NewsCommentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LanguageId" Type="nvarchar" MaxLength="5" />
+    <Property Name="NewsId" Type="uniqueidentifier" />
+    <Property Name="Fullname" Type="nvarchar" MaxLength="256" />
+    <Property Name="Content" Type="nvarchar" MaxLength="256" />
+    <Property Name="Order" Type="int" />
+    <Property Name="Visible" Type="bit" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NewsStatus">
+    <Key>
+      <PropertyRef Name="NewsStatusId" />
+    </Key>
+    <Property Name="NewsStatusId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+    <Property Name="IsPublished" Type="bit" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RssProvider">
+    <Key>
+      <PropertyRef Name="RssProviderId" />
+    </Key>
+    <Property Name="RssProviderId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LanguageId" Type="nvarchar" MaxLength="5" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" />
+    <Property Name="Order" Type="int" />
+    <Property Name="Visible" Type="bit" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RssSource">
+    <Key>
+      <PropertyRef Name="RssSourceId" />
+    </Key>
+    <Property Name="RssSourceId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LanguageId" Type="nvarchar" MaxLength="5" />
+    <Property Name="NewsCategoryId" Type="uniqueidentifier" />
+    <Property Name="RssProviderId" Type="uniqueidentifier" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" />
+    <Property Name="SourceLink" Type="nvarchar" MaxLength="256" />
+    <Property Name="Order" Type="int" />
+    <Property Name="Visible" Type="bit" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="LastUpdateUser" Type="uniqueidentifier" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+  </EntityType>
+</Schema>
