@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/admin/admin.master" AutoEventWireup="true" Inherits="admin.Widgets.Blogroll" Title="Blogroll" Codebehind="Blogroll.aspx.cs" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Blog/admin/admin.master" AutoEventWireup="true" Inherits="admin.Widgets.Blogroll" Title="Blogroll" Codebehind="Blogroll.aspx.cs" %>
 <%@ Register src="Menu.ascx" tagname="TabMenu" tagprefix="menu" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphAdmin" runat="Server">
@@ -137,7 +137,7 @@
                 <Columns>
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:HyperLink ID="feedLink" runat="server" ImageUrl="~/pics/rssButton.png" NavigateUrl='<%# Eval("FeedUrl").ToString() %>'
+                            <asp:HyperLink ID="feedLink" runat="server" ImageUrl="~/Blog/pics/rssButton.png" NavigateUrl='<%# Eval("FeedUrl").ToString() %>'
                                 Text="<%# string.Empty %>"></asp:HyperLink>
                         </ItemTemplate>
                     </asp:TemplateField>
@@ -155,9 +155,9 @@
                     <asp:CommandField ShowDeleteButton="True" DeleteText="<%$Resources:labels, delete %>" ControlStyle-CssClass="deleteAction" />
                     <asp:TemplateField ControlStyle-BackColor="Transparent">
                         <ItemTemplate>
-                            <asp:ImageButton ID="ibMoveUp" ImageUrl="~/admin/images/action-up.png" runat="server"
+                            <asp:ImageButton ID="ibMoveUp" ImageUrl="~/Blog/admin/images/action-up.png" runat="server"
                                 CommandArgument="<%# ((GridViewRow)Container).RowIndex %>" CommandName="moveUp" />
-                            <asp:ImageButton ID="ibMoveDown" ImageUrl="~/admin/images/action-down.png" runat="server"
+                            <asp:ImageButton ID="ibMoveDown" ImageUrl="~/Blog/admin/images/action-down.png" runat="server"
                                 CommandArgument="<%# ((GridViewRow)Container).RowIndex %>" CommandName="moveDown" />
                         </ItemTemplate>
                     </asp:TemplateField>

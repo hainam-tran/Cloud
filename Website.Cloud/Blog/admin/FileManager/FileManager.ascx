@@ -3,7 +3,7 @@
 <%@ Import Namespace="System.Web.Optimization" %>
 
 <%if (BlogSettings.Instance.EnableOptimization) { %>
-<link href="<%= BundleTable.Bundles.ResolveBundleUrl("~/Content/filemanager") %>" rel="stylesheet" type="text/css" />
+<link href="<%= BundleTable.Bundles.ResolveBundleUrl("~/Blog/Content/filemanager") %>" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="<%= BundleTable.Bundles.ResolveBundleUrl("~/Scripts/filemanager") %>"></script>
 <% } else { %>
 <link href="<%= Utils.ApplicationRelativeWebRoot %>admin/FileManager/FileManager.css" rel="Stylesheet" type="text/css" />

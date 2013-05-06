@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/admin.master" AutoEventWireup="true" Inherits="admin.Settings.HeadTrack" Codebehind="HeadTrack.aspx.cs" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Blog/admin/admin.master" AutoEventWireup="true" Inherits="admin.Settings.HeadTrack" Codebehind="HeadTrack.aspx.cs" %>
 <%@ Register src="Menu.ascx" tagname="TabMenu" tagprefix="menu" %>
 <%@ Import Namespace="BlogEngine.Core" %>
 

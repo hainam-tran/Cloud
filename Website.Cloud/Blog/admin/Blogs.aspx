@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/admin.master" AutoEventWireup="true" Inherits="Admin.Blogs" Codebehind="Blogs.aspx.cs" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Blog/admin/admin.master" AutoEventWireup="true" Inherits="Admin.Blogs" Codebehind="Blogs.aspx.cs" %>
 <%@ Import Namespace="BlogEngine.Core" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphAdmin" runat="Server">

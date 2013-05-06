@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/admin/admin.master" ValidateRequest="False"
+﻿<%@ Page Language="C#" MasterPageFile="~/Blog/admin/admin.master" ValidateRequest="False"
     AutoEventWireup="true" Inherits="admin.Widgets.Controls"
     Title="Control settings" Codebehind="Controls.aspx.cs" %>
 <%@ Register src="Menu.ascx" tagname="TabMenu" tagprefix="menu" %>

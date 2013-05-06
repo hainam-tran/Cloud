@@ -7,9 +7,9 @@
     <link href="include/core.css" rel="stylesheet" />
     <link href="include/styles.min.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
-    <link rel="shortcut icon" href="~/pics/blogengine.ico" type="image/x-icon" />
-    <link href="~/editors/tiny_mce_3_5_8/plugins/syntaxhighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
-    <link href="~/editors/tiny_mce_3_5_8/plugins/syntaxhighlighter/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="~/Blog/pics/blogengine.ico" type="image/x-icon" />
+    <link href="~/Blog/editors/tiny_mce_3_5_8/plugins/syntaxhighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="~/Blog/editors/tiny_mce_3_5_8/plugins/syntaxhighlighter/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="<%# ShRoot %>scripts/XRegExp.js"></script>
     <script type="text/javascript" src="<%# ShRoot %>scripts/shCore.js"></script>
     <script type="text/javascript" src="<%# ShRoot %>scripts/shAutoloader.js"></script>

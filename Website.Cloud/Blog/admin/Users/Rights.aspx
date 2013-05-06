@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/admin.master" AutoEventWireup="true" Inherits="Admin.Users.Rights" Codebehind="Rights.aspx.cs" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Blog/admin/admin.master" AutoEventWireup="true" Inherits="Admin.Users.Rights" Codebehind="Rights.aspx.cs" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphAdmin" runat="Server">
     <script type="text/javascript">

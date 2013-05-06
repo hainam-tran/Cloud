@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/admin.master" AutoEventWireup="true" Inherits="Admin.Users.ProfilePage" Codebehind="Profile.aspx.cs" %>
-<%@ MasterType VirtualPath="~/admin/admin.master" %>
-<%@ Register Src="~/admin/htmlEditor.ascx" TagPrefix="Blog" TagName="TextEditor" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Blog/admin/admin.master" AutoEventWireup="true" Inherits="Admin.Users.ProfilePage" Codebehind="Profile.aspx.cs" %>
+<%@ MasterType VirtualPath="~/Blog/admin/admin.master" %>
+<%@ Register Src="~/Blog/admin/htmlEditor.ascx" TagPrefix="Blog" TagName="TextEditor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphAdmin" Runat="Server">
     <script type="text/javascript">
         function SaveProfile() {

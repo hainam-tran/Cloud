@@ -1,6 +1,6 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/admin/admin.master" AutoEventWireup="true"
+﻿<%@ Page Language="C#" MasterPageFile="~/Blog/admin/admin.master" AutoEventWireup="true"
     ValidateRequest="False" Inherits="Admin.Posts.Categories" Codebehind="Categories.aspx.cs" %>
-<%@ MasterType VirtualPath="~/admin/admin.master" %>
+<%@ MasterType VirtualPath="~/Blog/admin/admin.master" %>
 <%@ Register src="Menu.ascx" tagname="TabMenu" tagprefix="menu" %>
 <%@ Import Namespace="BlogEngine.Core"%>
 

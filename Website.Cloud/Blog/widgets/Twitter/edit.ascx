@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="Widgets.Twitter.Edit" Codebehind="edit.ascx.cs" %>
-<%@ Reference Control="~/widgets/Twitter/widget.ascx" %>
+<%@ Reference Control="~/Blog/widgets/Twitter/widget.ascx" %>
 
 <label for="<%=txtAccountUrl %>">Your Twitter account URL</label><br />
 <asp:TextBox runat="server" ID="txtAccountUrl" Width="300" />

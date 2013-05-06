@@ -1852,6 +1852,7 @@
     <Compile Include="Blog\api\TagMiniView.aspx.designer.cs">
       <DependentUpon>TagMiniView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\Helpers\RazorHelpers.cs" />
     <Compile Include="Blog\archive.aspx.cs">
       <DependentUpon>archive.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2378,6 +2379,10 @@
     <Content Include="Blog\admin\Web.Config" />
     <Content Include="Blog\admin\_Layout.cshtml" />
     <Content Include="Blog\admin\_menu.cshtml" />
+    <Content Include="App_Code\Helpers\AdminHelper.cshtml" />
+    <Content Include="App_Code\Helpers\ControlsHelper.cshtml" />
+    <Content Include="App_Code\Helpers\DashboardHelper.cshtml" />
+    <Content Include="App_Code\Helpers\ExtensionsHelper.cshtml" />
     <None Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\syntaxhighlighter.version" />
     <Content Include="Blog\packages.config" />
     <None Include="Blog\Scripts\jquery-1.9.1.min.map" />

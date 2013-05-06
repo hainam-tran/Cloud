@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/admin/admin.master" AutoEventWireup="true" Inherits="Admin.Posts.AddEntry" ValidateRequest="False"
+﻿<%@ Page Language="C#" MasterPageFile="~/Blog/admin/admin.master" AutoEventWireup="true" Inherits="Admin.Posts.AddEntry" ValidateRequest="False"
     EnableSessionState="True" Codebehind="Add_entry.aspx.cs" %>
 
-<%@ Register Src="~/admin/htmlEditor.ascx" TagPrefix="Blog" TagName="TextEditor" %>
+<%@ Register Src="~/Blog/admin/htmlEditor.ascx" TagPrefix="Blog" TagName="TextEditor" %>
 <%@ Register src="Menu.ascx" tagname="TabMenu" tagprefix="menu" %>
-<%@ Register Src="~/admin/FileManager/FileManager.ascx" TagName="FileManager" TagPrefix="con" %>
+<%@ Register Src="~/Blog/admin/FileManager/FileManager.ascx" TagName="FileManager" TagPrefix="con" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphAdmin" runat="Server">
 	<div class="content-box-outer">
         <con:FileManager runat="server" ID="FileManager1" />

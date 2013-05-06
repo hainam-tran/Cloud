@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="Admin.Extensions.UserControlSettings" Codebehind="~/admin/Extensions/Settings.ascx.cs" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="Admin.Extensions.UserControlSettings" Codebehind="~/Blog/admin/Extensions/Settings.ascx.cs" %>
 <h1><%=SettingName%></h1>
 <div id="ErrorMsg" runat="server" style="color:Red; padding:5px 0 5px 0; display:block;"></div>
 <div id="InfoMsg" runat="server" style="color:Green; padding:5px 0 5px 0; display:block;"></div>

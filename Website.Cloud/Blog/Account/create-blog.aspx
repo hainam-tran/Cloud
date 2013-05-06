@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="account.master" AutoEventWireup="true" Inherits="Account.CreateBlog" Codebehind="create-blog.aspx.cs" %>
-<%@ MasterType VirtualPath="~/Account/account.master" %>
+<%@ MasterType VirtualPath="~/Blog/Account/account.master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server"></asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
     <p>
