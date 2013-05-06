@@ -1,0 +1,5 @@
+E:\Work\Artnman\Artnman\Cloud\BlogEngine.Core\bin\Debug\BlogEngine.Core.dll
+E:\Work\Artnman\Artnman\Cloud\BlogEngine.Core\bin\Debug\BlogEngine.Core.pdb
+E:\Work\Artnman\Artnman\Cloud\BlogEngine.Core\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Artnman\Artnman\Cloud\BlogEngine.Core\obj\Debug\BlogEngine.Core.dll
+E:\Work\Artnman\Artnman\Cloud\BlogEngine.Core\obj\Debug\BlogEngine.Core.pdb

@@ -33,12 +33,52 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxMin">
+      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="BlogML">
+      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\BlogML.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Core, Version=1.0.11220.104, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\NuGet.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -49,8 +89,1169 @@
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="WebGrease">
+      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\WebGrease.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\blogroll.xml" />
+    <Content Include="App_Data\blogs.xml" />
+    <Content Include="App_Data\blogs\_new\categories.xml" />
+    <Content Include="App_Data\blogs\_new\datastore\widgets\be_WIDGET_ZONE.xml" />
+    <Content Include="App_Data\blogs\_new\pingservices.xml" />
+    <Content Include="App_Data\blogs\_new\posts\c3b491e5-59ac-4f6a-81e5-27e971b903ed.xml" />
+    <Content Include="App_Data\blogs\_new\rights.xml" />
+    <Content Include="App_Data\blogs\_new\roles.xml" />
+    <Content Include="App_Data\blogs\_new\settings.xml" />
+    <Content Include="App_Data\blogs\_new\setup.xml" />
+    <Content Include="App_Data\blogs\_new\users.xml" />
+    <Content Include="App_Data\categories.xml" />
+    <Content Include="App_Data\datastore\extensions\AkismetFilter.xml" />
+    <Content Include="App_Data\datastore\extensions\BBCode.xml" />
+    <Content Include="App_Data\datastore\extensions\BreakPost.xml" />
+    <Content Include="App_Data\datastore\extensions\CodeFormatterExtension.xml" />
+    <Content Include="App_Data\datastore\extensions\Logger.xml" />
+    <Content Include="App_Data\datastore\extensions\MediaElementPlayer.xml" />
+    <Content Include="App_Data\datastore\extensions\MetaExtension.xml" />
+    <Content Include="App_Data\datastore\extensions\Recaptcha.xml" />
+    <Content Include="App_Data\datastore\extensions\ResolveLinks.xml" />
+    <Content Include="App_Data\datastore\extensions\SendCommentMail.xml" />
+    <Content Include="App_Data\datastore\extensions\SendPings.xml" />
+    <Content Include="App_Data\datastore\extensions\SimpleCaptcha.xml" />
+    <Content Include="App_Data\datastore\extensions\Smilies.xml" />
+    <Content Include="App_Data\datastore\extensions\StopForumSpam.xml" />
+    <Content Include="App_Data\datastore\extensions\TypePadFilter.xml" />
+    <Content Include="App_Data\datastore\widgets\be_WIDGET_ZONE.xml" />
+    <Content Include="App_Data\files\2011\07\admin menu.PNG" />
+    <Content Include="App_Data\files\2011\07\background2.PNG" />
+    <Content Include="App_Data\logger.txt" />
+    <Content Include="App_Data\monstercache\80\6981821.png" />
+    <Content Include="App_Data\newsletter.xml" />
+    <Content Include="App_Data\packagefiles.xml" />
+    <Content Include="App_Data\packages.xml" />
+    <Content Include="App_Data\pages\b663b6a1-1c34-4c60-a891-c14772507b23.xml" />
+    <Content Include="App_Data\pingservices.xml" />
+    <Content Include="App_Data\posts\c3b491e5-59ac-4f6a-81e5-27e971b903ed.xml" />
+    <Content Include="App_Data\profiles\admin.xml" />
+    <Content Include="App_Data\quicknotes.xml" />
+    <Content Include="App_Data\rights.xml" />
+    <Content Include="App_Data\roles.xml" />
+    <Content Include="App_Data\settings.xml" />
+    <Content Include="App_Data\stopwords.txt" />
+    <Content Include="App_Data\users.xml" />
+    <Content Include="App_GlobalResources\Notes On Labels.resx.txt" />
+    <Content Include="Blog\Account\account.css" />
+    <Content Include="Blog\Account\account.js" />
+    <Content Include="Blog\Account\change-password-success.aspx" />
+    <Content Include="Blog\Account\change-password.aspx" />
+    <Content Include="Blog\Account\create-blog.aspx" />
+    <Content Include="Blog\Account\login.aspx" />
+    <Content Include="Blog\Account\password-retrieval.aspx" />
+    <Content Include="Blog\Account\register.aspx" />
+    <Content Include="Blog\admin\admin.js" />
+    <Content Include="Blog\admin\AjaxHelper.aspx" />
+    <Content Include="Blog\admin\Blogs.aspx" />
+    <Content Include="Blog\admin\colorbox.css" />
+    <Content Include="Blog\admin\Comments\Approved.aspx" />
+    <Content Include="Blog\admin\Comments\Menu.ascx" />
+    <Content Include="Blog\admin\Comments\Pending.aspx" />
+    <Content Include="Blog\admin\Comments\Spam.aspx" />
+    <Content Include="Blog\admin\Extensions\Settings.ascx" />
+    <Content Include="Blog\admin\Extensions\Settings.aspx" />
+    <Content Include="Blog\admin\FileManager\AjaxFileManager.aspx" />
+    <Content Include="Blog\admin\FileManager\fileManager-mini.js" />
+    <Content Include="Blog\admin\FileManager\FileManager.ascx" />
+    <Content Include="Blog\admin\FileManager\FileManager.aspx" />
+    <Content Include="Blog\admin\FileManager\FileManager.css" />
+    <Content Include="Blog\admin\FileManager\images\action-enable.png" />
+    <Content Include="Blog\admin\FileManager\images\add.png" />
+    <Content Include="Blog\admin\FileManager\images\archives.png" />
+    <Content Include="Blog\admin\FileManager\images\background.gif" />
+    <Content Include="Blog\admin\FileManager\images\cancel.png" />
+    <Content Include="Blog\admin\FileManager\images\design_wait.gif" />
+    <Content Include="Blog\admin\FileManager\images\diag_bg.jpg" />
+    <Content Include="Blog\admin\FileManager\images\disk.gif" />
+    <Content Include="Blog\admin\FileManager\images\drive.gif" />
+    <Content Include="Blog\admin\FileManager\images\file.gif" />
+    <Content Include="Blog\admin\FileManager\images\filecabinet.png" />
+    <Content Include="Blog\admin\FileManager\images\fileUpload.png" />
+    <Content Include="Blog\admin\FileManager\images\folder.png" />
+    <Content Include="Blog\admin\FileManager\images\folders.gif" />
+    <Content Include="Blog\admin\FileManager\images\hover.gif" />
+    <Content Include="Blog\admin\FileManager\images\icon_resize.gif" />
+    <Content Include="Blog\admin\FileManager\images\image.png" />
+    <Content Include="Blog\admin\FileManager\images\logout.png" />
+    <Content Include="Blog\admin\FileManager\images\New-Document-icon.png" />
+    <Content Include="Blog\admin\FileManager\images\ok.gif" />
+    <Content Include="Blog\admin\FileManager\images\page-delete.png" />
+    <Content Include="Blog\admin\FileManager\images\page-prop.png" />
+    <Content Include="Blog\admin\FileManager\images\page_white_picture.png" />
+    <Content Include="Blog\admin\FileManager\images\page_white_world.png" />
+    <Content Include="Blog\admin\FileManager\images\pbar-ani.gif" />
+    <Content Include="Blog\admin\FileManager\images\rename.png" />
+    <Content Include="Blog\admin\FileManager\images\ruler_crop.png" />
+    <Content Include="Blog\admin\FileManager\images\separator.gif" />
+    <Content Include="Blog\admin\FileManager\images\shape_flip_horizontal.png" />
+    <Content Include="Blog\admin\FileManager\images\shape_flip_vertical.png" />
+    <Content Include="Blog\admin\FileManager\images\shape_rotate_anticlockwise.png" />
+    <Content Include="Blog\admin\FileManager\images\shape_rotate_clockwise.png" />
+    <Content Include="Blog\admin\FileManager\images\submenu.gif" />
+    <Content Include="Blog\admin\FileManager\images\submenu_dis.gif" />
+    <Content Include="Blog\admin\FileManager\images\tr-hover.png" />
+    <Content Include="Blog\admin\FileManager\images\up-directory.png" />
+    <Content Include="Blog\admin\FileManager\images\uploadFMD.png" />
+    <Content Include="Blog\admin\FileManager\images\view.png" />
+    <Content Include="Blog\admin\FileManager\JCrop\css\Jcrop.gif" />
+    <Content Include="Blog\admin\FileManager\JCrop\css\jquery.Jcrop.css" />
+    <Content Include="Blog\admin\FileManager\JCrop\js\jquery.color.js" />
+    <Content Include="Blog\admin\FileManager\JCrop\js\jquery.Jcrop.js" />
+    <Content Include="Blog\admin\FileManager\JCrop\js\jquery.Jcrop.min.js" />
+    <Content Include="Blog\admin\FileManager\JCrop\js\jquery.min.js" />
+    <Content Include="Blog\admin\FileManager\jquery.jeegoocontext.min.js" />
+    <Content Include="Blog\admin\FileManager\jqueryui\jquery-ui.css" />
+    <Content Include="Blog\admin\FileManager\jqueryui\jquery-ui.min.js" />
+    <Content Include="Blog\admin\htmlEditor.ascx" />
+    <Content Include="Blog\admin\images\action-add.png" />
+    <Content Include="Blog\admin\images\action-delete-small-lt.png" />
+    <Content Include="Blog\admin\images\action-delete-small.png" />
+    <Content Include="Blog\admin\images\action-delete.png" />
+    <Content Include="Blog\admin\images\action-down.png" />
+    <Content Include="Blog\admin\images\action-dropdown.png" />
+    <Content Include="Blog\admin\images\action-edit-small-lt.png" />
+    <Content Include="Blog\admin\images\action-edit-small.png" />
+    <Content Include="Blog\admin\images\action-enable-small.png" />
+    <Content Include="Blog\admin\images\action-enable.png" />
+    <Content Include="Blog\admin\images\action-profile-small.png" />
+    <Content Include="Blog\admin\images\action-remove-small.png" />
+    <Content Include="Blog\admin\images\action-remove.png" />
+    <Content Include="Blog\admin\images\action-rights-small.png" />
+    <Content Include="Blog\admin\images\action-settings.png" />
+    <Content Include="Blog\admin\images\action-tools-small-lt.png" />
+    <Content Include="Blog\admin\images\action-tools-small.png" />
+    <Content Include="Blog\admin\images\action-up.png" />
+    <Content Include="Blog\admin\images\action-view-small.png" />
+    <Content Include="Blog\admin\images\avatars\blank.png" />
+    <Content Include="Blog\admin\images\avatars\identicon.png" />
+    <Content Include="Blog\admin\images\avatars\mm.png" />
+    <Content Include="Blog\admin\images\avatars\monsterid.png" />
+    <Content Include="Blog\admin\images\avatars\retro.png" />
+    <Content Include="Blog\admin\images\avatars\wavatar.png" />
+    <Content Include="Blog\admin\images\bkg-dark.jpg" />
+    <Content Include="Blog\admin\images\bkg-dark2.jpg" />
+    <Content Include="Blog\admin\images\bkg-light.jpg" />
+    <Content Include="Blog\admin\images\bkg.png" />
+    <Content Include="Blog\admin\images\colorbox\border.png" />
+    <Content Include="Blog\admin\images\colorbox\controls.png" />
+    <Content Include="Blog\admin\images\colorbox\internet_explorer\borderBottomCenter.png" />
+    <Content Include="Blog\admin\images\colorbox\internet_explorer\borderBottomLeft.png" />
+    <Content Include="Blog\admin\images\colorbox\internet_explorer\borderBottomRight.png" />
+    <Content Include="Blog\admin\images\colorbox\internet_explorer\borderMiddleLeft.png" />
+    <Content Include="Blog\admin\images\colorbox\internet_explorer\borderMiddleRight.png" />
+    <Content Include="Blog\admin\images\colorbox\internet_explorer\borderTopCenter.png" />
+    <Content Include="Blog\admin\images\colorbox\internet_explorer\borderTopLeft.png" />
+    <Content Include="Blog\admin\images\colorbox\internet_explorer\borderTopRight.png" />
+    <Content Include="Blog\admin\images\colorbox\loading.gif" />
+    <Content Include="Blog\admin\images\colorbox\loading_background.png" />
+    <Content Include="Blog\admin\images\colorbox\overlay.png" />
+    <Content Include="Blog\admin\images\gray-btn-bkg.png" />
+    <Content Include="Blog\admin\images\icon-comments.png" />
+    <Content Include="Blog\admin\images\icon-file.png" />
+    <Content Include="Blog\admin\images\icon-image.png" />
+    <Content Include="Blog\admin\images\icon-info.png" />
+    <Content Include="Blog\admin\images\icon-video.png" />
+    <Content Include="Blog\admin\images\imagegallery.png" />
+    <Content Include="Blog\admin\images\link-first.png" />
+    <Content Include="Blog\admin\images\link-last.png" />
+    <Content Include="Blog\admin\images\link-next.png" />
+    <Content Include="Blog\admin\images\link-prev.png" />
+    <Content Include="Blog\admin\images\no_avatar.png" />
+    <Content Include="Blog\admin\images\orange-btn-bkg.png" />
+    <Content Include="Blog\admin\images\recyclebin.png" />
+    <Content Include="Blog\admin\images\right-menu-bkg.jpg" />
+    <Content Include="Blog\admin\images\status-denied.png" />
+    <Content Include="Blog\admin\images\status-draft.png" />
+    <Content Include="Blog\admin\images\status-error.png" />
+    <Content Include="Blog\admin\images\status-help.png" />
+    <Content Include="Blog\admin\images\status-info.png" />
+    <Content Include="Blog\admin\images\status-success.png" />
+    <Content Include="Blog\admin\images\status-warning.png" />
+    <Content Include="Blog\admin\images\tab-bkg.png" />
+    <Content Include="Blog\admin\images\tipsy.gif" />
+    <Content Include="Blog\admin\jquery.colorbox.js" />
+    <Content Include="Blog\admin\jquery.masonry.min.js" />
+    <Content Include="Blog\admin\jquery.tipsy.js" />
+    <Content Include="Blog\admin\menu.ascx" />
+    <Content Include="Blog\admin\Pages\EditPage.aspx" />
+    <Content Include="Blog\admin\Pages\Menu.ascx" />
+    <Content Include="Blog\admin\Pages\Pages.aspx" />
+    <Content Include="Blog\admin\Pages\RecaptchaLogViewer.aspx" />
+    <Content Include="Blog\admin\Posts\Add_entry.aspx" />
+    <Content Include="Blog\admin\Posts\Categories.aspx" />
+    <Content Include="Blog\admin\Posts\Menu.ascx" />
+    <Content Include="Blog\admin\Posts\Posts.aspx" />
+    <Content Include="Blog\admin\Posts\Tags.aspx" />
+    <Content Include="Blog\admin\Settings\Advanced.aspx" />
+    <Content Include="Blog\admin\Settings\Comments.aspx" />
+    <Content Include="Blog\admin\Settings\Email.aspx" />
+    <Content Include="Blog\admin\Settings\Feed.aspx" />
+    <Content Include="Blog\admin\Settings\HeadTrack.aspx" />
+    <Content Include="Blog\admin\Settings\Import.aspx" />
+    <Content Include="Blog\admin\Settings\Main.aspx" />
+    <Content Include="Blog\admin\Settings\Menu.ascx" />
+    <Content Include="Blog\admin\Settings\PingServices.aspx" />
+    <Content Include="Blog\admin\Settings\Rules.aspx" />
+    <Content Include="Blog\admin\style-rtl.css" />
+    <Content Include="Blog\admin\style.css" />
+    <Content Include="Blog\admin\tinyMCE.ascx" />
+    <Content Include="Blog\admin\tipsy.css" />
+    <Content Include="Blog\admin\Tracking\Menu.ascx" />
+    <Content Include="Blog\admin\Tracking\Pingbacks.aspx" />
+    <Content Include="Blog\admin\Tracking\referrers.aspx" />
+    <Content Include="Blog\admin\Trash.aspx" />
+    <Content Include="Blog\admin\uploadify\cancel.png" />
+    <Content Include="Blog\admin\uploadify\expressInstall.swf" />
+    <Content Include="Blog\admin\uploadify\jquery-1.4.2.min.js" />
+    <Content Include="Blog\admin\uploadify\jquery.uploadify.v2.1.4.js" />
+    <Content Include="Blog\admin\uploadify\jquery.uploadify.v2.1.4.min.js" />
+    <Content Include="Blog\admin\uploadify\swfobject.js" />
+    <Content Include="Blog\admin\uploadify\uploadify.allglyphs.swf" />
+    <Content Include="Blog\admin\uploadify\uploadify.css" />
+    <Content Include="Blog\admin\uploadify\uploadify.swf" />
+    <Content Include="Blog\admin\Users\Profile.aspx" />
+    <Content Include="Blog\admin\Users\Rights.aspx" />
+    <Content Include="Blog\admin\Users\Roles.aspx" />
+    <Content Include="Blog\admin\Users\Users.aspx" />
+    <Content Include="Blog\admin\WidgetEditor.aspx" />
+    <Content Include="Blog\admin\Widgets\Blogroll.aspx" />
+    <Content Include="Blog\admin\Widgets\Controls.aspx" />
+    <Content Include="Blog\admin\Widgets\Menu.ascx" />
+    <Content Include="Blog\api\Authentication.svc" />
+    <Content Include="Blog\api\BlogImporter.asmx" />
+    <Content Include="Blog\api\Blogs.asmx" />
+    <Content Include="Blog\api\Comments.asmx" />
+    <Content Include="Blog\api\Posts.asmx" />
+    <Content Include="Blog\api\Profile.asmx" />
+    <Content Include="Blog\api\RoleService.asmx" />
+    <Content Include="Blog\api\TagMiniView.aspx" />
+    <Content Include="Blog\api\Tags.asmx" />
+    <Content Include="Blog\api\UserService.asmx" />
+    <Content Include="Blog\api\wlw.css" />
+    <Content Include="Blog\archive.aspx" />
+    <Content Include="Blog\contact.aspx" />
+    <Content Include="Blog\Content\Auto\Global.css" />
+    <Content Include="Blog\Content\Global.css" />
+    <Content Include="Blog\default.aspx" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\langs\en.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\license.txt" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advhr\css\advhr.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advhr\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advhr\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advhr\js\rule.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advhr\langs\en_dlg.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advhr\rule.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advimage\css\advimage.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advimage\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advimage\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advimage\image.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advimage\img\sample.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advimage\js\image.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advimage\langs\en_dlg.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advlink\css\advlink.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advlink\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advlink\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advlink\js\advlink.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advlink\langs\en_dlg.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advlink\link.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advlist\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\advlist\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\autolink\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\autolink\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\autoresize\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\autoresize\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\autosave\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\autosave\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\bbcode\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\bbcode\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\contextmenu\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\contextmenu\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\directionality\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\directionality\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\emotions.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\img\smiley-cool.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\img\smiley-cry.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\img\smiley-embarassed.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\img\smiley-foot-in-mouth.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\img\smiley-frown.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\img\smiley-innocent.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\img\smiley-kiss.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\img\smiley-laughing.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\img\smiley-money-mouth.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\img\smiley-sealed.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\img\smiley-smile.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\img\smiley-surprised.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\img\smiley-tongue-out.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\img\smiley-undecided.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\img\smiley-wink.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\img\smiley-yell.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\js\emotions.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\emotions\langs\en_dlg.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\example\dialog.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\example\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\example\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\example\img\example.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\example\js\dialog.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\example\langs\en.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\example\langs\en_dlg.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\example_dependency\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\example_dependency\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\fullpage\css\fullpage.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\fullpage\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\fullpage\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\fullpage\fullpage.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\fullpage\js\fullpage.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\fullpage\langs\en_dlg.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\fullscreen\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\fullscreen\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\fullscreen\fullscreen.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\iespell\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\iespell\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\inlinepopups\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\inlinepopups\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\inlinepopups\skins\clearlooks2\img\alert.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\inlinepopups\skins\clearlooks2\img\button.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\inlinepopups\skins\clearlooks2\img\buttons.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\inlinepopups\skins\clearlooks2\img\confirm.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\inlinepopups\skins\clearlooks2\img\corners.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\inlinepopups\skins\clearlooks2\img\horizontal.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\inlinepopups\skins\clearlooks2\img\vertical.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\inlinepopups\skins\clearlooks2\window.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\inlinepopups\template.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\insertdatetime\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\insertdatetime\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\layer\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\layer\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\legacyoutput\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\legacyoutput\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\lists\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\lists\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\media\css\media.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\media\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\media\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\media\js\embed.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\media\js\media.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\media\langs\en_dlg.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\media\media.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\media\moxieplayer.swf" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\nonbreaking\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\nonbreaking\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\noneditable\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\noneditable\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\pagebreak\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\pagebreak\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\paste\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\paste\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\paste\js\pastetext.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\paste\js\pasteword.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\paste\langs\en_dlg.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\paste\pastetext.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\paste\pasteword.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\preview\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\preview\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\preview\example.html" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\preview\jscripts\embed.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\preview\preview.html" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\print\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\print\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\save\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\save\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\searchreplace\css\searchreplace.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\searchreplace\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\searchreplace\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\searchreplace\js\searchreplace.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\searchreplace\langs\en_dlg.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\searchreplace\searchreplace.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\spellchecker\css\content.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\spellchecker\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\spellchecker\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\spellchecker\img\wline.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\style\css\props.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\style\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\style\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\style\js\props.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\style\langs\en_dlg.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\style\props.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\style\readme.txt" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\images\syntaxhighlighter.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\langs\en.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shAutoloader.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushAppleScript.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushAS3.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushBash.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushColdFusion.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushCpp.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushCSharp.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushCss.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushDelphi.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushDiff.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushErlang.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushGroovy.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushHaxe.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushJava.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushJavaFX.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushJScript.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushPerl.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushPhp.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushPlain.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushPowerShell.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushPython.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushRuby.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushSass.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushScala.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushSql.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushVb.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shBrushXml.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shCore.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\shLegacy.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\syntaxhighlighter.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\scripts\XRegExp.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\shActivator.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\styles\shCore.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\styles\shCoreDefault.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\styles\shCoreDjango.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\styles\shCoreEclipse.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\styles\shCoreEmacs.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\styles\shCoreFadeToGrey.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\styles\shCoreMDUltra.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\styles\shCoreMidnight.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\styles\shCoreRDark.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\styles\shThemeAppleScript.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\styles\shThemeDefault.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\styles\shThemeDjango.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\styles\shThemeEclipse.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\styles\shThemeEmacs.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\styles\shThemeFadeToGrey.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\styles\shThemeMDUltra.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\styles\shThemeMidnight.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\styles\shThemeRDark.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\styles\syntaxhighlighter.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\syntaxhighlighter.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\tabfocus\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\tabfocus\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\table\cell.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\table\css\cell.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\table\css\row.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\table\css\table.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\table\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\table\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\table\js\cell.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\table\js\merge_cells.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\table\js\row.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\table\js\table.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\table\langs\en_dlg.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\table\merge_cells.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\table\row.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\table\table.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\template\blank.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\template\css\template.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\template\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\template\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\template\js\template.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\template\langs\en_dlg.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\template\template.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\visualblocks\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\visualblocks\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\visualchars\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\visualchars\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\wordcount\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\wordcount\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\xhtmlxtras\abbr.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\xhtmlxtras\acronym.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\xhtmlxtras\attributes.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\xhtmlxtras\cite.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\xhtmlxtras\css\attributes.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\xhtmlxtras\css\popup.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\xhtmlxtras\del.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\xhtmlxtras\editor_plugin.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\xhtmlxtras\editor_plugin_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\xhtmlxtras\ins.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\xhtmlxtras\js\abbr.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\xhtmlxtras\js\acronym.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\xhtmlxtras\js\attributes.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\xhtmlxtras\js\cite.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\xhtmlxtras\js\del.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\xhtmlxtras\js\element_common.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\xhtmlxtras\js\ins.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\plugins\xhtmlxtras\langs\en_dlg.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\about.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\anchor.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\charmap.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\color_picker.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\editor_template.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\editor_template_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\image.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\img\colorpicker.jpg" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\img\flash.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\img\icons.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\img\iframe.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\img\pagebreak.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\img\quicktime.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\img\realmedia.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\img\shockwave.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\img\trans.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\img\video.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\img\windowsmedia.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\js\about.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\js\anchor.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\js\charmap.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\js\color_picker.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\js\image.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\js\link.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\js\source_editor.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\langs\en.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\langs\en_dlg.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\link.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\shortcuts.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\default\content.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\default\dialog.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\default\img\buttons.png" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\default\img\items.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\default\img\menu_arrow.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\default\img\menu_check.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\default\img\progress.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\default\img\tabs.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\default\ui.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\highcontrast\content.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\highcontrast\dialog.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\highcontrast\ui.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\o2k7\content.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\o2k7\dialog.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\o2k7\img\button_bg.png" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\o2k7\img\button_bg_black.png" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\o2k7\img\button_bg_silver.png" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\o2k7\ui.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\o2k7\ui_black.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\skins\o2k7\ui_silver.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\advanced\source_editor.htm" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\simple\editor_template.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\simple\editor_template_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\simple\img\icons.gif" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\simple\langs\en.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\simple\skins\default\content.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\simple\skins\default\ui.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\simple\skins\o2k7\content.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\simple\skins\o2k7\img\button_bg.png" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\themes\simple\skins\o2k7\ui.css" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\tiny_mce.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\tiny_mce_popup.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\tiny_mce_src.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\utils\editable_selects.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\utils\form_utils.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\utils\mctabs.js" />
+    <Content Include="Blog\editors\tiny_mce_3_5_8\utils\validate.js" />
+    <Content Include="Blog\error.aspx" />
+    <Content Include="Blog\error404.aspx" />
+    <Content Include="Blog\Modules\QuickNotes\Images\add.png" />
+    <Content Include="Blog\Modules\QuickNotes\Images\dn.png" />
+    <Content Include="Blog\Modules\QuickNotes\Images\folder-50.png" />
+    <Content Include="Blog\Modules\QuickNotes\Images\folder.png" />
+    <Content Include="Blog\Modules\QuickNotes\Images\note-50.png" />
+    <Content Include="Blog\Modules\QuickNotes\Images\note.png" />
+    <Content Include="Blog\Modules\QuickNotes\Images\tool-50.png" />
+    <Content Include="Blog\Modules\QuickNotes\Images\tool.png" />
+    <Content Include="Blog\Modules\QuickNotes\Images\up.png" />
+    <Content Include="Blog\Modules\QuickNotes\Qnotes.asmx" />
+    <Content Include="Blog\Modules\QuickNotes\Qnotes.css" />
+    <Content Include="Blog\Modules\QuickNotes\Templates\List.htm" />
+    <Content Include="Blog\Modules\QuickNotes\Templates\Note.htm" />
+    <Content Include="Blog\Modules\QuickNotes\Templates\Panel.htm" />
+    <Content Include="Blog\Modules\QuickNotes\Templates\Settings.htm" />
+    <Content Include="Blog\page.aspx" />
+    <Content Include="Blog\pics\ajax-loader.gif" />
+    <Content Include="Blog\pics\apml.png" />
+    <Content Include="Blog\pics\be-logo.jpg" />
+    <Content Include="Blog\pics\benTag24.png" />
+    <Content Include="Blog\pics\bg-md.jpg" />
+    <Content Include="Blog\pics\bg-slice.jpg" />
+    <Content Include="Blog\pics\blogengine.ico" />
+    <Content Include="Blog\pics\bx-slice.jpg" />
+    <Content Include="Blog\pics\down_arrow_small.gif" />
+    <Content Include="Blog\pics\flags\ad.png" />
+    <Content Include="Blog\pics\flags\ae.png" />
+    <Content Include="Blog\pics\flags\af.png" />
+    <Content Include="Blog\pics\flags\ag.png" />
+    <Content Include="Blog\pics\flags\ai.png" />
+    <Content Include="Blog\pics\flags\al.png" />
+    <Content Include="Blog\pics\flags\am.png" />
+    <Content Include="Blog\pics\flags\an.png" />
+    <Content Include="Blog\pics\flags\ao.png" />
+    <Content Include="Blog\pics\flags\ar.png" />
+    <Content Include="Blog\pics\flags\as.png" />
+    <Content Include="Blog\pics\flags\at.png" />
+    <Content Include="Blog\pics\flags\au.png" />
+    <Content Include="Blog\pics\flags\aw.png" />
+    <Content Include="Blog\pics\flags\ax.png" />
+    <Content Include="Blog\pics\flags\az.png" />
+    <Content Include="Blog\pics\flags\ba.png" />
+    <Content Include="Blog\pics\flags\bb.png" />
+    <Content Include="Blog\pics\flags\bd.png" />
+    <Content Include="Blog\pics\flags\be.png" />
+    <Content Include="Blog\pics\flags\bf.png" />
+    <Content Include="Blog\pics\flags\bg.png" />
+    <Content Include="Blog\pics\flags\bh.png" />
+    <Content Include="Blog\pics\flags\bi.png" />
+    <Content Include="Blog\pics\flags\bj.png" />
+    <Content Include="Blog\pics\flags\bm.png" />
+    <Content Include="Blog\pics\flags\bn.png" />
+    <Content Include="Blog\pics\flags\bo.png" />
+    <Content Include="Blog\pics\flags\br.png" />
+    <Content Include="Blog\pics\flags\bs.png" />
+    <Content Include="Blog\pics\flags\bt.png" />
+    <Content Include="Blog\pics\flags\bv.png" />
+    <Content Include="Blog\pics\flags\bw.png" />
+    <Content Include="Blog\pics\flags\by.png" />
+    <Content Include="Blog\pics\flags\bz.png" />
+    <Content Include="Blog\pics\flags\ca.png" />
+    <Content Include="Blog\pics\flags\cc.png" />
+    <Content Include="Blog\pics\flags\cd.png" />
+    <Content Include="Blog\pics\flags\cf.png" />
+    <Content Include="Blog\pics\flags\cg.png" />
+    <Content Include="Blog\pics\flags\ch.png" />
+    <Content Include="Blog\pics\flags\ci.png" />
+    <Content Include="Blog\pics\flags\ck.png" />
+    <Content Include="Blog\pics\flags\cl.png" />
+    <Content Include="Blog\pics\flags\cm.png" />
+    <Content Include="Blog\pics\flags\cn.png" />
+    <Content Include="Blog\pics\flags\co.png" />
+    <Content Include="Blog\pics\flags\cr.png" />
+    <Content Include="Blog\pics\flags\cs.png" />
+    <Content Include="Blog\pics\flags\cu.png" />
+    <Content Include="Blog\pics\flags\cv.png" />
+    <Content Include="Blog\pics\flags\cx.png" />
+    <Content Include="Blog\pics\flags\cy.png" />
+    <Content Include="Blog\pics\flags\cz.png" />
+    <Content Include="Blog\pics\flags\de.png" />
+    <Content Include="Blog\pics\flags\dj.png" />
+    <Content Include="Blog\pics\flags\dk.png" />
+    <Content Include="Blog\pics\flags\dm.png" />
+    <Content Include="Blog\pics\flags\do.png" />
+    <Content Include="Blog\pics\flags\dz.png" />
+    <Content Include="Blog\pics\flags\ec.png" />
+    <Content Include="Blog\pics\flags\ee.png" />
+    <Content Include="Blog\pics\flags\eg.png" />
+    <Content Include="Blog\pics\flags\eh.png" />
+    <Content Include="Blog\pics\flags\er.png" />
+    <Content Include="Blog\pics\flags\es.png" />
+    <Content Include="Blog\pics\flags\et.png" />
+    <Content Include="Blog\pics\flags\fam.png" />
+    <Content Include="Blog\pics\flags\fi.png" />
+    <Content Include="Blog\pics\flags\fj.png" />
+    <Content Include="Blog\pics\flags\fk.png" />
+    <Content Include="Blog\pics\flags\fm.png" />
+    <Content Include="Blog\pics\flags\fo.png" />
+    <Content Include="Blog\pics\flags\fr.png" />
+    <Content Include="Blog\pics\flags\ga.png" />
+    <Content Include="Blog\pics\flags\gb.png" />
+    <Content Include="Blog\pics\flags\gd.png" />
+    <Content Include="Blog\pics\flags\ge.png" />
+    <Content Include="Blog\pics\flags\gf.png" />
+    <Content Include="Blog\pics\flags\gh.png" />
+    <Content Include="Blog\pics\flags\gi.png" />
+    <Content Include="Blog\pics\flags\gl.png" />
+    <Content Include="Blog\pics\flags\gm.png" />
+    <Content Include="Blog\pics\flags\gn.png" />
+    <Content Include="Blog\pics\flags\gp.png" />
+    <Content Include="Blog\pics\flags\gq.png" />
+    <Content Include="Blog\pics\flags\gr.png" />
+    <Content Include="Blog\pics\flags\gs.png" />
+    <Content Include="Blog\pics\flags\gt.png" />
+    <Content Include="Blog\pics\flags\gu.png" />
+    <Content Include="Blog\pics\flags\gw.png" />
+    <Content Include="Blog\pics\flags\gy.png" />
+    <Content Include="Blog\pics\flags\hk.png" />
+    <Content Include="Blog\pics\flags\hm.png" />
+    <Content Include="Blog\pics\flags\hn.png" />
+    <Content Include="Blog\pics\flags\hr.png" />
+    <Content Include="Blog\pics\flags\ht.png" />
+    <Content Include="Blog\pics\flags\hu.png" />
+    <Content Include="Blog\pics\flags\id.png" />
+    <Content Include="Blog\pics\flags\ie.png" />
+    <Content Include="Blog\pics\flags\il.png" />
+    <Content Include="Blog\pics\flags\in.png" />
+    <Content Include="Blog\pics\flags\io.png" />
+    <Content Include="Blog\pics\flags\iq.png" />
+    <Content Include="Blog\pics\flags\ir.png" />
+    <Content Include="Blog\pics\flags\is.png" />
+    <Content Include="Blog\pics\flags\it.png" />
+    <Content Include="Blog\pics\flags\jm.png" />
+    <Content Include="Blog\pics\flags\jo.png" />
+    <Content Include="Blog\pics\flags\jp.png" />
+    <Content Include="Blog\pics\flags\ke.png" />
+    <Content Include="Blog\pics\flags\kg.png" />
+    <Content Include="Blog\pics\flags\kh.png" />
+    <Content Include="Blog\pics\flags\ki.png" />
+    <Content Include="Blog\pics\flags\km.png" />
+    <Content Include="Blog\pics\flags\kn.png" />
+    <Content Include="Blog\pics\flags\kp.png" />
+    <Content Include="Blog\pics\flags\kr.png" />
+    <Content Include="Blog\pics\flags\kw.png" />
+    <Content Include="Blog\pics\flags\ky.png" />
+    <Content Include="Blog\pics\flags\kz.png" />
+    <Content Include="Blog\pics\flags\la.png" />
+    <Content Include="Blog\pics\flags\lb.png" />
+    <Content Include="Blog\pics\flags\lc.png" />
+    <Content Include="Blog\pics\flags\li.png" />
+    <Content Include="Blog\pics\flags\lk.png" />
+    <Content Include="Blog\pics\flags\lr.png" />
+    <Content Include="Blog\pics\flags\ls.png" />
+    <Content Include="Blog\pics\flags\lt.png" />
+    <Content Include="Blog\pics\flags\lu.png" />
+    <Content Include="Blog\pics\flags\lv.png" />
+    <Content Include="Blog\pics\flags\ly.png" />
+    <Content Include="Blog\pics\flags\ma.png" />
+    <Content Include="Blog\pics\flags\mc.png" />
+    <Content Include="Blog\pics\flags\md.png" />
+    <Content Include="Blog\pics\flags\me.png" />
+    <Content Include="Blog\pics\flags\mg.png" />
+    <Content Include="Blog\pics\flags\mh.png" />
+    <Content Include="Blog\pics\flags\mk.png" />
+    <Content Include="Blog\pics\flags\ml.png" />
+    <Content Include="Blog\pics\flags\mm.png" />
+    <Content Include="Blog\pics\flags\mn.png" />
+    <Content Include="Blog\pics\flags\mo.png" />
+    <Content Include="Blog\pics\flags\mp.png" />
+    <Content Include="Blog\pics\flags\mq.png" />
+    <Content Include="Blog\pics\flags\mr.png" />
+    <Content Include="Blog\pics\flags\ms.png" />
+    <Content Include="Blog\pics\flags\mt.png" />
+    <Content Include="Blog\pics\flags\mu.png" />
+    <Content Include="Blog\pics\flags\mv.png" />
+    <Content Include="Blog\pics\flags\mw.png" />
+    <Content Include="Blog\pics\flags\mx.png" />
+    <Content Include="Blog\pics\flags\my.png" />
+    <Content Include="Blog\pics\flags\mz.png" />
+    <Content Include="Blog\pics\flags\na.png" />
+    <Content Include="Blog\pics\flags\nc.png" />
+    <Content Include="Blog\pics\flags\ne.png" />
+    <Content Include="Blog\pics\flags\nf.png" />
+    <Content Include="Blog\pics\flags\ng.png" />
+    <Content Include="Blog\pics\flags\ni.png" />
+    <Content Include="Blog\pics\flags\nl.png" />
+    <Content Include="Blog\pics\flags\no.png" />
+    <Content Include="Blog\pics\flags\np.png" />
+    <Content Include="Blog\pics\flags\nr.png" />
+    <Content Include="Blog\pics\flags\nu.png" />
+    <Content Include="Blog\pics\flags\nz.png" />
+    <Content Include="Blog\pics\flags\om.png" />
+    <Content Include="Blog\pics\flags\pa.png" />
+    <Content Include="Blog\pics\flags\pe.png" />
+    <Content Include="Blog\pics\flags\pf.png" />
+    <Content Include="Blog\pics\flags\pg.png" />
+    <Content Include="Blog\pics\flags\ph.png" />
+    <Content Include="Blog\pics\flags\pk.png" />
+    <Content Include="Blog\pics\flags\pl.png" />
+    <Content Include="Blog\pics\flags\pm.png" />
+    <Content Include="Blog\pics\flags\pn.png" />
+    <Content Include="Blog\pics\flags\pr.png" />
+    <Content Include="Blog\pics\flags\ps.png" />
+    <Content Include="Blog\pics\flags\pt.png" />
+    <Content Include="Blog\pics\flags\pw.png" />
+    <Content Include="Blog\pics\flags\py.png" />
+    <Content Include="Blog\pics\flags\qa.png" />
+    <Content Include="Blog\pics\flags\re.png" />
+    <Content Include="Blog\pics\flags\ro.png" />
+    <Content Include="Blog\pics\flags\rs.png" />
+    <Content Include="Blog\pics\flags\ru.png" />
+    <Content Include="Blog\pics\flags\rw.png" />
+    <Content Include="Blog\pics\flags\sa.png" />
+    <Content Include="Blog\pics\flags\sb.png" />
+    <Content Include="Blog\pics\flags\sc.png" />
+    <Content Include="Blog\pics\flags\sd.png" />
+    <Content Include="Blog\pics\flags\se.png" />
+    <Content Include="Blog\pics\flags\sg.png" />
+    <Content Include="Blog\pics\flags\sh.png" />
+    <Content Include="Blog\pics\flags\si.png" />
+    <Content Include="Blog\pics\flags\sj.png" />
+    <Content Include="Blog\pics\flags\sk.png" />
+    <Content Include="Blog\pics\flags\sl.png" />
+    <Content Include="Blog\pics\flags\sm.png" />
+    <Content Include="Blog\pics\flags\sn.png" />
+    <Content Include="Blog\pics\flags\so.png" />
+    <Content Include="Blog\pics\flags\sr.png" />
+    <Content Include="Blog\pics\flags\st.png" />
+    <Content Include="Blog\pics\flags\sv.png" />
+    <Content Include="Blog\pics\flags\sy.png" />
+    <Content Include="Blog\pics\flags\sz.png" />
+    <Content Include="Blog\pics\flags\tc.png" />
+    <Content Include="Blog\pics\flags\td.png" />
+    <Content Include="Blog\pics\flags\tf.png" />
+    <Content Include="Blog\pics\flags\tg.png" />
+    <Content Include="Blog\pics\flags\th.png" />
+    <Content Include="Blog\pics\flags\tj.png" />
+    <Content Include="Blog\pics\flags\tk.png" />
+    <Content Include="Blog\pics\flags\tl.png" />
+    <Content Include="Blog\pics\flags\tm.png" />
+    <Content Include="Blog\pics\flags\tn.png" />
+    <Content Include="Blog\pics\flags\to.png" />
+    <Content Include="Blog\pics\flags\tr.png" />
+    <Content Include="Blog\pics\flags\tt.png" />
+    <Content Include="Blog\pics\flags\tv.png" />
+    <Content Include="Blog\pics\flags\tw.png" />
+    <Content Include="Blog\pics\flags\tz.png" />
+    <Content Include="Blog\pics\flags\ua.png" />
+    <Content Include="Blog\pics\flags\ug.png" />
+    <Content Include="Blog\pics\flags\um.png" />
+    <Content Include="Blog\pics\flags\us.png" />
+    <Content Include="Blog\pics\flags\uy.png" />
+    <Content Include="Blog\pics\flags\uz.png" />
+    <Content Include="Blog\pics\flags\va.png" />
+    <Content Include="Blog\pics\flags\vc.png" />
+    <Content Include="Blog\pics\flags\ve.png" />
+    <Content Include="Blog\pics\flags\vg.png" />
+    <Content Include="Blog\pics\flags\vi.png" />
+    <Content Include="Blog\pics\flags\vn.png" />
+    <Content Include="Blog\pics\flags\vu.png" />
+    <Content Include="Blog\pics\flags\wf.png" />
+    <Content Include="Blog\pics\flags\ws.png" />
+    <Content Include="Blog\pics\flags\ye.png" />
+    <Content Include="Blog\pics\flags\yt.png" />
+    <Content Include="Blog\pics\flags\za.png" />
+    <Content Include="Blog\pics\flags\zm.png" />
+    <Content Include="Blog\pics\flags\zw.png" />
+    <Content Include="Blog\pics\logo.png" />
+    <Content Include="Blog\pics\mail.gif" />
+    <Content Include="Blog\pics\marker_bottom.gif" />
+    <Content Include="Blog\pics\marker_middle.gif" />
+    <Content Include="Blog\pics\marker_top.gif" />
+    <Content Include="Blog\pics\noavatar.jpg" />
+    <Content Include="Blog\pics\opml.png" />
+    <Content Include="Blog\pics\page_white_code.png" />
+    <Content Include="Blog\pics\pixel.png" />
+    <Content Include="Blog\pics\remote.gif" />
+    <Content Include="Blog\pics\reply-arrow.gif" />
+    <Content Include="Blog\pics\rssButton.gif" />
+    <Content Include="Blog\pics\rssButton.png" />
+    <Content Include="Blog\pics\star_small.gif" />
+    <Content Include="Blog\pics\success.png" />
+    <Content Include="Blog\pics\Theme.png" />
+    <Content Include="Blog\pics\up_arrow_small.gif" />
+    <Content Include="Blog\pics\warning.png" />
+    <Content Include="Blog\pics\Widget.png" />
+    <Content Include="Blog\pics\wrench84watermark.png" />
+    <Content Include="Blog\pics\wrenchicon16.png" />
+    <Content Include="Blog\pics\xfn\colleague.gif" />
+    <Content Include="Blog\pics\xfn\colleagueMet.gif" />
+    <Content Include="Blog\pics\xfn\contact.gif" />
+    <Content Include="Blog\pics\xfn\contactMet.gif" />
+    <Content Include="Blog\pics\xfn\me.gif" />
+    <Content Include="Blog\pics\xfn\sweet.gif" />
+    <Content Include="Blog\pics\xfn\sweetMet.gif" />
+    <Content Include="Blog\post.aspx" />
+    <Content Include="Blog\robots.txt" />
+    <Content Include="Blog\Scripts\App\qnotes.js" />
+    <Content Include="Blog\Scripts\App\widget.js" />
+    <Content Include="Blog\Scripts\Auto\01-jquery-1.9.1.min.js" />
+    <Content Include="Blog\Scripts\Auto\02-jquery.cookie.js" />
+    <Content Include="Blog\Scripts\Auto\04-jquery-jtemplates.js" />
+    <Content Include="Blog\Scripts\Auto\05-json2.min.js" />
+    <Content Include="Blog\Scripts\Auto\blog.js" />
+    <Content Include="Blog\Scripts\jquery-1.8.2.js" />
+    <Content Include="Blog\Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Blog\Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Blog\Scripts\jquery-1.9.1.js" />
+    <Content Include="Blog\Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Blog\Scripts\jquery-jtemplates.js" />
+    <Content Include="Blog\Scripts\jquery-jtemplates.min.js" />
+    <Content Include="Blog\Scripts\jquery.cookie.js" />
+    <Content Include="Blog\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Blog\Scripts\jquery.validate.js" />
+    <Content Include="Blog\Scripts\jquery.validate.min.js" />
+    <Content Include="Blog\Scripts\jQuery\01-jquery-1.9.1.min.js" />
+    <Content Include="Blog\Scripts\jQuery\02-jquery.cookie.js" />
+    <Content Include="Blog\Scripts\jQuery\03-jquery.validate.min.js" />
+    <Content Include="Blog\Scripts\jQuery\04-jquery-jtemplates.js" />
+    <Content Include="Blog\Scripts\jQuery\05-json2.min.js" />
+    <Content Include="Blog\Scripts\json2.js" />
+    <Content Include="Blog\Scripts\json2.min.js" />
+    <Content Include="Blog\Scripts\mediaelement\background.png" />
+    <Content Include="Blog\Scripts\mediaelement\bigplay.png" />
+    <Content Include="Blog\Scripts\mediaelement\controls.png" />
+    <Content Include="Blog\Scripts\mediaelement\flashmediaelement.swf" />
+    <Content Include="Blog\Scripts\mediaelement\mediaelement.js" />
+    <Content Include="Blog\Scripts\mediaelement\mediaelement.min.js" />
+    <Content Include="Blog\Scripts\mediaelement\mediaelementplayer.css" />
+    <Content Include="Blog\Scripts\mediaelement\mediaelementplayer.js" />
+    <Content Include="Blog\Scripts\mediaelement\mediaelementplayer.min.css" />
+    <Content Include="Blog\Scripts\mediaelement\mediaelementplayer.min.js" />
+    <Content Include="Blog\Scripts\mediaelement\silverlightmediaelement.xap" />
+    <Content Include="Blog\search.aspx" />
+    <Content Include="Blog\setup\Mono\ReadMe.txt" />
+    <Content Include="Blog\setup\MySQL\MySQLSetup1.4.5.0.sql" />
+    <Content Include="Blog\setup\MySQL\MySQLSetup1.5.0.sql" />
+    <Content Include="Blog\setup\MySQL\MySQLSetup1.6.0.sql" />
+    <Content Include="Blog\setup\MySQL\MySQLSetup2.0.0.sql" />
+    <Content Include="Blog\setup\MySQL\MySQLSetup2.5.0.sql" />
+    <Content Include="Blog\setup\MySQL\MySQLSetup2.6.0.sql" />
+    <Content Include="Blog\setup\MySQL\MySQLSetup2.7.0.sql" />
+    <Content Include="Blog\setup\MySQL\MySQLSetup2.8.0.sql" />
+    <Content Include="Blog\setup\MySQL\MySQLUpgradeFrom1.5To1.6.sql" />
+    <Content Include="Blog\setup\MySQL\MySQLUpgradeFrom1.6To2.0.sql" />
+    <Content Include="Blog\setup\MySQL\MySQLUpgradeFrom2.0To2.5.sql" />
+    <Content Include="Blog\setup\MySQL\MySQLUpgradeFrom2.5To2.6.sql" />
+    <Content Include="Blog\setup\MySQL\MySQLUpgradeTo1.4.5.0From1.4.0.0.sql" />
+    <Content Include="Blog\setup\MySQL\MySQLUpgradeTo1.5.0From1.4.5.sql" />
+    <Content Include="Blog\setup\MySQL\ReadMe.txt" />
+    <Content Include="Blog\setup\ReadMe.txt" />
+    <Content Include="Blog\setup\SQLite\ReadMe.txt" />
+    <Content Include="Blog\setup\SQLite\SQLiteUpgradeFrom1.4.5.0To1.4.0.0.txt" />
+    <Content Include="Blog\setup\SQLite\SQLiteUpgradeFrom1.5To1.6.txt" />
+    <Content Include="Blog\setup\SQLite\SQLiteUpgradeFrom1.6To2.0.txt" />
+    <Content Include="Blog\setup\SQLite\SQLiteUpgradeFrom2.0To2.5.txt" />
+    <Content Include="Blog\setup\SQLite\SQLiteUpgradeFrom2.5To2.6.txt" />
+    <Content Include="Blog\setup\SQLite\SQLiteUpgradeTo1.5.0From1.4.5.txt" />
+    <Content Include="Blog\setup\SQLServer\MSSQLSetup1.4.5.0.sql" />
+    <Content Include="Blog\setup\SQLServer\MSSQLSetup1.5.0.0.sql" />
+    <Content Include="Blog\setup\SQLServer\MSSQLSetup1.6.0.0.sql" />
+    <Content Include="Blog\setup\SQLServer\MSSQLSetup2.0.0.0.sql" />
+    <Content Include="Blog\setup\SQLServer\MSSQLSetup2.5.0.0.sql" />
+    <Content Include="Blog\setup\SQLServer\MSSQLSetup2.6.0.0.sql" />
+    <Content Include="Blog\setup\SQLServer\MSSQLSetup2.7.0.0.sql" />
+    <Content Include="Blog\setup\SQLServer\MSSQLSetup2.8.0.0.sql" />
+    <Content Include="Blog\setup\SQLServer\MSSQLUpgradeFrom1.5To1.6.sql" />
+    <Content Include="Blog\setup\SQLServer\MSSQLUpgradeFrom1.6To2.0.sql" />
+    <Content Include="Blog\setup\SQLServer\MSSQLUpgradeFrom2.0to2.5.sql" />
+    <Content Include="Blog\setup\SQLServer\MSSQLUpgradeFrom2.5to2.6.sql" />
+    <Content Include="Blog\setup\SQLServer\MSSQLUpgradeTo1.4.5.0From1.3.x.sql" />
+    <Content Include="Blog\setup\SQLServer\MSSQLUpgradeTo1.4.5.0From1.4.0.0.sql" />
+    <Content Include="Blog\setup\SQLServer\MSSQLUpgradeTo1.5.0.0From1.4.5.0.sql" />
+    <Content Include="Blog\setup\SQLServer\ReadMe.txt" />
+    <Content Include="Blog\setup\SQL_CE\BlogEngine.sdf" />
+    <Content Include="Blog\setup\SQL_CE\ReadMe.txt" />
+    <Content Include="Blog\setup\SQL_CE\SQL_CE_Setup_2.0.sql" />
+    <Content Include="Blog\setup\SQL_CE\SQL_CE_Setup_2.5.sql" />
+    <Content Include="Blog\setup\SQL_CE\SQL_CE_Setup_2.6.sql" />
+    <Content Include="Blog\setup\SQL_CE\SQL_CE_Setup_2.7.sql" />
+    <Content Include="Blog\setup\SQL_CE\SQL_CE_Setup_2.8.sql" />
+    <Content Include="Blog\setup\SQL_CE\SQL_CE_UpgradeFrom2.0to2.5.sql" />
+    <Content Include="Blog\setup\SQL_CE\SQL_CE_UpgradeFrom2.5to2.6.sql" />
+    <Content Include="Blog\setup\TestFiles\sample.flv" />
+    <Content Include="Blog\setup\TestFiles\sample.png" />
+    <Content Include="Blog\setup\TestFiles\sample.txt" />
+    <Content Include="Blog\setup\VistaDB\ReadMe.txt" />
+    <Content Include="Blog\Templates\blogs.htm" />
+    <Content Include="Blog\Templates\commentrow.htm" />
+    <Content Include="Blog\Templates\comments.htm" />
+    <Content Include="Blog\Templates\customfilters.htm" />
+    <Content Include="Blog\Templates\editcomment.htm" />
+    <Content Include="Blog\Templates\FileManager.htm" />
+    <Content Include="Blog\Templates\packages.htm" />
+    <Content Include="Blog\Templates\pager.htm" />
+    <Content Include="Blog\Templates\pages.htm" />
+    <Content Include="Blog\Templates\posts.htm" />
+    <Content Include="Blog\Templates\profile.htm" />
+    <Content Include="Blog\Templates\profile2.htm" />
+    <Content Include="Blog\Templates\roles.htm" />
+    <Content Include="Blog\Templates\tags.htm" />
+    <Content Include="Blog\Templates\trash.htm" />
+    <Content Include="Blog\Templates\users.htm" />
+    <Content Include="Blog\tests\back.png" />
+    <Content Include="Blog\tests\Quixote.css" />
+    <Content Include="Blog\themes\Classic\CommentView.ascx" />
+    <Content Include="Blog\themes\Classic\download.png" />
+    <Content Include="Blog\themes\Classic\img\newsletter\bg.jpg" />
+    <Content Include="Blog\themes\Classic\img\newsletter\header.png" />
+    <Content Include="Blog\themes\Classic\img\newsletter\logo.png" />
+    <Content Include="Blog\themes\Classic\newsletter.html" />
+    <Content Include="Blog\themes\Classic\noavatar.jpg" />
+    <Content Include="Blog\themes\Classic\PostView.ascx" />
+    <Content Include="Blog\themes\Classic\style-min.css" />
+    <Content Include="Blog\themes\Classic\style.css" />
+    <Content Include="Blog\themes\Classic\theme.png" />
+    <Content Include="Blog\themes\Classic\theme.xml" />
+    <Content Include="Blog\themes\Classic\WidgetContainer.ascx" />
+    <Content Include="Blog\themes\Garland-Revisited\images\bg-content-left.png" />
+    <Content Include="Blog\themes\Garland-Revisited\images\bg-content-right.png" />
+    <Content Include="Blog\themes\Garland-Revisited\images\bg-content.png" />
+    <Content Include="Blog\themes\Garland-Revisited\images\bg-navigation-item-hover.png" />
+    <Content Include="Blog\themes\Garland-Revisited\images\bg-navigation-item.png" />
+    <Content Include="Blog\themes\Garland-Revisited\images\bg-navigation.png" />
+    <Content Include="Blog\themes\Garland-Revisited\images\bg-tab.png" />
+    <Content Include="Blog\themes\Garland-Revisited\images\blockquote.png" />
+    <Content Include="Blog\themes\Garland-Revisited\images\blockquote3-img.png" />
+    <Content Include="Blog\themes\Garland-Revisited\images\body.png" />
+    <Content Include="Blog\themes\Garland-Revisited\images\gradient-inner.png" />
+    <Content Include="Blog\themes\Garland-Revisited\images\menu-leaf.gif" />
+    <Content Include="Blog\themes\Garland-Revisited\images\user-admin.png" />
+    <Content Include="Blog\themes\Garland-Revisited\images\user-student.png" />
+    <Content Include="Blog\themes\Garland-Revisited\img\newsletter\bg.jpg" />
+    <Content Include="Blog\themes\Garland-Revisited\img\newsletter\header.png" />
+    <Content Include="Blog\themes\Garland-Revisited\img\newsletter\logo.png" />
+    <Content Include="Blog\themes\Garland-Revisited\newsletter.html" />
+    <Content Include="Blog\themes\Garland-Revisited\style.css" />
+    <Content Include="Blog\themes\Garland-Revisited\Theme.png" />
+    <Content Include="Blog\themes\Garland-Revisited\theme.xml" />
+    <Content Include="Blog\themes\Indigo\CommentView.ascx" />
+    <Content Include="Blog\themes\Indigo\img\author.gif" />
+    <Content Include="Blog\themes\Indigo\img\bg.gif" />
+    <Content Include="Blog\themes\Indigo\img\bgcode.gif" />
+    <Content Include="Blog\themes\Indigo\img\bgfooter.gif" />
+    <Content Include="Blog\themes\Indigo\img\bgmain.gif" />
+    <Content Include="Blog\themes\Indigo\img\comments.gif" />
+    <Content Include="Blog\themes\Indigo\img\li.gif" />
+    <Content Include="Blog\themes\Indigo\img\nav_li.gif" />
+    <Content Include="Blog\themes\Indigo\img\quote.gif" />
+    <Content Include="Blog\themes\Indigo\img\timeicon.gif" />
+    <Content Include="Blog\themes\Indigo\img\topleft.gif" />
+    <Content Include="Blog\themes\Indigo\PostView.ascx" />
+    <Content Include="Blog\themes\Indigo\style.css" />
+    <Content Include="Blog\themes\Indigo\Theme.png" />
+    <Content Include="Blog\themes\Indigo\theme.xml" />
+    <Content Include="Blog\themes\JQ-Mobile\Archive.aspx" />
+    <Content Include="Blog\themes\JQ-Mobile\CommentView.ascx" />
+    <Content Include="Blog\themes\JQ-Mobile\Contact.aspx" />
+    <Content Include="Blog\themes\JQ-Mobile\controls\CommentView.ascx" />
+    <Content Include="Blog\themes\JQ-Mobile\controls\Header.ascx" />
+    <Content Include="Blog\themes\JQ-Mobile\controls\MainHeader.ascx" />
+    <Content Include="Blog\themes\JQ-Mobile\controls\Pager.ascx" />
+    <Content Include="Blog\themes\JQ-Mobile\controls\PostList.ascx" />
+    <Content Include="Blog\themes\JQ-Mobile\logo.png" />
+    <Content Include="Blog\themes\JQ-Mobile\newsletter.html" />
+    <Content Include="Blog\themes\JQ-Mobile\Post.aspx" />
+    <Content Include="Blog\themes\JQ-Mobile\PostView.ascx" />
+    <Content Include="Blog\themes\JQ-Mobile\Readme.txt" />
+    <Content Include="Blog\themes\JQ-Mobile\Search.aspx" />
+    <Content Include="Blog\themes\JQ-Mobile\style.css" />
+    <Content Include="Blog\themes\JQ-Mobile\theme.png" />
+    <Content Include="Blog\themes\JQ-Mobile\theme.xml" />
+    <Content Include="Blog\themes\Mobile\arrow.gif" />
+    <Content Include="Blog\themes\Mobile\CommentView.ascx" />
+    <Content Include="Blog\themes\Mobile\PostView.ascx" />
+    <Content Include="Blog\themes\Mobile\style.css" />
+    <Content Include="Blog\themes\Mobile\Theme.png" />
+    <Content Include="Blog\themes\Mobile\theme.xml" />
+    <Content Include="Blog\themes\RazorHost\CommentView.ascx" />
+    <Content Include="Blog\themes\RazorHost\PostView.ascx" />
+    <Content Include="Blog\themes\RazorHost\WidgetContainer.ascx" />
+    <Content Include="Blog\themes\StandardRTL\CommentView.ascx" />
+    <Content Include="Blog\themes\StandardRTL\download.png" />
+    <Content Include="Blog\themes\StandardRTL\img\newsletter\bg.jpg" />
+    <Content Include="Blog\themes\StandardRTL\img\newsletter\header.png" />
+    <Content Include="Blog\themes\StandardRTL\img\newsletter\logo.png" />
+    <Content Include="Blog\themes\StandardRTL\newsletter.html" />
+    <Content Include="Blog\themes\StandardRTL\noavatar.jpg" />
+    <Content Include="Blog\themes\StandardRTL\PostView.ascx" />
+    <Content Include="Blog\themes\StandardRTL\style-min.css" />
+    <Content Include="Blog\themes\StandardRTL\style.css" />
+    <Content Include="Blog\themes\StandardRTL\theme.png" />
+    <Content Include="Blog\themes\StandardRTL\theme.xml" />
+    <Content Include="Blog\themes\StandardRTL\WidgetContainer.ascx" />
+    <Content Include="Blog\themes\Standard\CommentView.ascx" />
+    <Content Include="Blog\themes\Standard\img\body.jpg" />
+    <Content Include="Blog\themes\Standard\img\BtnSearch.png" />
+    <Content Include="Blog\themes\Standard\img\Footer.png" />
+    <Content Include="Blog\themes\Standard\img\HeaderBar.jpg" />
+    <Content Include="Blog\themes\Standard\img\Home.png" />
+    <Content Include="Blog\themes\Standard\img\newsletter\bg.jpg" />
+    <Content Include="Blog\themes\Standard\img\newsletter\header.png" />
+    <Content Include="Blog\themes\Standard\img\newsletter\logo.png" />
+    <Content Include="Blog\themes\Standard\img\RSS.png" />
+    <Content Include="Blog\themes\Standard\img\success.png" />
+    <Content Include="Blog\themes\Standard\include\core.css" />
+    <Content Include="Blog\themes\Standard\include\html5.js" />
+    <Content Include="Blog\themes\Standard\include\rtl.css" />
+    <Content Include="Blog\themes\Standard\include\styles.min.css" />
+    <Content Include="Blog\themes\Standard\newsletter.html" />
+    <Content Include="Blog\themes\Standard\PostView.ascx" />
+    <Content Include="Blog\themes\Standard\theme.png" />
+    <Content Include="Blog\themes\Standard\theme.xml" />
+    <Content Include="Blog\themes\Standard\WidgetContainer.ascx" />
+    <Content Include="Blog\themes\TitaniumX\CommentView.ascx" />
+    <Content Include="Blog\themes\TitaniumX\download.png" />
+    <Content Include="Blog\themes\TitaniumX\img\contentbg.png" />
+    <Content Include="Blog\themes\TitaniumX\img\menubg.png" />
+    <Content Include="Blog\themes\TitaniumX\img\newsletter\bg.jpg" />
+    <Content Include="Blog\themes\TitaniumX\img\newsletter\header.png" />
+    <Content Include="Blog\themes\TitaniumX\img\newsletter\logo.png" />
+    <Content Include="Blog\themes\TitaniumX\img\widgetbg.png" />
+    <Content Include="Blog\themes\TitaniumX\newsletter.html" />
+    <Content Include="Blog\themes\TitaniumX\PostView.ascx" />
+    <Content Include="Blog\themes\TitaniumX\style.css" />
+    <Content Include="Blog\themes\TitaniumX\theme.png" />
+    <Content Include="Blog\themes\TitaniumX\theme.xml" />
+    <Content Include="Blog\themes\TitaniumX\WidgetContainer.ascx" />
+    <Content Include="Blog\User controls\CommentView.ascx" />
+    <Content Include="Blog\User controls\PostList.ascx" />
+    <Content Include="Blog\widgets\Administration\screenshot.png" />
+    <Content Include="Blog\widgets\Administration\widget.ascx" />
+    <Content Include="Blog\widgets\Administration\widget.xml" />
+    <Content Include="Blog\widgets\AuthorList\edit.ascx" />
+    <Content Include="Blog\widgets\AuthorList\screenshot.png" />
+    <Content Include="Blog\widgets\AuthorList\widget.ascx" />
+    <Content Include="Blog\widgets\AuthorList\widget.xml" />
+    <Content Include="Blog\widgets\Blog List\screenshot.png" />
+    <Content Include="Blog\widgets\Blog List\widget.ascx" />
+    <Content Include="Blog\widgets\Blog List\widget.xml" />
+    <Content Include="Blog\widgets\BlogRoll\screenshot.png" />
+    <Content Include="Blog\widgets\BlogRoll\widget.ascx" />
+    <Content Include="Blog\widgets\BlogRoll\widget.xml" />
+    <Content Include="Blog\widgets\Calendar\screenshot.png" />
+    <Content Include="Blog\widgets\Calendar\widget.ascx" />
+    <Content Include="Blog\widgets\Calendar\widget.xml" />
+    <Content Include="Blog\widgets\Category list\edit.ascx" />
+    <Content Include="Blog\widgets\Category list\screenshot.png" />
+    <Content Include="Blog\widgets\Category list\widget.ascx" />
+    <Content Include="Blog\widgets\Category list\widget.xml" />
+    <Content Include="Blog\widgets\LinkList\edit.ascx" />
+    <Content Include="Blog\widgets\LinkList\screenshot.png" />
+    <Content Include="Blog\widgets\LinkList\widget.ascx" />
+    <Content Include="Blog\widgets\LinkList\widget.xml" />
+    <Content Include="Blog\widgets\Month List\edit.ascx" />
+    <Content Include="Blog\widgets\Month List\screenshot.png" />
+    <Content Include="Blog\widgets\Month List\widget.ascx" />
+    <Content Include="Blog\widgets\Month List\widget.xml" />
+    <Content Include="Blog\widgets\Most comments\edit.ascx" />
+    <Content Include="Blog\widgets\Most comments\screenshot.png" />
+    <Content Include="Blog\widgets\Most comments\widget.ascx" />
+    <Content Include="Blog\widgets\Most comments\widget.xml" />
+    <Content Include="Blog\widgets\Newsletter\edit.ascx" />
+    <Content Include="Blog\widgets\Newsletter\screenshot.png" />
+    <Content Include="Blog\widgets\Newsletter\widget.ascx" />
+    <Content Include="Blog\widgets\Newsletter\widget.xml" />
+    <Content Include="Blog\widgets\Page List\screenshot.png" />
+    <Content Include="Blog\widgets\Page List\widget.ascx" />
+    <Content Include="Blog\widgets\Page List\widget.xml" />
+    <Content Include="Blog\widgets\RecentComments\edit.ascx" />
+    <Content Include="Blog\widgets\RecentComments\screenshot.png" />
+    <Content Include="Blog\widgets\RecentComments\widget.ascx" />
+    <Content Include="Blog\widgets\RecentComments\widget.xml" />
+    <Content Include="Blog\widgets\RecentPosts\edit.ascx" />
+    <Content Include="Blog\widgets\RecentPosts\screenshot.png" />
+    <Content Include="Blog\widgets\RecentPosts\widget.ascx" />
+    <Content Include="Blog\widgets\RecentPosts\widget.xml" />
+    <Content Include="Blog\widgets\Search\screenshot.png" />
+    <Content Include="Blog\widgets\Search\widget.ascx" />
+    <Content Include="Blog\widgets\Search\widget.xml" />
+    <Content Include="Blog\widgets\Tag cloud\edit.ascx" />
+    <Content Include="Blog\widgets\Tag cloud\screenshot.png" />
+    <Content Include="Blog\widgets\Tag cloud\widget.ascx" />
+    <Content Include="Blog\widgets\Tag cloud\widget.xml" />
+    <Content Include="Blog\widgets\TextBox\edit.ascx" />
+    <Content Include="Blog\widgets\TextBox\screenshot.png" />
+    <Content Include="Blog\widgets\TextBox\widget.ascx" />
+    <Content Include="Blog\widgets\TextBox\widget.xml" />
+    <Content Include="Blog\widgets\Twitter\edit.ascx" />
+    <Content Include="Blog\widgets\Twitter\screenshot.png" />
+    <Content Include="Blog\widgets\Twitter\twitter.ico" />
+    <Content Include="Blog\widgets\Twitter\widget.ascx" />
+    <Content Include="Blog\widgets\Twitter\widget.xml" />
+    <Content Include="Blog\widgets\Visitor info\screenshot.png" />
+    <Content Include="Blog\widgets\Visitor info\widget.ascx" />
+    <Content Include="Blog\widgets\Visitor info\widget.xml" />
+    <Content Include="Blog\wlwmanifest.xml" />
     <Content Include="Control\CssLoader.ascx" />
     <Content Include="Control\JavaScriptLoader.ascx" />
     <Content Include="Control\PageComponent\MenuBarLoader.ascx" />
@@ -84,6 +1285,968 @@
     <Content Include="Upload\Image\Content\Icon\youtube_32.png" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\labels.af.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.af.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.ar.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.bg.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.bg.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.cs.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.cs.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.da.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.da.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.de.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.el-GR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.el-GR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.es.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.es.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.et.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.et.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.fa.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.fa.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.fi.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.fi.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.fr.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.he.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.he.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.hr.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.hr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.hu.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.hu.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.is.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.is.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.it.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.it.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.ja.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.ja.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.ko.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.ko.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.mk.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.mk.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.nl-be.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.nl-be.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.nl.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.nl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.no.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.no.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.pl.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.pl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.pt-BR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.pt-BR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.ru.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.sk.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.sk.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.sl.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.sl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.sq.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.sq.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.sv.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.sv.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.th.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.th.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.tr.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.tr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.uk.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.uk.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.vi-VN.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.vi-VN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.zh-CN.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.zh-CN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\labels.zh-TW.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels.zh-TW.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\Account\account.master.cs">
+      <DependentUpon>account.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\Account\account.master.designer.cs">
+      <DependentUpon>account.master</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\Account\change-password-success.aspx.cs">
+      <DependentUpon>change-password-success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\Account\change-password-success.aspx.designer.cs">
+      <DependentUpon>change-password-success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\Account\change-password.aspx.cs">
+      <DependentUpon>change-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\Account\change-password.aspx.designer.cs">
+      <DependentUpon>change-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\Account\create-blog.aspx.cs">
+      <DependentUpon>create-blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\Account\create-blog.aspx.designer.cs">
+      <DependentUpon>create-blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\Account\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\Account\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\Account\password-retrieval.aspx.cs">
+      <DependentUpon>password-retrieval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\Account\password-retrieval.aspx.designer.cs">
+      <DependentUpon>password-retrieval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\Account\register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\Account\register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\admin.master.cs">
+      <DependentUpon>admin.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\admin.master.designer.cs">
+      <DependentUpon>admin.master</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\AjaxHelper.aspx.cs">
+      <DependentUpon>AjaxHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\AjaxHelper.aspx.designer.cs">
+      <DependentUpon>AjaxHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Blogs.aspx.cs">
+      <DependentUpon>Blogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Blogs.aspx.designer.cs">
+      <DependentUpon>Blogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Comments\Approved.aspx.cs">
+      <DependentUpon>Approved.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Comments\Approved.aspx.designer.cs">
+      <DependentUpon>Approved.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Comments\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Comments\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Comments\Pending.aspx.cs">
+      <DependentUpon>Pending.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Comments\Pending.aspx.designer.cs">
+      <DependentUpon>Pending.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Comments\Spam.aspx.cs">
+      <DependentUpon>Spam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Comments\Spam.aspx.designer.cs">
+      <DependentUpon>Spam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Extensions\Settings.ascx.cs">
+      <DependentUpon>Settings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Extensions\Settings.ascx.designer.cs">
+      <DependentUpon>Settings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Extensions\Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Extensions\Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\FileManager\AjaxFileManager.aspx.cs">
+      <DependentUpon>AjaxFileManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\FileManager\AjaxFileManager.aspx.designer.cs">
+      <DependentUpon>AjaxFileManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\FileManager\FileManager.ascx.cs">
+      <DependentUpon>FileManager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\FileManager\FileManager.ascx.designer.cs">
+      <DependentUpon>FileManager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\FileManager\FileManager.aspx.cs">
+      <DependentUpon>FileManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\FileManager\FileManager.aspx.designer.cs">
+      <DependentUpon>FileManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\htmlEditor.ascx.cs">
+      <DependentUpon>htmlEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\htmlEditor.ascx.designer.cs">
+      <DependentUpon>htmlEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\menu.ascx.cs">
+      <DependentUpon>menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\menu.ascx.designer.cs">
+      <DependentUpon>menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Pages\EditPage.aspx.cs">
+      <DependentUpon>EditPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Pages\EditPage.aspx.designer.cs">
+      <DependentUpon>EditPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Pages\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Pages\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Pages\Pages.aspx.cs">
+      <DependentUpon>Pages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Pages\Pages.aspx.designer.cs">
+      <DependentUpon>Pages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Pages\RecaptchaLogViewer.aspx.cs">
+      <DependentUpon>RecaptchaLogViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Pages\RecaptchaLogViewer.aspx.designer.cs">
+      <DependentUpon>RecaptchaLogViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Posts\Add_entry.aspx.cs">
+      <DependentUpon>Add_entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Posts\Add_entry.aspx.designer.cs">
+      <DependentUpon>Add_entry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Posts\Categories.aspx.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Posts\Categories.aspx.designer.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Posts\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Posts\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Posts\Posts.aspx.cs">
+      <DependentUpon>Posts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Posts\Posts.aspx.designer.cs">
+      <DependentUpon>Posts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Posts\Tags.aspx.cs">
+      <DependentUpon>Tags.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Posts\Tags.aspx.designer.cs">
+      <DependentUpon>Tags.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\Advanced.aspx.cs">
+      <DependentUpon>Advanced.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\Advanced.aspx.designer.cs">
+      <DependentUpon>Advanced.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\Comments.aspx.cs">
+      <DependentUpon>Comments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\Comments.aspx.designer.cs">
+      <DependentUpon>Comments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\Email.aspx.cs">
+      <DependentUpon>Email.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\Email.aspx.designer.cs">
+      <DependentUpon>Email.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\Feed.aspx.cs">
+      <DependentUpon>Feed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\Feed.aspx.designer.cs">
+      <DependentUpon>Feed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\HeadTrack.aspx.cs">
+      <DependentUpon>HeadTrack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\HeadTrack.aspx.designer.cs">
+      <DependentUpon>HeadTrack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\PingServices.aspx.cs">
+      <DependentUpon>PingServices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\PingServices.aspx.designer.cs">
+      <DependentUpon>PingServices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\Rules.aspx.cs">
+      <DependentUpon>Rules.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Settings\Rules.aspx.designer.cs">
+      <DependentUpon>Rules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\tinyMCE.ascx.cs">
+      <DependentUpon>tinyMCE.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\tinyMCE.ascx.designer.cs">
+      <DependentUpon>tinyMCE.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Tracking\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Tracking\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Tracking\Pingbacks.aspx.cs">
+      <DependentUpon>Pingbacks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Tracking\Pingbacks.aspx.designer.cs">
+      <DependentUpon>Pingbacks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Tracking\referrers.aspx.cs">
+      <DependentUpon>referrers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Tracking\referrers.aspx.designer.cs">
+      <DependentUpon>referrers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Trash.aspx.cs">
+      <DependentUpon>Trash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Trash.aspx.designer.cs">
+      <DependentUpon>Trash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Users\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Users\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Users\Rights.aspx.cs">
+      <DependentUpon>Rights.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Users\Rights.aspx.designer.cs">
+      <DependentUpon>Rights.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Users\Roles.aspx.cs">
+      <DependentUpon>Roles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Users\Roles.aspx.designer.cs">
+      <DependentUpon>Roles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Users\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Users\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\WidgetEditor.aspx.cs">
+      <DependentUpon>WidgetEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\WidgetEditor.aspx.designer.cs">
+      <DependentUpon>WidgetEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Widgets\Blogroll.aspx.cs">
+      <DependentUpon>Blogroll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Widgets\Blogroll.aspx.designer.cs">
+      <DependentUpon>Blogroll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Widgets\Controls.aspx.cs">
+      <DependentUpon>Controls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Widgets\Controls.aspx.designer.cs">
+      <DependentUpon>Controls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\admin\Widgets\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\admin\Widgets\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\api\TagMiniView.aspx.cs">
+      <DependentUpon>TagMiniView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\api\TagMiniView.aspx.designer.cs">
+      <DependentUpon>TagMiniView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\archive.aspx.cs">
+      <DependentUpon>archive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\archive.aspx.designer.cs">
+      <DependentUpon>archive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\error404.aspx.cs">
+      <DependentUpon>error404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\error404.aspx.designer.cs">
+      <DependentUpon>error404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\page.aspx.cs">
+      <DependentUpon>page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\page.aspx.designer.cs">
+      <DependentUpon>page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\post.aspx.cs">
+      <DependentUpon>post.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\post.aspx.designer.cs">
+      <DependentUpon>post.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\search.aspx.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\search.aspx.designer.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\themes\Classic\site.master.cs">
+      <DependentUpon>site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\themes\Classic\site.master.designer.cs">
+      <DependentUpon>site.master</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\themes\Indigo\site.master.cs">
+      <DependentUpon>site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\themes\Indigo\site.master.designer.cs">
+      <DependentUpon>site.master</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\Archive.aspx.cs">
+      <DependentUpon>Archive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\Archive.aspx.designer.cs">
+      <DependentUpon>Archive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\controls\CommentView.ascx.cs">
+      <DependentUpon>CommentView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\controls\CommentView.ascx.designer.cs">
+      <DependentUpon>CommentView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\controls\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\controls\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\controls\MainHeader.ascx.cs">
+      <DependentUpon>MainHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\controls\MainHeader.ascx.designer.cs">
+      <DependentUpon>MainHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\controls\Pager.ascx.cs">
+      <DependentUpon>Pager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\controls\Pager.ascx.designer.cs">
+      <DependentUpon>Pager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\controls\PostList.ascx.cs">
+      <DependentUpon>PostList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\controls\PostList.ascx.designer.cs">
+      <DependentUpon>PostList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\Post.aspx.cs">
+      <DependentUpon>Post.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\Post.aspx.designer.cs">
+      <DependentUpon>Post.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\PostView.ascx.cs">
+      <DependentUpon>PostView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\PostView.ascx.designer.cs">
+      <DependentUpon>PostView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\site.master.cs">
+      <DependentUpon>site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\themes\JQ-Mobile\site.master.designer.cs">
+      <DependentUpon>site.master</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\themes\Mobile\site.master.cs">
+      <DependentUpon>site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\themes\Mobile\site.master.designer.cs">
+      <DependentUpon>site.master</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\themes\RazorHost\site.master.cs">
+      <DependentUpon>site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\themes\RazorHost\site.master.designer.cs">
+      <DependentUpon>site.master</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\themes\StandardRTL\site.master.cs">
+      <DependentUpon>site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\themes\StandardRTL\site.master.designer.cs">
+      <DependentUpon>site.master</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\themes\Standard\site.master.cs">
+      <DependentUpon>site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\themes\Standard\site.master.designer.cs">
+      <DependentUpon>site.master</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\themes\TitaniumX\site.master.cs">
+      <DependentUpon>site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\themes\TitaniumX\site.master.designer.cs">
+      <DependentUpon>site.master</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\User controls\CommentView.ascx.cs">
+      <DependentUpon>CommentView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\User controls\CommentView.ascx.designer.cs">
+      <DependentUpon>CommentView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\User controls\PostList.ascx.cs">
+      <DependentUpon>PostList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\User controls\PostList.ascx.designer.cs">
+      <DependentUpon>PostList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\Administration\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\Administration\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\AuthorList\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\AuthorList\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\AuthorList\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\AuthorList\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\Blog List\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\Blog List\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\BlogRoll\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\BlogRoll\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\Calendar\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\Calendar\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\Category list\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\Category list\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\Category list\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\Category list\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\LinkList\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\LinkList\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\LinkList\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\LinkList\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\Month List\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\Month List\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\Month List\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\Month List\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\Most comments\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\Most comments\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\Most comments\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\Most comments\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\Newsletter\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\Newsletter\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\Newsletter\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\Newsletter\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\Page List\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\Page List\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\RecentComments\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\RecentComments\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\RecentComments\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\RecentComments\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\RecentPosts\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\RecentPosts\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\RecentPosts\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\RecentPosts\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\Search\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\Search\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\Tag cloud\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\Tag cloud\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\Tag cloud\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\Tag cloud\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\TextBox\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\TextBox\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\TextBox\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\TextBox\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\Twitter\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\Twitter\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\Twitter\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\Twitter\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\widgets\Visitor info\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\widgets\Visitor info\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Control\CssLoader.ascx.cs">
       <DependentUpon>CssLoader.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -125,6 +2288,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Administrator\" />
+    <Folder Include="App_Data\files\2013\04\" />
     <Folder Include="Page\" />
     <Folder Include="Upload\Image\Thumb\" />
   </ItemGroup>
@@ -174,9 +2338,228 @@
       <Project>{62C37BAA-DB1B-4BBD-935D-894AF49CA52A}</Project>
       <Name>Artnman.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Blog.AppCode\Blog.AppCode.csproj">
+      <Project>{D01C3A79-532A-4A4B-AD0B-02ECABC78F48}</Project>
+      <Name>Blog.AppCode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BlogEngine.Core\BlogEngine.Core.csproj">
+      <Project>{9ED9914A-FB6E-4D21-8C71-9122E8C3076B}</Project>
+      <Name>BlogEngine.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Data\packages\JQ-Mobile.1.3.0\JQ-Mobile.1.3.0.nupkg" />
+    <Content Include="Blog\Account\account.master" />
+    <Content Include="Blog\Account\Logout.cshtml" />
+    <Content Include="Blog\Account\Web.Config" />
+    <Content Include="Blog\admin\admin.master" />
+    <Content Include="Blog\admin\Comments\Web.Config" />
+    <Content Include="Blog\admin\default.cshtml" />
+    <Content Include="Blog\admin\Extensions\default.cshtml" />
+    <Content Include="Blog\admin\Extensions\Editor.cshtml" />
+    <Content Include="Blog\admin\Extensions\Extensions.cshtml" />
+    <Content Include="Blog\admin\Extensions\SetStatus.cshtml" />
+    <Content Include="Blog\admin\Extensions\SetStatusForBlog.cshtml" />
+    <Content Include="Blog\admin\Extensions\Themes.cshtml" />
+    <Content Include="Blog\admin\Extensions\WidgetGallery.cshtml" />
+    <Content Include="Blog\admin\Extensions\Widgets.cshtml" />
+    <Content Include="Blog\admin\FileManager\FileUpload.ashx" />
+    <Content Include="Blog\admin\Pages\Web.Config" />
+    <Content Include="Blog\admin\Settings\_menu.cshtml" />
+    <None Include="Blog\admin\uploadify\uploadify.fla" />
+    <Content Include="Blog\admin\Users\Web.Config" />
+    <Content Include="Blog\admin\Web.Config" />
+    <Content Include="Blog\admin\_Layout.cshtml" />
+    <Content Include="Blog\admin\_menu.cshtml" />
+    <None Include="Blog\editors\tiny_mce_3_5_8\plugins\syntaxhighlighter\syntaxhighlighter.version" />
+    <Content Include="Blog\packages.config" />
+    <None Include="Blog\Scripts\jquery-1.9.1.min.map" />
+    <None Include="Blog\setup\Mono\mono_setup.sh" />
+    <Content Include="Blog\setup\MySQL\MySQLWeb.Config" />
+    <None Include="Blog\setup\SQLite\BlogEngine.s3db" />
+    <Content Include="Blog\setup\SQLite\SQLiteWeb.Config" />
+    <Content Include="Blog\setup\SQLServer\SQLServerWeb.Config" />
+    <Content Include="Blog\setup\SQL_CE\SQL_CE_Web.Config" />
+    <None Include="Blog\setup\VistaDB\BlogEngine.vdb3" />
+    <None Include="Blog\setup\VistaDB\BlogEngine.vdb4" />
+    <Content Include="Blog\setup\VistaDB\VistaDB.NET_4.0_Web.Config" />
+    <None Include="Blog\setup\VistaDB\VistaDBUpgradeTo1.5.0.0From1.4.5.0.vsql3" />
+    <None Include="Blog\setup\VistaDB\VistaDBUpgradeTo1.6From1.5.vsql3" />
+    <Content Include="Blog\setup\VistaDB\VistaDBWeb.Config" />
+    <Content Include="Blog\tests\avatar.cshtml" />
+    <Content Include="Blog\tests\default.cshtml" />
+    <Content Include="Blog\tests\packaging.cshtml" />
+    <Content Include="Blog\tests\pager.cshtml" />
+    <Content Include="Blog\tests\urlrewrite.cshtml" />
+    <Content Include="Blog\tests\_layout.cshtml" />
+    <Content Include="Blog\themes\Classic\site.master" />
+    <Content Include="Blog\themes\Garland-Revisited\CommentView.cshtml" />
+    <Content Include="Blog\themes\Garland-Revisited\PostView.cshtml" />
+    <Content Include="Blog\themes\Garland-Revisited\site.cshtml" />
+    <Content Include="Blog\themes\Garland-Revisited\WidgetContainer.cshtml" />
+    <Content Include="Blog\themes\Indigo\site.master" />
+    <Content Include="Blog\themes\JQ-Mobile\site.master" />
+    <Content Include="Blog\themes\Mobile\site.master" />
+    <Content Include="Blog\themes\RazorHost\page.cshtml" />
+    <Content Include="Blog\themes\RazorHost\site.master" />
+    <Content Include="Blog\themes\StandardRTL\site.master" />
+    <Content Include="Blog\themes\Standard\site.master" />
+    <Content Include="Blog\themes\TitaniumX\site.master" />
+    <Content Include="Blog\Web.sitemap" />
+    <Content Include="Blog\widgets\Visitor info\apmlchecker.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\labels.af.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.af.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.ar.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.ar.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.bg.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.bg.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.cs.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.cs.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.da.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.da.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.de.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.el-GR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.el-GR.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.es.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.es.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.et.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.et.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.fa.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.fa.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.fi.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.fi.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.fr.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.fr.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.he.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.he.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.hr.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.hr.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.hu.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.hu.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.is.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.is.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.it.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.it.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.ja.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.ja.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.ko.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.ko.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.mk.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.mk.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.nl-be.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.nl-be.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.nl.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.nl.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.no.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.no.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.pl.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.pl.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.pt-BR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.pt-BR.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.ru.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.ru.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.sk.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.sk.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.sl.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.sl.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.sq.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.sq.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.sv.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.sv.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.th.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.th.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.tr.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.tr.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.uk.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.uk.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.vi-VN.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.vi-VN.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.zh-CN.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.zh-CN.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\labels.zh-TW.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>labels.zh-TW.designer.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
