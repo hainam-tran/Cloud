@@ -67,8 +67,9 @@
     <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AjaxMin">
-      <HintPath>..\..\lib\ajaxminify\AjaxMin.dll</HintPath>
+    <Reference Include="AjaxMin, Version=4.6.3932.19636, Culture=neutral, PublicKeyToken=24297a69a7eae424, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\blogengine\AjaxMin.dll</HintPath>
     </Reference>
     <Reference Include="BlogML">
       <HintPath>..\..\lib\blogml\BlogML.dll</HintPath>
@@ -82,7 +83,7 @@
     </Reference>
     <Reference Include="NuGet.Core, Version=1.0.11220.104, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\nuget\NuGet.Core.dll</HintPath>
+      <HintPath>..\lib\blogengine\NuGet.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
