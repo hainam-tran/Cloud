@@ -108,8 +108,8 @@ namespace BlogEngine.Core.Web.Controls
                 ul.Attributes.Add("class", "menu");
                 _ulIdSet = true;
 
-                AddMenuItem(ul, Home, Utils.RelativeWebRoot + "default.aspx");
-                AddMenuItem(ul, Archive, Utils.RelativeWebRoot + "archive.aspx");
+                AddMenuItem(ul, Home, Utils.ApplicationRelativeWebRoot + "default.aspx");
+                AddMenuItem(ul, Archive, Utils.ApplicationRelativeWebRoot + "archive.aspx");
             }
 
             foreach (BlogEngine.Core.Page page in BlogEngine.Core.Page.Pages)
