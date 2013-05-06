@@ -33,11 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AjaxMin">
-      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\AjaxMin.dll</HintPath>
+    <Reference Include="AjaxMin, Version=4.6.3932.19636, Culture=neutral, PublicKeyToken=24297a69a7eae424, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\blogengine\AjaxMin.dll</HintPath>
     </Reference>
-    <Reference Include="BlogML">
-      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\BlogML.dll</HintPath>
+    <Reference Include="BlogML, Version=2.5.3.0, Culture=neutral, PublicKeyToken=8b11cb968f70ecec, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\blogengine\BlogML.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\ICSharpCode.SharpZipLib.dll</HintPath>
@@ -49,7 +51,7 @@
     </Reference>
     <Reference Include="NuGet.Core, Version=1.0.11220.104, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\NuGet.Core.dll</HintPath>
+      <HintPath>..\lib\blogengine\NuGet.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -58,26 +60,27 @@
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\System.Web.Helpers.dll</HintPath>
+      <HintPath>..\lib\blogengine\System.Web.Helpers.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Optimization">
-      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\System.Web.Optimization.dll</HintPath>
+    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\blogengine\System.Web.Optimization.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\System.Web.Razor.dll</HintPath>
+      <HintPath>..\lib\blogengine\System.Web.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\System.Web.WebPages.dll</HintPath>
+      <HintPath>..\lib\blogengine\System.Web.WebPages.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\System.Web.WebPages.Deployment.dll</HintPath>
+      <HintPath>..\lib\blogengine\System.Web.WebPages.Deployment.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\System.Web.WebPages.Razor.dll</HintPath>
+      <HintPath>..\lib\blogengine\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -89,8 +92,9 @@
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="WebGrease">
-      <HintPath>..\..\..\..\..\Code Library\SharedLibs\BlogEngine\WebGrease.dll</HintPath>
+    <Reference Include="WebGrease, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\blogengine\WebGrease.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

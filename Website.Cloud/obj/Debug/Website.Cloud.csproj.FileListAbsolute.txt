@@ -37,7 +37,6 @@ E:\Work\Artnman\Artnman\Cloud\Website.Cloud\bin\BlogEngine.Core.dll
 E:\Work\Artnman\Artnman\Cloud\Website.Cloud\bin\BlogML.dll
 E:\Work\Artnman\Artnman\Cloud\Website.Cloud\bin\ICSharpCode.SharpZipLib.dll
 E:\Work\Artnman\Artnman\Cloud\Website.Cloud\bin\NuGet.Core.dll
-E:\Work\Artnman\Artnman\Cloud\Website.Cloud\bin\System.Web.Helpers.dll
 E:\Work\Artnman\Artnman\Cloud\Website.Cloud\bin\System.Web.Optimization.dll
 E:\Work\Artnman\Artnman\Cloud\Website.Cloud\bin\System.Web.Razor.dll
 E:\Work\Artnman\Artnman\Cloud\Website.Cloud\bin\System.Web.WebPages.Deployment.dll
@@ -52,3 +51,4 @@ E:\Work\Artnman\Artnman\Cloud\Website.Cloud\bin\BlogEngine.Core.xml
 E:\Work\Artnman\Artnman\Cloud\Website.Cloud\bin\log4net.xml
 E:\Work\Artnman\Artnman\Cloud\Website.Cloud\obj\Debug\Website.Cloud.dll
 E:\Work\Artnman\Artnman\Cloud\Website.Cloud\obj\Debug\Website.Cloud.pdb
+E:\Work\Artnman\Artnman\Cloud\Website.Cloud\bin\System.Web.Helpers.dll
