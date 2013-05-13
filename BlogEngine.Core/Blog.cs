@@ -377,7 +377,7 @@ namespace BlogEngine.Core
         /// Sets the current Blog instance as the primary.
         /// </summary>
         public void SetAsPrimaryInstance()
-        {   
+        {
             for (int i = 0; i < Blogs.Count; i++)
             {
                 // Ensure other blogs are not marked as primary.
@@ -422,7 +422,7 @@ namespace BlogEngine.Core
                             blogs = BlogService.FillBlogs().ToList();
 
                             if (blogs.Count == 0)
-                            { 
+                            {
                                 // create the primary instance
 
                                 Blog blog = new Blog();
@@ -678,9 +678,12 @@ namespace BlogEngine.Core
         {
             get
             {
+                //return relativeWebRoot ??
+                //       (relativeWebRoot =
+                //        VirtualPathUtility.ToAbsolute(VirtualPathUtility.AppendTrailingSlash(BlogConfig.VirtualPath)));
+
                 return relativeWebRoot ??
-                       (relativeWebRoot =
-                        VirtualPathUtility.ToAbsolute(VirtualPathUtility.AppendTrailingSlash(BlogConfig.VirtualPath)));
+                        (relativeWebRoot = VirtualPathUtility.ToAbsolute(BlogConfig.VirtualPath));
             }
         }
 
@@ -791,7 +794,7 @@ namespace BlogEngine.Core
                 setupResult = newBlog.SetupFromExistingBlog(existingBlog);
             }
             catch (Exception ex)
-            {   
+            {
                 Utils.Log("Blog.CreateNewBlog", ex);
                 message = "Failed to create new blog. Error: " + ex.Message;
                 return null;
@@ -858,7 +861,7 @@ namespace BlogEngine.Core
                 message = "Storage Container Name contains invalid characters.";
                 return false;
             }
-            
+
 
             if (string.IsNullOrWhiteSpace(virtualPath))
             {
@@ -1041,7 +1044,7 @@ namespace BlogEngine.Core
         /// <param name="other">The other Blog instance to compare to.</param>
         /// <returns>-1, 0, or 1. See ordering rules in the comments.</returns>
         public int CompareTo(Blog other)
-        {   
+        {
             // order so:
             //   1. active blogs come first
             //   2. blogs with longer Hostnames come first (length DESC)

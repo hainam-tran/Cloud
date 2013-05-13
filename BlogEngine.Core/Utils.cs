@@ -462,7 +462,7 @@
                 }
                 else
                 {
-                    assemblyName = "App_Code";
+                    assemblyName = "Blog.AppCode";
                     codeAssemblies.Add(Assembly.Load(assemblyName));
                 }
             }
