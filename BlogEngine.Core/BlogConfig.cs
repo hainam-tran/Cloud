@@ -42,7 +42,7 @@ namespace BlogEngine.Core
         {
             get
             {
-                return WebConfigurationManager.AppSettings["BlogEngine.VirtualPath"] ?? "~/";
+                return WebConfigurationManager.AppSettings["BlogEngine.VirtualPath"] ?? "~/Blog/";
             }
         }
         #endregion

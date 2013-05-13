@@ -14,6 +14,6 @@ E:\Work\Artnman\Artnman\Cloud\Blog.AppCode\bin\Debug\System.Web.WebPages.Razor.d
 E:\Work\Artnman\Artnman\Cloud\Blog.AppCode\bin\Debug\WebGrease.dll
 E:\Work\Artnman\Artnman\Cloud\Blog.AppCode\bin\Debug\BlogEngine.Core.pdb
 E:\Work\Artnman\Artnman\Cloud\Blog.AppCode\bin\Debug\BlogEngine.Core.xml
-E:\Work\Artnman\Artnman\Cloud\Blog.AppCode\obj\Debug\ResolveAssemblyReference.cache
 E:\Work\Artnman\Artnman\Cloud\Blog.AppCode\obj\Debug\Blog.AppCode.dll
 E:\Work\Artnman\Artnman\Cloud\Blog.AppCode\obj\Debug\Blog.AppCode.pdb
+E:\Work\Artnman\Artnman\Cloud\Blog.AppCode\obj\Debug\Blog.AppCode.csprojResolveAssemblyReference.cache

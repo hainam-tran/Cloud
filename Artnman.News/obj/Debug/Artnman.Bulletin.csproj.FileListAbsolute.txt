@@ -15,6 +15,5 @@ E:\Work\Artnman\Artnman\Cloud\Artnman.News\bin\Debug\Artnman.Core.dll
 E:\Work\Artnman\Artnman\Cloud\Artnman.News\bin\Debug\log4net.dll
 E:\Work\Artnman\Artnman\Cloud\Artnman.News\bin\Debug\Artnman.Core.pdb
 E:\Work\Artnman\Artnman\Cloud\Artnman.News\bin\Debug\log4net.xml
-E:\Work\Artnman\Artnman\Cloud\Artnman.News\obj\Debug\ResolveAssemblyReference.cache
 E:\Work\Artnman\Artnman\Cloud\Artnman.News\obj\Debug\Artnman.Bulletin.dll
 E:\Work\Artnman\Artnman\Cloud\Artnman.News\obj\Debug\Artnman.Bulletin.pdb
