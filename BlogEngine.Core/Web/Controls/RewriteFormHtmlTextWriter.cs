@@ -63,7 +63,7 @@
                 {
                     if (HttpContext.Current.Items["ActionAlreadyWritten"] == null)
                     {
-                        value = Utils.AbsoluteWebRoot + value;
+                        value = Utils.RelativeWebRoot + value;
                         HttpContext.Current.Items["ActionAlreadyWritten"] = true;
                     }
                 }

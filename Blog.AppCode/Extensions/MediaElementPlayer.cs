@@ -197,7 +197,7 @@ jQuery(document).ready(function($) {
 		
 		// override for feed
 		if (e.Location == ServingLocation.Feed) {
-			path = Utils.AbsoluteWebRoot + folder.TrimEnd(new char[] { '/' }) + "/";			
+			path = Utils.RelativeWebRoot + folder.TrimEnd(new char[] { '/' }) + "/";			
 		}
 					
 		// do replacement for media

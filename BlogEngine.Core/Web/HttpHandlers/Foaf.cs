@@ -387,8 +387,8 @@
 
             // no homepage
             // this website = blog
-            this.Blog = Utils.AbsoluteWebRoot.ToString();
-            this.Rdf = string.Format("{0}foaf_{1}.axd", Utils.AbsoluteWebRoot, ap.UserName);
+            this.Blog = Utils.RelativeWebRoot.ToString();
+            this.Rdf = string.Format("{0}foaf_{1}.axd", Utils.RelativeWebRoot, ap.UserName);
             this.Firstname = ap.FirstName;
             this.Lastname = ap.LastName;
             this.Image = ap.PhotoUrl;

@@ -198,7 +198,7 @@
         /// </returns>
         private static string GetBlogAuthorUrl(string username)
         {
-            return string.Format("{0}author/{1}{2}", Utils.AbsoluteWebRoot, HttpUtility.UrlEncode(username), BlogConfig.FileExtension);
+            return string.Format("{0}author/{1}{2}", Utils.RelativeWebRoot, HttpUtility.UrlEncode(username), BlogConfig.FileExtension);
         }
 
         /// <summary>
@@ -228,7 +228,7 @@
         private static string GetSiocAuthorUrl(string username)
         {
             return string.Format(
-                "{0}sioc.axd?sioc_type=user&sioc_id={1}", Utils.AbsoluteWebRoot, HttpUtility.UrlEncode(username));
+                "{0}sioc.axd?sioc_type=user&sioc_id={1}", Utils.RelativeWebRoot, HttpUtility.UrlEncode(username));
         }
 
         /// <summary>
@@ -239,7 +239,7 @@
         /// </returns>
         private static string GetSiocAuthorsUrl()
         {
-            return string.Format("{0}sioc.axd?sioc_type=site#authors", Utils.AbsoluteWebRoot);
+            return string.Format("{0}sioc.axd?sioc_type=site#authors", Utils.RelativeWebRoot);
         }
 
         /// <summary>
@@ -250,7 +250,7 @@
         /// </returns>
         private static string GetSiocBlogUrl()
         {
-            return string.Format("{0}sioc.axd?sioc_type=site#webblog", Utils.AbsoluteWebRoot);
+            return string.Format("{0}sioc.axd?sioc_type=site#webblog", Utils.RelativeWebRoot);
         }
 
         /// <summary>
@@ -264,7 +264,7 @@
         /// </returns>
         private static string GetSiocCommentUrl(string id)
         {
-            return string.Format("{0}sioc.axd?sioc_type=comment&sioc_id={1}", Utils.AbsoluteWebRoot, id);
+            return string.Format("{0}sioc.axd?sioc_type=comment&sioc_id={1}", Utils.RelativeWebRoot, id);
         }
 
         /// <summary>
@@ -278,7 +278,7 @@
         /// </returns>
         private static string GetSiocPostUrl(string id)
         {
-            return string.Format("{0}sioc.axd?sioc_type=post&sioc_id={1}", Utils.AbsoluteWebRoot, id);
+            return string.Format("{0}sioc.axd?sioc_type=post&sioc_id={1}", Utils.RelativeWebRoot, id);
         }
 
         /*
@@ -290,7 +290,7 @@
                 /// </returns>
                 private static string GetSiocSiteUrl()
                 {
-                    return string.Format("{0}sioc.axd?sioc_type=site", Utils.AbsoluteWebRoot);
+                    return string.Format("{0}sioc.axd?sioc_type=site", Utils.RelativeWebRoot);
                 }
         */
 
@@ -356,7 +356,7 @@
             xmlWriter.WriteElementString(
                 "foaf", "mbox_sha1sum", null, (user != null) ? CalculateSha1(user.Email, Encoding.UTF8) : string.Empty);
             xmlWriter.WriteStartElement("foaf", "homepage", null);
-            xmlWriter.WriteAttributeString("rdf", "resource", null, Utils.AbsoluteWebRoot.ToString());
+            xmlWriter.WriteAttributeString("rdf", "resource", null, Utils.RelativeWebRoot.ToString());
             xmlWriter.WriteEndElement(); // foaf:homepage 
 
             xmlWriter.WriteStartElement("foaf", "holdsAccount", null);
@@ -396,7 +396,7 @@
                 "A SIOC profile describes the structure and contents of a weblog in a machine readable form. For more information please refer to http://sioc-project.org/.";
 
             xmlWriter.WriteStartElement("foaf", "Document", null);
-            xmlWriter.WriteAttributeString("rdf", "about", null, Utils.AbsoluteWebRoot.ToString());
+            xmlWriter.WriteAttributeString("rdf", "about", null, Utils.RelativeWebRoot.ToString());
 
             xmlWriter.WriteElementString("dc", "title", null, title);
             xmlWriter.WriteElementString("dc", "description", null, Description);
@@ -535,7 +535,7 @@
             xmlWriter.WriteStartElement("foaf", "homepage", null);
             if (pub is Post)
             {
-                xmlWriter.WriteAttributeString("rdf", "resource", null, Utils.AbsoluteWebRoot.ToString());
+                xmlWriter.WriteAttributeString("rdf", "resource", null, Utils.RelativeWebRoot.ToString());
             }
             else
             {
@@ -576,7 +576,7 @@
                 {
                     xmlWriter.WriteStartElement("sioc", "topic", null);
                     xmlWriter.WriteAttributeString("rdfs", "label", null, tag);
-                    xmlWriter.WriteAttributeString("rdf", "resource", null, Utils.AbsoluteWebRoot + "?tag=/" + tag);
+                    xmlWriter.WriteAttributeString("rdf", "resource", null, Utils.RelativeWebRoot + "?tag=/" + tag);
                     xmlWriter.WriteEndElement(); // sioc:topic
                 }
 
@@ -604,7 +604,7 @@
                     var url = linkMatch.Groups[1].Value;
                     var text = linkMatch.Groups[2].Value;
 
-                    if (url.IndexOf(Utils.AbsoluteWebRoot.ToString()) == 0)
+                    if (url.IndexOf(Utils.RelativeWebRoot.ToString()) == 0)
                     {
                         continue;
                     }
@@ -636,11 +636,11 @@
         private static void WriteSiocSite(XmlWriter xmlWriter)
         {
             xmlWriter.WriteStartElement("sioc", "Site", null);
-            xmlWriter.WriteAttributeString("rdf", "about", null, Utils.AbsoluteWebRoot.ToString());
+            xmlWriter.WriteAttributeString("rdf", "about", null, Utils.RelativeWebRoot.ToString());
 
             xmlWriter.WriteElementString("dc", "title", null, BlogSettings.Instance.Name);
             xmlWriter.WriteElementString("dc", "description", null, BlogSettings.Instance.Description);
-            xmlWriter.WriteElementString("sioc", "link", null, Utils.AbsoluteWebRoot.ToString());
+            xmlWriter.WriteElementString("sioc", "link", null, Utils.RelativeWebRoot.ToString());
             xmlWriter.WriteElementString("sioc", "host_of", null, GetSiocBlogUrl());
             xmlWriter.WriteElementString("sioc", "has_group", null, GetSiocAuthorsUrl());
 
@@ -661,7 +661,7 @@
             var xmlWriter = GetWriter(stream);
 
             WriteUserGroup(xmlWriter);
-            WriteFoafDocument(xmlWriter, "site", Utils.AbsoluteWebRoot.ToString());
+            WriteFoafDocument(xmlWriter, "site", Utils.RelativeWebRoot.ToString());
             WriteSiocSite(xmlWriter);
             WriteForum(xmlWriter, list);
 

@@ -24,15 +24,15 @@
             <div id="header">
                 <div id="logo-floater">
                     <h1>
-                        <a href="@Utils.AbsoluteWebRoot">@BlogSettings.Instance.Name</a> <span style="font-style: italic;
+                        <a href="@Utils.RelativeWebRoot">@BlogSettings.Instance.Name</a> <span style="font-style: italic;
                             font-size: 60%;">@BlogSettings.Instance.Description</span>
                     </h1>
                 </div>
                 <!-- <ul class="links primary-links"> -->
                 <ul id="dropmenu">
-                    <li><a href="@(Utils.AbsoluteWebRoot)" rel="home">@(Resources.labels.home)</a></li>
-                    <li><a href="@(Utils.AbsoluteWebRoot)archive@(BlogConfig.FileExtension)">@(Resources.labels.archive)</a></li>
-                    <li><a href="@(Utils.AbsoluteWebRoot)contact@(BlogConfig.FileExtension)">@(Resources.labels.contact)</a></li>
+                    <li><a href="@(Utils.RelativeWebRoot)" rel="home">@(Resources.labels.home)</a></li>
+                    <li><a href="@(Utils.RelativeWebRoot)archive@(BlogConfig.FileExtension)">@(Resources.labels.archive)</a></li>
+                    <li><a href="@(Utils.RelativeWebRoot)contact@(BlogConfig.FileExtension)">@(Resources.labels.contact)</a></li>
                     @foreach (BlogEngine.Core.Page parentPage in BlogEngine.Core.Page.Pages.Where(p => !p.HasParentPage))
                     {
                         <li class="page_item"><a href="@parentPage.RelativeLink" title="@parentPage.Title">@parentPage.Title</a>

@@ -8,7 +8,7 @@
     <div class="accountInfo">
         <div class="login">
             <p>
-                <span><%=BlogEngine.Core.Utils.AbsoluteWebRoot %></span><span id="blogId" style="font-weight:bold"></span>
+                <span><%=BlogEngine.Core.Utils.RelativeWebRoot %></span><span id="blogId" style="font-weight:bold"></span>
                 <div class="boxRound">
                     <asp:TextBox ID="BlogName" runat="server" CssClass="textEntry"></asp:TextBox>
                 </div>

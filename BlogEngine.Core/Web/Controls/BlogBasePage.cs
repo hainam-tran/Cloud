@@ -144,10 +144,10 @@
 
                 header.AddLink("", "contents", "Archive", string.Format("{0}archive{1}", relativeWebRoot, BlogConfig.FileExtension));
                 header.AddLink("", "start", instanceName, relativeWebRoot);
-                header.AddLink("application/rsd+xml", "edituri", "RSD", string.Format("{0}rsd.axd", absoluteWebRoot));
-                header.AddLink("application/rdf+xml", "meta", "SIOC", string.Format("{0}sioc.axd", absoluteWebRoot));
-                header.AddLink("application/apml+xml", "meta", "APML", string.Format("{0}apml.axd", absoluteWebRoot));
-                header.AddLink("application/rdf+xml", "meta", "FOAF", string.Format("{0}foaf.axd", absoluteWebRoot));
+                header.AddLink("application/rsd+xml", "edituri", "RSD", string.Format("{0}rsd.axd", relativeWebRoot));
+                header.AddLink("application/rdf+xml", "meta", "SIOC", string.Format("{0}sioc.axd", relativeWebRoot));
+                header.AddLink("application/apml+xml", "meta", "APML", string.Format("{0}apml.axd", relativeWebRoot));
+                header.AddLink("application/rdf+xml", "meta", "FOAF", string.Format("{0}foaf.axd", relativeWebRoot));
 
                 if (string.IsNullOrEmpty(BlogSettings.Instance.AlternateFeedUrl))
                 {
@@ -160,7 +160,7 @@
                 }
                 if (BlogSettings.Instance.EnableOpenSearch)
                 {
-                    header.AddLink("application/opensearchdescription+xml", "search", instanceName, string.Format("{0}opensearch.axd", absoluteWebRoot));
+                    header.AddLink("application/opensearchdescription+xml", "search", instanceName, string.Format("{0}opensearch.axd", relativeWebRoot));
                 }
                 header.Render(this);
 

@@ -90,7 +90,7 @@ public class SendCommentMail
         Comment.OnServing(comment, args);
         var body = args.Body;
         body = body.Replace(Environment.NewLine, "<br />");
-        body = body.Replace(string.Format("<img src=\"{0}", Utils.RelativeWebRoot), string.Format("<img src=\"{0}", Utils.AbsoluteWebRoot));
+        body = body.Replace(string.Format("<img src=\"{0}", Utils.RelativeWebRoot), string.Format("<img src=\"{0}", Utils.RelativeWebRoot));
 
         var mail = new MailMessage
             {

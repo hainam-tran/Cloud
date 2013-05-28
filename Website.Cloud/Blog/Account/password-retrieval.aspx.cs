@@ -88,7 +88,7 @@
             sb.AppendFormat("<br/><br/>Your password at \"{0}\" has been reset to: {1}", BlogSettings.Instance.Name, pwd);
             sb.Append(
                 "<br/><br/>If it wasn't you who initiated the reset, please let us know immediately (use contact form on our site)");
-            sb.AppendFormat("<br/><br/>Sincerely,<br/><br/><a href=\"{0}\">{1}</a> team.", Utils.AbsoluteWebRoot, BlogSettings.Instance.Name);
+            sb.AppendFormat("<br/><br/>Sincerely,<br/><br/><a href=\"{0}\">{1}</a> team.", Utils.RelativeWebRoot, BlogSettings.Instance.Name);
             sb.Append("</div>");
 
             mail.Body = sb.ToString();

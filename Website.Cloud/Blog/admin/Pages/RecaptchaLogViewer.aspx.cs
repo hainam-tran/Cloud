@@ -85,7 +85,7 @@ namespace Admin.Pages
             {
                 return string.Format(
                     "<img src=\"/Blog/themes/{1}/noavatar.jpg\" alt=\"{2}\" width=\"28\" height=\"28\" />", 
-                    Utils.AbsoluteWebRoot, 
+                    Utils.RelativeWebRoot, 
                     BlogSettings.Instance.Theme, 
                     author);
             }

@@ -50,7 +50,7 @@ namespace Admin
         /// </returns>
         protected string UserPhoto()
         {
-            var src = string.Format("{0}admin/images/no_avatar.png", Utils.AbsoluteWebRoot);
+            var src = string.Format("{0}admin/images/no_avatar.png", Utils.RelativeWebRoot);
             var email = (string)null;
             var userName = string.Empty;
             var ap = this.UserProfile();

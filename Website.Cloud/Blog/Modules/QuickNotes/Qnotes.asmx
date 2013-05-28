@@ -158,7 +158,7 @@ public class Qnotes  : WebService {
 
             Utils.Log(string.Format("QuickNotes.Qnotes.SaveQuickPost(): {0} : {1}", post.Id, post.Description));
 
-            response.Data = Utils.AbsoluteWebRoot.ToString();
+            response.Data = Utils.RelativeWebRoot.ToString();
         }
         catch (Exception ex)
         {

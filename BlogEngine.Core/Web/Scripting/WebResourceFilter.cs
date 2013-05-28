@@ -315,7 +315,7 @@ namespace BlogEngine.Core.Web.Scripting
 
         private static string RetrieveRemoteFile(string file)
         {
-            file = Utils.AbsoluteWebRoot.ToString() + file.Substring(1); 
+            file = Utils.RelativeWebRoot.ToString() + file.Substring(1); 
             Uri url;
             if (Uri.TryCreate(file, UriKind.Absolute, out url))
             {

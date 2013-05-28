@@ -412,7 +412,7 @@ namespace BlogEngine.Core
         /// <returns>The validated file name.</returns>
         private static string ValidateFileName(IPublishable publishable, string fileName)
         {
-            fileName = fileName.Replace(publishable.Blog.AbsoluteWebRoot.ToString(), string.Empty);
+            fileName = fileName.Replace(publishable.Blog.RelativeWebRoot.ToString(), string.Empty);
 
             try
             {
@@ -432,7 +432,7 @@ namespace BlogEngine.Core
                 }
             }
 
-            return publishable.Blog.AbsoluteWebRoot + fileName;
+            return publishable.Blog.RelativeWebRoot + fileName;
         }
 
         /// <summary>
@@ -550,7 +550,7 @@ namespace BlogEngine.Core
             // ------------------------------------------------------------
             Uri pingbackServer;
             if (Uri.TryCreate(
-                String.Concat(publishable.Blog.AbsoluteWebRoot.ToString().TrimEnd('/'), "/pingback.axd"),
+                String.Concat(publishable.Blog.RelativeWebRoot.ToString().TrimEnd('/'), "/pingback.axd"),
                 UriKind.RelativeOrAbsolute,
                 out pingbackServer))
             {
@@ -603,7 +603,7 @@ namespace BlogEngine.Core
                 "wfw",
                 "commentRss",
                 "http://wellformedweb.org/CommentAPI/",
-                string.Format("{0}/syndication.axd?post={1}", publishable.Blog.AbsoluteWebRoot.ToString().TrimEnd('/'), publishable.Id));
+                string.Format("{0}/syndication.axd?post={1}", publishable.Blog.RelativeWebRoot.ToString().TrimEnd('/'), publishable.Id));
 
             // ------------------------------------------------------------
             // Write </entry> element
@@ -723,7 +723,7 @@ namespace BlogEngine.Core
             // ------------------------------------------------------------
             Uri pingbackServer;
             if (Uri.TryCreate(
-                String.Concat(publishable.Blog.AbsoluteWebRoot.ToString().TrimEnd('/'), "/pingback.axd"),
+                String.Concat(publishable.Blog.RelativeWebRoot.ToString().TrimEnd('/'), "/pingback.axd"),
                 UriKind.RelativeOrAbsolute,
                 out pingbackServer))
             {
@@ -776,7 +776,7 @@ namespace BlogEngine.Core
                 "wfw",
                 "commentRss",
                 "http://wellformedweb.org/CommentAPI/",
-                string.Format("{0}/syndication.axd?post={1}", publishable.Blog.AbsoluteWebRoot.ToString().TrimEnd('/'), publishable.Id));
+                string.Format("{0}/syndication.axd?post={1}", publishable.Blog.RelativeWebRoot.ToString().TrimEnd('/'), publishable.Id));
 
             // ------------------------------------------------------------
             // Write </item> element
@@ -801,7 +801,7 @@ namespace BlogEngine.Core
             // ------------------------------------------------------------
             // Write required feed elements
             // ------------------------------------------------------------
-            writer.WriteElementString("id", Utils.AbsoluteWebRoot.ToString());
+            writer.WriteElementString("id", Utils.RelativeWebRoot.ToString());
             writer.WriteElementString("title", title);
             
             var updated = publishables.Count > 0
@@ -816,12 +816,12 @@ namespace BlogEngine.Core
             // Write recommended feed elements
             // ------------------------------------------------------------
             writer.WriteStartElement("link");
-            writer.WriteAttributeString("href", Utils.AbsoluteWebRoot.ToString());
+            writer.WriteAttributeString("href", Utils.RelativeWebRoot.ToString());
             writer.WriteEndElement();
 
             writer.WriteStartElement("link");
             writer.WriteAttributeString("rel", "self");
-            writer.WriteAttributeString("href", string.Format("{0}syndication.axd?format=atom", Utils.AbsoluteWebRoot));
+            writer.WriteAttributeString("href", string.Format("{0}syndication.axd?format=atom", Utils.RelativeWebRoot));
             writer.WriteEndElement();
 
             // writer.WriteStartElement("link");
@@ -877,7 +877,7 @@ namespace BlogEngine.Core
             // ------------------------------------------------------------
             Uri blogRoll;
             if (Uri.TryCreate(
-                String.Concat(Utils.AbsoluteWebRoot.ToString().TrimEnd('/'), "/opml.axd"),
+                String.Concat(Utils.RelativeWebRoot.ToString().TrimEnd('/'), "/opml.axd"),
                 UriKind.RelativeOrAbsolute,
                 out blogRoll))
             {
@@ -1003,7 +1003,7 @@ namespace BlogEngine.Core
 
             writer.WriteElementString("title", title);
             writer.WriteElementString("description", this.Settings.Description);
-            writer.WriteElementString("link", Utils.AbsoluteWebRoot.ToString());
+            writer.WriteElementString("link", Utils.RelativeWebRoot.ToString());
 
             // ------------------------------------------------------------
             // Write common/shared channel elements
@@ -1049,7 +1049,7 @@ namespace BlogEngine.Core
             // ------------------------------------------------------------
             Uri blogRoll;
             if (Uri.TryCreate(
-                String.Concat(Utils.AbsoluteWebRoot.ToString().TrimEnd('/'), "/opml.axd"),
+                String.Concat(Utils.RelativeWebRoot.ToString().TrimEnd('/'), "/opml.axd"),
                 UriKind.RelativeOrAbsolute,
                 out blogRoll))
             {

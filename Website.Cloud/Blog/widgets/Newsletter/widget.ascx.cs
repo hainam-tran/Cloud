@@ -223,7 +223,7 @@ namespace Widgets.Newsletter
         {
             var body = new StringBuilder();
             var urlbase = Path.Combine(
-                Path.Combine(Utils.AbsoluteWebRoot.AbsoluteUri, "themes"), BlogSettings.Instance.Theme);
+                Path.Combine(Utils.RelativeWebRoot, "themes"), BlogSettings.Instance.Theme);
             var filePath = string.Format("~/themes/{0}/newsletter.html", BlogSettings.Instance.Theme);
             filePath = HostingEnvironment.MapPath(filePath);
             if (File.Exists(filePath))
@@ -251,7 +251,7 @@ namespace Widgets.Newsletter
             body = body.Replace("[TITLE]", publishable.Title);
             body = body.Replace("[LINK]", publishable.AbsoluteLink.AbsoluteUri);
             body = body.Replace("[LINK_DESCRIPTION]", publishable.Description);
-            body = body.Replace("[WebRoot]", Utils.AbsoluteWebRoot.AbsoluteUri);
+            body = body.Replace("[WebRoot]", Utils.RelativeWebRoot);
             body = body.Replace("[httpBase]", urlbase);
             return body.ToString();
         }

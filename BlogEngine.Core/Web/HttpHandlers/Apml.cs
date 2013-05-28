@@ -222,7 +222,7 @@
                 writer.WriteStartElement("Concept");
                 writer.WriteAttributeString("key", key.Title);
                 writer.WriteAttributeString("value", key.Score.ToString());
-                writer.WriteAttributeString("from", Utils.AbsoluteWebRoot.ToString());
+                writer.WriteAttributeString("from", Utils.RelativeWebRoot.ToString());
                 writer.WriteAttributeString("updated", key.LastUpdated.ToString());
                 writer.WriteEndElement(); // Concept
             }
@@ -243,7 +243,7 @@
             // writer.WriteStartElement("Concept");
             // writer.WriteAttributeString("key", key);
             // writer.WriteAttributeString("value", catList[key].Score.ToString());
-            // writer.WriteAttributeString("from", Utils.AbsoluteWebRoot.ToString());
+            // writer.WriteAttributeString("from", Utils.RelativeWebRoot.ToString());
             // writer.WriteAttributeString("updated", catList[key].LastUpdated.ToString());
             // writer.WriteEndElement();  // Concept
             // }
@@ -269,13 +269,13 @@
                     writer.WriteAttributeString("name", title);
                     writer.WriteAttributeString("value", "1.0");
                     writer.WriteAttributeString("type", "text/html");
-                    writer.WriteAttributeString("from", Utils.AbsoluteWebRoot.ToString());
+                    writer.WriteAttributeString("from", Utils.RelativeWebRoot.ToString());
                     writer.WriteAttributeString("updated", DateTime.Now.ToString());
 
                     writer.WriteStartElement("Author");
                     writer.WriteAttributeString("key", title);
                     writer.WriteAttributeString("value", "1.0");
-                    writer.WriteAttributeString("from", Utils.AbsoluteWebRoot.ToString());
+                    writer.WriteAttributeString("from", Utils.RelativeWebRoot.ToString());
                     writer.WriteAttributeString("updated", DateTime.Now.ToString());
                     writer.WriteEndElement(); // Author
 

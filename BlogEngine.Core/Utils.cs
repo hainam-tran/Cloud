@@ -133,7 +133,7 @@
             {
                 return !string.IsNullOrEmpty(BlogSettings.Instance.AlternateFeedUrl)
                            ? BlogSettings.Instance.AlternateFeedUrl
-                           : string.Format("{0}syndication.axd", AbsoluteWebRoot);
+                           : string.Format("{0}syndication.axd", RelativeWebRoot);
             }
         }
 

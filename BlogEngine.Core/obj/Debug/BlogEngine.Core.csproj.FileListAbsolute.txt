@@ -6,5 +6,5 @@ E:\Work\Artnman\Artnman\Cloud\BlogEngine.Core\obj\Debug\BlogEngine.Core.dll
 E:\Work\Artnman\Artnman\Cloud\BlogEngine.Core\obj\Debug\BlogEngine.Core.pdb
 E:\Work\Artnman\Artnman\Cloud\BlogEngine.Core\bin\Debug\BlogML.dll
 E:\Work\Artnman\Artnman\Cloud\BlogEngine.Core\bin\Debug\ICSharpCode.SharpZipLib.dll
-E:\Work\Artnman\Artnman\Cloud\BlogEngine.Core\bin\Debug\BlogEngine.Core.XML
 E:\Work\Artnman\Artnman\Cloud\BlogEngine.Core\obj\Debug\BlogEngine.Core.csprojResolveAssemblyReference.cache
+E:\Work\Artnman\Artnman\Cloud\BlogEngine.Core\bin\Debug\BlogEngine.Core.XML

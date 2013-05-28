@@ -235,7 +235,7 @@ namespace BlogEngine.Core
                 return "";
 
             return pf.PhotoUrl.StartsWith("http://") || pf.PhotoUrl.StartsWith("https://") ? pf.PhotoUrl :
-                Utils.ApplicationRelativeWebRoot + "image.axd?picture=/avatars/" + pf.PhotoUrl;
+                Utils.RelativeWebRoot + "image.axd?picture=/avatars/" + pf.PhotoUrl;
         }
 
         static Avatar SiteThumb(string email, Uri website, string description, int width, int height)
@@ -264,8 +264,8 @@ namespace BlogEngine.Core
 
             var uri = new Uri(
                 System.IO.File.Exists(themeAvatar) ?
-                string.Format("{0}themes/{1}/noavatar.jpg", Utils.AbsoluteWebRoot, BlogSettings.Instance.Theme) :
-                string.Format("{0}pics/noavatar.jpg", Utils.AbsoluteWebRoot)
+                string.Format("{0}themes/{1}/noavatar.jpg", Utils.RelativeWebRoot, BlogSettings.Instance.Theme) :
+                string.Format("{0}pics/noavatar.jpg", Utils.RelativeWebRoot)
             );
 
             var imageTag = string.Format(

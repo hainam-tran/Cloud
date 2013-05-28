@@ -214,7 +214,7 @@ namespace BlogEngine.Core
         {
             get
             {
-                return (this.Uri.AbsoluteUri.StartsWith(Utils.AbsoluteWebRoot.AbsoluteUri));
+                return (this.Uri.AbsoluteUri.StartsWith(Utils.RelativeWebRoot));
             }
         }
 

@@ -89,13 +89,13 @@
                     else
                     {
                         OnBadRequest(fileName);
-                        context.Response.Redirect(string.Format("{0}error404.aspx", Utils.AbsoluteWebRoot));
+                        context.Response.Redirect(string.Format("{0}error404.aspx", Utils.RelativeWebRoot));
                     }
                 }
                 catch (Exception)
                 {
                     OnBadRequest(fileName);
-                    context.Response.Redirect(string.Format("{0}error404.aspx", Utils.AbsoluteWebRoot));
+                    context.Response.Redirect(string.Format("{0}error404.aspx", Utils.RelativeWebRoot));
                 }
             }
         }

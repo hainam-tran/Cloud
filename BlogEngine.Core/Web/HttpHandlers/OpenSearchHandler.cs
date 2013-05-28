@@ -55,22 +55,22 @@
                 writer.WriteElementString("ShortName", BlogSettings.Instance.Name);
                 writer.WriteElementString("Description", BlogSettings.Instance.Description);
 
-                // writer.WriteRaw("<Image height=\"16\" width=\"16\" type=\"image/vnd.microsoft.icon\">" + Utils.AbsoluteWebRoot.ToString() + "pics/favicon.ico</Image>");
+                // writer.WriteRaw("<Image height=\"16\" width=\"16\" type=\"image/vnd.microsoft.icon\">" + Utils.RelativeWebRoot.ToString() + "pics/favicon.ico</Image>");
                 writer.WriteStartElement("Image");
                 writer.WriteAttributeString("height", "16");
                 writer.WriteAttributeString("width", "16");
                 writer.WriteAttributeString("type", "image/vnd.microsoft.icon");
-                writer.WriteValue(string.Format("{0}pics/favicon.ico", Utils.AbsoluteWebRoot));
+                writer.WriteValue(string.Format("{0}pics/favicon.ico", Utils.RelativeWebRoot));
                 writer.WriteEndElement();
 
                 writer.WriteStartElement("Url");
                 writer.WriteAttributeString("type", "text/html");
-                writer.WriteAttributeString("template", string.Format("{0}search{1}?q={{searchTerms}}", Utils.AbsoluteWebRoot, BlogConfig.FileExtension));
+                writer.WriteAttributeString("template", string.Format("{0}search{1}?q={{searchTerms}}", Utils.RelativeWebRoot, BlogConfig.FileExtension));
                 writer.WriteEndElement();
 
                 writer.WriteStartElement("Url");
                 writer.WriteAttributeString("type", "application/rss+xml");
-                writer.WriteAttributeString("template", string.Format("{0}syndication.axd?q={{searchTerms}}", Utils.AbsoluteWebRoot));
+                writer.WriteAttributeString("template", string.Format("{0}syndication.axd?q={{searchTerms}}", Utils.RelativeWebRoot));
                 writer.WriteEndElement();
 
                 writer.WriteEndElement();

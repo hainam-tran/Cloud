@@ -132,7 +132,7 @@ namespace App_Code.Controls
         private string Html()
         {
             if (this.Context.Request.UrlReferrer != null &&
-                !this.Context.Request.UrlReferrer.ToString().Contains(Utils.AbsoluteWebRoot.ToString()) && this.IsSearch)
+                !this.Context.Request.UrlReferrer.ToString().Contains(Utils.RelativeWebRoot.ToString()) && this.IsSearch)
             {
                 var referrer = this.Context.Request.UrlReferrer.ToString().ToLowerInvariant();
                 var searchTerm = GetSearchTerm(referrer);

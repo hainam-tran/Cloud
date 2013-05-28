@@ -322,7 +322,7 @@ namespace BlogEngine.Core.Web
         public static bool DefaultPageRequested(HttpContext context)
         {
             var url = context.Request.Url.ToString();
-            var match = string.Format("{0}DEFAULT{1}", Utils.AbsoluteWebRoot, BlogConfig.FileExtension);
+            var match = string.Format("{0}DEFAULT{1}", Utils.RelativeWebRoot, BlogConfig.FileExtension);
 
             var u = GetUrlWithQueryString(context);
             var m = YearMonthDayRegex.Match(u);
@@ -338,7 +338,7 @@ namespace BlogEngine.Core.Web
 
             if (m.Success)
             {
-                var s = string.Format("{0}{1}DEFAULT{2}", Utils.AbsoluteWebRoot, m.ToString().Substring(1), BlogConfig.FileExtension);
+                var s = string.Format("{0}{1}DEFAULT{2}", Utils.RelativeWebRoot, m.ToString().Substring(1), BlogConfig.FileExtension);
 
                 Utils.Log("Url: " + url + "; s: " + s);
 

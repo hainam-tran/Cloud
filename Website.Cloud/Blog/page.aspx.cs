@@ -210,7 +210,7 @@ public partial class page : BlogBasePage
     {
         get
         {
-            return string.Format("{0}page.aspx?id={1}", Utils.AbsoluteWebRoot, this.Page.Id);
+            return string.Format("{0}page.aspx?id={1}", Utils.RelativeWebRoot, this.Page.Id);
         }
     }
 }

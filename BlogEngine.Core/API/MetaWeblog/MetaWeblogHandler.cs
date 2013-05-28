@@ -42,7 +42,7 @@
         {
             try
             {
-                var rootUrl = Utils.AbsoluteWebRoot.ToString();
+                var rootUrl = Utils.RelativeWebRoot.ToString();
                     
                 // context.Request.Url.ToString().Substring(0, context.Request.Url.ToString().IndexOf("metaweblog.axd"));
                 var input = new XMLRPCRequest(context);
@@ -774,7 +774,7 @@
             }
 
             // Set Url
-            var rootUrl = Utils.AbsoluteWebRoot.ToString();
+            var rootUrl = Utils.RelativeWebRoot.ToString();
             if (BlogSettings.Instance.RequireSslMetaWeblogApi)
             {
                 rootUrl = rootUrl.Replace("https://", "http://");

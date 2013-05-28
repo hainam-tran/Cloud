@@ -17,3 +17,4 @@ E:\Work\Artnman\Artnman\Cloud\Artnman.News\bin\Debug\Artnman.Core.pdb
 E:\Work\Artnman\Artnman\Cloud\Artnman.News\bin\Debug\log4net.xml
 E:\Work\Artnman\Artnman\Cloud\Artnman.News\obj\Debug\Artnman.Bulletin.dll
 E:\Work\Artnman\Artnman\Cloud\Artnman.News\obj\Debug\Artnman.Bulletin.pdb
+E:\Work\Artnman\Artnman\Cloud\Artnman.News\obj\Debug\Artnman.Bulletin.csprojResolveAssemblyReference.cache

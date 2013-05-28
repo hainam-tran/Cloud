@@ -218,7 +218,7 @@
             }
 
             var referrer = context.Request.UrlReferrer;
-            if (!referrer.Host.Equals(Utils.AbsoluteWebRoot.Host, StringComparison.OrdinalIgnoreCase) &&
+            if (!referrer.Host.Equals(Utils.RelativeWebRoot, StringComparison.OrdinalIgnoreCase) &&
                 !IsSearchEngine(referrer.ToString()))
             {
                 Guid blogId = Blog.CurrentInstance.Id;

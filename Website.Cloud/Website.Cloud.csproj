@@ -2424,14 +2424,17 @@
     <Content Include="App_GlobalResources\labels.af.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>labels.af.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="App_GlobalResources\labels.ar.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>labels.ar.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="App_GlobalResources\labels.bg.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>labels.bg.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="App_GlobalResources\labels.cs.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>

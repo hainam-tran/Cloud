@@ -24,7 +24,7 @@
                 <li><strong><%=Resources.labels.or %></strong></li>
                 <li>
                     <label class="lbl"><%=Resources.labels.runClickOnceApplicationToImport %></label>
-                    <input type="button" class="btn rounded" value="<%=Resources.labels.importWithClickOnce %>" onclick="location.href='http://dotnetblogengine.net/clickonce/blogimporter/blog.importer.application?url=<%=Utils.AbsoluteWebRoot %>&username=<%=Page.User.Identity.Name %>'" />
+                    <input type="button" class="btn rounded" value="<%=Resources.labels.importWithClickOnce %>" onclick="location.href='http://dotnetblogengine.net/clickonce/blogimporter/blog.importer.application?url=<%=Utils.RelativeWebRoot %>&username=<%=Page.User.Identity.Name %>'" />
                 </li>
             </ul>
             

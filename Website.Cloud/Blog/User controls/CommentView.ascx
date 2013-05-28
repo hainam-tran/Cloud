@@ -117,7 +117,7 @@
 coco =
 {
     tool: "BlogEngine",
-    siteurl: "<%=Utils.AbsoluteWebRoot %>",
+    siteurl: "<%=Utils.RelativeWebRoot %>",
     sitetitle: "<%=BlogSettings.Instance.Name %>",
     pageurl: location.href,
     pagetitle: "<%=Post.Title %>",
