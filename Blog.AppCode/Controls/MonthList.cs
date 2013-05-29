@@ -356,7 +356,7 @@ namespace App_Code.Controls
 				string aHref = string.Format
 				(
 					"{0}{1}/{2}/default{3}",
-					Utils.RelativeOrAbsoluteWebRoot,
+					Utils.RelativeWebRoot,
 					theDate.Year,
 					theDate.ToString("MM"),
 					BlogConfig.FileExtension

@@ -602,12 +602,12 @@
         public static string ConvertPublishablePathsToAbsolute(string content, IPublishable publishable)
         {
             content = content.Replace(
-                string.Format("\"{0}image.axd", publishable.Blog.AbsoluteWebRoot.AbsolutePath), "\"" + publishable.Blog.AbsoluteWebRoot + "image.axd");
+                string.Format("\"{0}image.axd", publishable.Blog.RelativeWebRoot), "\"" + publishable.Blog.RelativeWebRoot + "image.axd");
             content = content.Replace(
-                string.Format("\"{0}file.axd", publishable.Blog.AbsoluteWebRoot.AbsolutePath), "\"" + publishable.Blog.AbsoluteWebRoot + "file.axd");
-            content = content.Replace(string.Format("href=\"{0}{1}", publishable.Blog.RelativeWebRoot, string.Empty), string.Format("href=\"{0}", publishable.Blog.AbsoluteWebRoot));
+                string.Format("\"{0}file.axd", publishable.Blog.RelativeWebRoot), "\"" + publishable.Blog.RelativeWebRoot + "file.axd");
+            content = content.Replace(string.Format("href=\"{0}{1}", publishable.Blog.RelativeWebRoot, string.Empty), string.Format("href=\"{0}", publishable.Blog.RelativeWebRoot));
 
-            content = content.Replace("href=\"/", string.Format("href=\"{0}", publishable.Blog.AbsoluteWebRoot));
+            content = content.Replace("href=\"/", string.Format("href=\"{0}", publishable.Blog.RelativeWebRoot));
 
             return content;
         }

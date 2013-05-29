@@ -216,7 +216,7 @@
                     sb.AppendFormat(
                         CultureInfo.InvariantCulture,
                         "<a href=\"{0}\">{1}</a> | ",
-                    Post.Blog.AbsoluteWebRoot + "admin/Posts/Add_entry.aspx?id=" + this.Post.Id,
+                    Post.Blog.RelativeWebRoot + "admin/Posts/Add_entry.aspx?id=" + this.Post.Id,
                         Utils.Translate("edit"));
                 }
 
@@ -350,7 +350,7 @@
 
             var tagStrings = new string[tags.Count];
             const string Link = "<a href=\"{0}/{1}\" rel=\"tag\">{2}</a>";
-            var path = Post.Blog.AbsoluteWebRoot + "?tag=";
+            var path = Post.Blog.RelativeWebRoot + "?tag=";
             for (var i = 0; i < tags.Count; i++)
             {
                 var tag = tags[i];
