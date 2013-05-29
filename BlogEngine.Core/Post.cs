@@ -647,7 +647,7 @@
         {
             get
             {
-                return new Uri(string.Format("{0}trackback.axd?id={1}", this.Blog.RelativeWebRoot, this.Id));
+                return new Uri(string.Format("{0}trackback.axd?id={1}", this.Blog.AbsoluteWebRoot, this.Id));
             }
         }
 
