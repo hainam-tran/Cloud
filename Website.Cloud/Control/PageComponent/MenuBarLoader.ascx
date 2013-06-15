@@ -5,7 +5,7 @@
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#">A short CV</a></li>
         <li><a href="#">Gallery</a></li>
-        <li><a href="#">Blog</a></li>
+        <li><a href="http://artnman.blogspot.com" target="_blank">Blog</a></li>
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b
             class="caret"></b></a>
             <ul class="dropdown-menu">
