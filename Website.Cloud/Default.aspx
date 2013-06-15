@@ -139,7 +139,7 @@
                         It will be upgraded in the future and I will upload my photos there.
                         <br />
                         <br />
-                        For the time beging, you can view my photos at <a href="http://500px.com/ArtnmaN"
+                        For the time being, you can view my photos at <a href="http://500px.com/ArtnmaN"
                             target="_blank">500px</a>
                         <br />
                         <br />
