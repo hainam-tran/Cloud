@@ -18,3 +18,13 @@ E:\Work\Artnman\Artnman\Cloud\Artnman.Content\bin\Debug\log4net.xml
 E:\Work\Artnman\Artnman\Cloud\Artnman.Content\obj\Debug\Artnman.Content.dll
 E:\Work\Artnman\Artnman\Cloud\Artnman.Content\obj\Debug\Artnman.Content.pdb
 E:\Work\Artnman\Artnman\Cloud\Artnman.Content\obj\Debug\Artnman.Content.csprojResolveAssemblyReference.cache
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Content\bin\Debug\Artnman.Content.dll.config
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Content\bin\Debug\Artnman.Content.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Content\bin\Debug\Artnman.Content.pdb
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Content\bin\Debug\Artnman.Core.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Content\bin\Debug\log4net.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Content\bin\Debug\Artnman.Core.pdb
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Content\bin\Debug\log4net.xml
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Content\obj\Debug\Artnman.Content.csprojResolveAssemblyReference.cache
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Content\obj\Debug\Artnman.Content.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Content\obj\Debug\Artnman.Content.pdb

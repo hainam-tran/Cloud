@@ -5,9 +5,6 @@ using System.Web;
 using System.Web.Optimization;
 using System.Web.Security;
 using System.Web.SessionState;
-using App_Code.Controls;
-using BlogEngine.Core;
-
 namespace Website.GRE
 {
     public class Global : System.Web.HttpApplication
@@ -33,11 +30,7 @@ namespace Website.GRE
 
         void Application_BeginRequest(object source, EventArgs e)
         {
-            HttpApplication app = (HttpApplication)source;
-            HttpContext context = app.Context;
 
-            // Attempt to perform first request initialization
-            FirstRequestInitialization.Initialize(context);
         }
 
         void Session_Start(object sender, EventArgs e)
@@ -57,26 +50,7 @@ namespace Website.GRE
 
         private class FirstRequestInitialization
         {
-            private static bool _initializedAlready = false;
-            private readonly static object _SyncRoot = new Object();
-
-            // Initialize only on the first request
-            public static void Initialize(HttpContext context)
-            {
-                if (_initializedAlready) { return; }
-
-                lock (_SyncRoot)
-                {
-                    if (_initializedAlready) { return; }
-
-                    WidgetZone.PreloadWidgetsAsync("be_WIDGET_ZONE");
-                    Utils.LoadExtensions();
-
-                    BundleConfig.RegisterBundles(BundleTable.Bundles);
-
-                    _initializedAlready = true;
-                }
-            }
+           
         }
     }
 }

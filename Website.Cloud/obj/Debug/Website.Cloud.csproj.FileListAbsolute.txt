@@ -52,3 +52,17 @@ E:\Work\Artnman\Artnman\Cloud\Website.Cloud\obj\Debug\Website.Cloud.dll
 E:\Work\Artnman\Artnman\Cloud\Website.Cloud\obj\Debug\Website.Cloud.pdb
 E:\Work\Artnman\Artnman\Cloud\Website.Cloud\bin\System.Web.Helpers.dll
 E:\Work\Artnman\Artnman\Cloud\Website.Cloud\obj\Debug\Website.Cloud.csprojResolveAssemblyReference.cache
+C:\Users\Nam\Documents\GitHub\Cloud\Website.Cloud\obj\Debug\Website.Cloud.csprojResolveAssemblyReference.cache
+C:\Users\Nam\Documents\GitHub\Cloud\Website.Cloud\obj\Debug\Website.Cloud.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Website.Cloud\obj\Debug\Website.Cloud.pdb
+C:\Users\Nam\Documents\GitHub\Cloud\Website.Cloud\bin\Website.Cloud.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Website.Cloud\bin\Website.Cloud.pdb
+C:\Users\Nam\Documents\GitHub\Cloud\Website.Cloud\bin\AjaxMin.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Website.Cloud\bin\Artnman.Core.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Website.Cloud\bin\BlogML.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Website.Cloud\bin\NuGet.Core.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Website.Cloud\bin\System.Web.Optimization.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Website.Cloud\bin\WebGrease.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Website.Cloud\bin\log4net.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Website.Cloud\bin\Artnman.Core.pdb
+C:\Users\Nam\Documents\GitHub\Cloud\Website.Cloud\bin\log4net.xml

@@ -18,3 +18,13 @@ E:\Work\Artnman\Artnman\Cloud\Artnman.Core\bin\Debug\log4net.xml
 E:\Work\Artnman\Artnman\Cloud\Artnman.Core\obj\Debug\Artnman.Core.dll
 E:\Work\Artnman\Artnman\Cloud\Artnman.Core\obj\Debug\Artnman.Core.pdb
 E:\Work\Artnman\Artnman\Cloud\Artnman.Core\obj\Debug\Artnman.Core.csprojResolveAssemblyReference.cache
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Core\bin\Debug\Artnman.Core.dll.config
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Core\bin\Debug\Artnman.Core.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Core\bin\Debug\Artnman.Core.pdb
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Core\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Core\bin\Debug\log4net.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Core\bin\Debug\SanitizerProviders.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Core\bin\Debug\log4net.xml
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Core\obj\Debug\Artnman.Core.csprojResolveAssemblyReference.cache
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Core\obj\Debug\Artnman.Core.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Core\obj\Debug\Artnman.Core.pdb

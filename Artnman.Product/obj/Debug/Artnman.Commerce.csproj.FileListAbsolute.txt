@@ -18,3 +18,12 @@ E:\Work\Artnman\Artnman\Cloud\Artnman.Product\bin\Debug\log4net.xml
 E:\Work\Artnman\Artnman\Cloud\Artnman.Product\obj\Debug\Artnman.Commerce.dll
 E:\Work\Artnman\Artnman\Cloud\Artnman.Product\obj\Debug\Artnman.Commerce.pdb
 E:\Work\Artnman\Artnman\Cloud\Artnman.Product\obj\Debug\Artnman.Commerce.csprojResolveAssemblyReference.cache
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Product\bin\Debug\Artnman.Commerce.dll.config
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Product\bin\Debug\Artnman.Commerce.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Product\bin\Debug\Artnman.Commerce.pdb
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Product\bin\Debug\Artnman.Core.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Product\bin\Debug\log4net.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Product\bin\Debug\Artnman.Core.pdb
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Product\bin\Debug\log4net.xml
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Product\obj\Debug\Artnman.Commerce.dll
+C:\Users\Nam\Documents\GitHub\Cloud\Artnman.Product\obj\Debug\Artnman.Commerce.pdb
