@@ -56,14 +56,5 @@ namespace Website.Cloud {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Website.Cloud.Control.PageComponent.MenuBarLoader MenuBarLoader;
-        
-        /// <summary>
-        /// SocialNetworkLoader control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Website.Cloud.Control.PageComponent.SocialNetworkLoader SocialNetworkLoader;
     }
 }

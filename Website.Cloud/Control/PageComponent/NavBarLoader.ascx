@@ -23,7 +23,7 @@
                         <li><a href="#"><b>Quick links</b></a>
                             <select id="slQuicklinks">
                                 <option>Please Select</option>
-                                <option value="http://beru.univ-brest.fr/~singhoff/cheddar/">Current Project</option>
+                                <option value="http://beru.univ-brest.fr/~singhoff/cheddar/">Cheddar project</option>
                             </select>
                         </li>
                         <li class="divider-vertical"></li>
@@ -40,7 +40,6 @@
                                 <option>Please Select</option>
                                 <option value="http://www.phdcomics.com/">PhD Comics</option>
                                 <option value="http://thedailywtf.com/">TheDailyWtf</option>
-                                <option value="http://www.fmylife.com/">FML</option>
                             </select>
                         </li>
                         <li class="divider-vertical"></li>
