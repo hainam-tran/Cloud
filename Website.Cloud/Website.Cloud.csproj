@@ -127,6 +127,10 @@
     <Content Include="Include\js\Common\jquery-1.8.1.min.js" />
     <Content Include="Include\js\jquery-ui-1.8.22.min.js" />
     <Content Include="Include\js\jquery.cookie.js" />
+    <Content Include="Page\About_Me.aspx" />
+    <Content Include="Page\About_Site.aspx" />
+    <Content Include="Page\CV.aspx" />
+    <Content Include="Page\Publication.aspx" />
     <Content Include="Upload\Image\Content\Icon\blogger_16.png" />
     <Content Include="Upload\Image\Content\Icon\blogger_32.png" />
     <Content Include="Upload\Image\Content\Icon\facebook_16.png" />
@@ -178,11 +182,38 @@
       <DependentUpon>FrontEnd.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Page\About_Me.aspx.cs">
+      <DependentUpon>About_Me.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\About_Me.aspx.designer.cs">
+      <DependentUpon>About_Me.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\About_Site.aspx.cs">
+      <DependentUpon>About_Site.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\About_Site.aspx.designer.cs">
+      <DependentUpon>About_Site.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\CV.aspx.cs">
+      <DependentUpon>CV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\CV.aspx.designer.cs">
+      <DependentUpon>CV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Publication.aspx.cs">
+      <DependentUpon>Publication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Publication.aspx.designer.cs">
+      <DependentUpon>Publication.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Administrator\" />
-    <Folder Include="Page\" />
     <Folder Include="Upload\Image\Thumb\" />
   </ItemGroup>
   <ItemGroup>

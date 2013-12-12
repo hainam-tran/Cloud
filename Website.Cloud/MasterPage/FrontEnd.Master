@@ -4,9 +4,11 @@
 <%@ Register TagPrefix="uc" Src="~/Control/CssLoader.ascx" TagName="CssLoader" %>
 <%@ Register TagPrefix="uc" Src="~/Control/JavaScriptLoader.ascx" TagName="JavaScriptLoader" %>
 <%@ Register TagPrefix="uc" Src="~/Control/PageComponent/NavBarLoader.ascx" TagName="NavBarLoader" %>
+<%@ Register TagPrefix="uc" Src="~/Control/PageComponent/MenuBarLoader.ascx" TagName="MenuBarLoader" %>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Inspiration</title>
+    
     <%--//Include Css and Java Scripts
         ================================================--%>
     <uc:CssLoader ID="CssLoader" runat="server"></uc:CssLoader>
@@ -16,45 +18,49 @@
 </head>
 <body>
     <form id="ArtnmanForm" runat="server">
-    <%--//Navigation bar
+        <%--//Navigation bar
         ================================================--%>
-    <uc:NavBarLoader ID="NavBarLoader" runat="server"></uc:NavBarLoader>
-    <%--//Page Content
+        <uc:NavBarLoader ID="NavBarLoader" runat="server"></uc:NavBarLoader>
+        <%--//Page Content
         ================================================--%>
-    <div class="container">
-        <div class="row">
-            <%--//Main 
-                ================================================--%>
-            <div class="span7 offset1 well">
-                <asp:ContentPlaceHolder runat="server" ID="Main">
-                </asp:ContentPlaceHolder>
+
+        <div class="container">
+            <div class="row">
+                <div class="offset1 padding-default">
+                    <%--<img src="Upload/Image/Logo/logo.png"/>--%>
+                </div>
             </div>
-            <%--//Side Bar
+            <div class="row">
+                <div class="navbar span10 offset1" style="margin-bottom: 0">
+                    <%--//Menu bar
+                    ================================================--%>
+                    <uc:MenuBarLoader ID="MenuBarLoader" runat="server"></uc:MenuBarLoader>
+                </div>
+            </div>
+            <div class="row">
+                <div class="offset1 padding-default">
+                </div>
+            </div>
+
+            <div class="row">
+                <%--//Main 
                 ================================================--%>
-            <div class="span3 well">
-                <%--//Content Place Holder for Side Bar
-                    ================================================--%>
-                <asp:ContentPlaceHolder runat="server" ID="SideBar">
-                </asp:ContentPlaceHolder>
-                <%--//Nav for social networks
-                    ================================================--%>
-                <div class="navbar">
-                    <div class="navbar-inner">
-                        <div class="container">
-                            <ul class="nav">
-                                <li><a href="#">Share the motivation</a> </li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="span8 offset1 ">
+                    <asp:ContentPlaceHolder runat="server" ID="Main">
+                    </asp:ContentPlaceHolder>
                 </div>
-                <div class="fb-like" data-href="https://www.facebook.com/PyramidVN" data-send="false"
-                    data-width="270" data-show-faces="true">
+                <%--//Side Bar
+                ================================================--%>
+                <div class="span2 ">
+                    <%--//Content Place Holder for Side Bar
+                    ================================================--%>
+                    <asp:ContentPlaceHolder runat="server" ID="SideBar">
+                    </asp:ContentPlaceHolder>
+                    <%--//Nav for social networks
+                    ================================================--%>
                 </div>
-                <hr />
-                <g:plusone size="small" annotation="inline" width="270"></g:plusone>
             </div>
         </div>
-    </div>
     </form>
 </body>
 </html>

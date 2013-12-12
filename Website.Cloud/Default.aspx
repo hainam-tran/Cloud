@@ -25,7 +25,6 @@
         <div class="container">
             <div class="row">
                 <div class="offset1 padding-default">
-                    <%--<img src="Upload/Image/Logo/logo.png"/>--%>
                 </div>
             </div>
             <div class="row">
@@ -69,13 +68,9 @@
             ================================================--%>
             <div class="row">
                 <div class="span10 offset1">
-                    <div class="row">
-                        <div class="span4">
-                            <h2>Tran Hai Nam</h2>
-                        </div>
-                    </div>
                     <div class="row ">
                         <div class="span10">
+                            <h2>Tran Hai Nam</h2>
                             <ul>
                                 <li>Full Vietnamese name: Trần Hải Nam</li>
                                 <li>PhD student, Lab-STICC, University of Western Brittany, Brest, France</li>
@@ -87,11 +82,10 @@
                                 </ul>
                                 </li>
                                 <hr />
-                                
+
                                 <li>Email: hai-nam.tran@univ-brest.fr </li>
-                                <li>Website: <a href="http://namtran.apphb.com"> http://namtran.apphb.com </a></li>
-                                <li>
-                                    Université de Bretagne Occidentale, UFR Sciences et Techniques, Département Informatique<br/>
+                                <li>Website: <a href="http://namtran.apphb.com">http://namtran.apphb.com </a></li>
+                                <li>Université de Bretagne Occidentale, UFR Sciences et Techniques, Département Informatique<br />
                                     20 avenue Le Gorgeu, C.S. 93837 - BP 809, 29238 Brest Cedex 3
                                 </li>
                                 <hr />
@@ -111,7 +105,7 @@
             </div>
             <div class="row">
                 <div class="span8 offset1">
-                    <div class="row">
+                   <%-- <div class="row">
                         <div class="span4">
                             <h2>Video</h2>
                         </div>
@@ -130,7 +124,7 @@
                             <a class="btn" href="#">View details »</a>
                         </div>
                     </div>
-                    <hr />
+                    <hr />--%>
                     <div class="row">
                         <div class="span4">
                             <h2>Gallery</h2>
