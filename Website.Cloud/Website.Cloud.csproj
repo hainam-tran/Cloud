@@ -117,8 +117,11 @@
     <Content Include="Global.asax" />
     <Content Include="Include\Bootstrap\css\bootstrap-responsive.css" />
     <Content Include="Include\Bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="Include\Bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Include\Bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="Include\Bootstrap\css\bootstrap.css" />
     <Content Include="Include\Bootstrap\css\bootstrap.min.css" />
+    <Content Include="Include\Bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Include\Bootstrap\img\glyphicons-halflings-white.png" />
     <Content Include="Include\Bootstrap\img\glyphicons-halflings.png" />
     <Content Include="Include\Bootstrap\js\bootstrap.js" />
@@ -130,6 +133,7 @@
     <Content Include="Page\About_Me.aspx" />
     <Content Include="Page\About_Site.aspx" />
     <Content Include="Page\CV.aspx" />
+    <Content Include="Page\Event.aspx" />
     <Content Include="Page\Publication.aspx" />
     <Content Include="Upload\Image\Content\Icon\blogger_16.png" />
     <Content Include="Upload\Image\Content\Icon\blogger_32.png" />
@@ -203,6 +207,13 @@
     <Compile Include="Page\CV.aspx.designer.cs">
       <DependentUpon>CV.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Page\Event.aspx.cs">
+      <DependentUpon>Event.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Event.aspx.designer.cs">
+      <DependentUpon>Event.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page\Publication.aspx.cs">
       <DependentUpon>Publication.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -262,6 +273,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Include\Bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Include\Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Include\Bootstrap\fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

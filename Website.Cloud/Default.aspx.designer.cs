@@ -31,15 +31,6 @@ namespace Website.Cloud {
         protected global::Website.Cloud.Control.JavaScriptLoader JavaScriptLoader;
         
         /// <summary>
-        /// ArtnmanForm control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm ArtnmanForm;
-        
-        /// <summary>
         /// NavBarLoader control.
         /// </summary>
         /// <remarks>
@@ -49,12 +40,12 @@ namespace Website.Cloud {
         protected global::Website.Cloud.Control.PageComponent.NavBarLoader NavBarLoader;
         
         /// <summary>
-        /// MenuBarLoader control.
+        /// ArtnmanForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Website.Cloud.Control.PageComponent.MenuBarLoader MenuBarLoader;
+        protected global::System.Web.UI.HtmlControls.HtmlForm ArtnmanForm;
     }
 }

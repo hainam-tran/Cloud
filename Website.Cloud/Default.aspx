@@ -4,9 +4,7 @@
 <%@ Register TagPrefix="uc" Src="~/Control/CssLoader.ascx" TagName="CssLoader" %>
 <%@ Register TagPrefix="uc" Src="~/Control/JavaScriptLoader.ascx" TagName="JavaScriptLoader" %>
 <%@ Register TagPrefix="uc" Src="~/Control/PageComponent/NavBarLoader.ascx" TagName="NavBarLoader" %>
-<%@ Register TagPrefix="uc" Src="~/Control/PageComponent/MenuBarLoader.ascx" TagName="MenuBarLoader" %>
-<%@ Register TagPrefix="uc" Src="~/Control/PageComponent/SocialNetworkLoader.ascx"
-    TagName="SocialNetworkLoader" %>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Tran Hai Nam's home page</title>
@@ -16,51 +14,58 @@
     <uc:JavaScriptLoader ID="JavaScriptLoader" runat="server"></uc:JavaScriptLoader>
 </head>
 <body>
+    <%--//Navigation bar
+     ================================================--%>
+    <uc:NavBarLoader ID="NavBarLoader" runat="server"></uc:NavBarLoader>
     <form id="ArtnmanForm" runat="server">
-        <%--//Navigation bar
-        ================================================--%>
-        <uc:NavBarLoader ID="NavBarLoader" runat="server"></uc:NavBarLoader>
+
+        
         <%--//Page Content
         ================================================--%>
         <div class="container">
-            <div class="row">
+            <%--<div class="row">
                 <div class="offset1 padding-default">
                 </div>
-            </div>
+            </div>--%>
             <div class="row">
                 <div class="navbar span10 offset1" style="margin-bottom: 0">
                     <%--//Menu bar
                     ================================================--%>
-                    <uc:MenuBarLoader ID="MenuBarLoader" runat="server"></uc:MenuBarLoader>
+                    <%--<uc:MenuBarLoader ID="MenuBarLoader" runat="server"></uc:MenuBarLoader>--%>
                     <br />
                     <%--//Hero unit
                     ================================================--%>
-                    <div id="myCarousel" class="carousel slide" style="margin-bottom: 0">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
                         <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                         </ol>
-                        <!-- Carousel items -->
-                        <div class="carousel-inner">
-                            <div class="active item">
-                                <div class="hero-unit hero-unit-custom" style="background-image: url(/Upload/Image/Misc/herounit1.jpg);">
-                                    <%--<h1 class="padding-left-20">
-                                </h1>
-                                <p class="padding-left-20">
-                                    Pont de Albert Loupe</p>
-                                <p class="padding-left-20">
-                                    <a class="btn btn-primary btn-large">Learn more </a>
-                                </p>--%>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" style="height: 250px">
+                            <div class="item active">
+                                <img src="/Upload/Image/Misc/herounit1.jpg" alt="..." >
+                                <div class="carousel-caption">
+                                   
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="hero-unit hero-unit-custom" style="background-image: url(/Upload/Image/Misc/herounit3.jpg);">
+                                <img src="/Upload/Image/Misc/herounit3.jpg" alt="..." >
+                                <div class="carousel-caption">
+                                   
                                 </div>
                             </div>
+
                         </div>
-                        <!-- Carousel nav -->
-                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -105,7 +110,7 @@
             </div>
             <div class="row">
                 <div class="span8 offset1">
-                   <%-- <div class="row">
+                    <%-- <div class="row">
                         <div class="span4">
                             <h2>Video</h2>
                         </div>
@@ -131,8 +136,8 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="span4">
-                            <img src="/Upload/Image/Misc/img-test.png" />
+                        <div class="span4 text-center">
+                            <img src="/Upload/Image/Misc/img-test.png" width="350px" />
                         </div>
                         <div class="span4">
                             I'm an amateur photographer. I take picture of people and things around my life.

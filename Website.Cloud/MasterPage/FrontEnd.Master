@@ -17,30 +17,15 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <uc:NavBarLoader ID="NavBarLoader" runat="server"></uc:NavBarLoader>
     <form id="ArtnmanForm" runat="server">
         <%--//Navigation bar
         ================================================--%>
-        <uc:NavBarLoader ID="NavBarLoader" runat="server"></uc:NavBarLoader>
+        
         <%--//Page Content
         ================================================--%>
 
         <div class="container">
-            <div class="row">
-                <div class="offset1 padding-default">
-                    <%--<img src="Upload/Image/Logo/logo.png"/>--%>
-                </div>
-            </div>
-            <div class="row">
-                <div class="navbar span10 offset1" style="margin-bottom: 0">
-                    <%--//Menu bar
-                    ================================================--%>
-                    <uc:MenuBarLoader ID="MenuBarLoader" runat="server"></uc:MenuBarLoader>
-                </div>
-            </div>
-            <div class="row">
-                <div class="offset1 padding-default">
-                </div>
-            </div>
 
             <div class="row">
                 <%--//Main 
