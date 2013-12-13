@@ -19,7 +19,7 @@
     <uc:NavBarLoader ID="NavBarLoader" runat="server"></uc:NavBarLoader>
     <form id="ArtnmanForm" runat="server">
 
-        
+
         <%--//Page Content
         ================================================--%>
         <div class="container">
@@ -45,15 +45,13 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" style="height: 250px">
                             <div class="item active">
-                                <img src="/Upload/Image/Misc/herounit1.jpg" alt="..." >
+                                <img src="/Upload/Image/Misc/herounit1.jpg" alt="...">
                                 <div class="carousel-caption">
-                                   
                                 </div>
                             </div>
                             <div class="item">
-                                <img src="/Upload/Image/Misc/herounit3.jpg" alt="..." >
+                                <img src="/Upload/Image/Misc/herounit3.jpg" alt="...">
                                 <div class="carousel-caption">
-                                   
                                 </div>
                             </div>
 
@@ -74,34 +72,65 @@
             <div class="row">
                 <div class="span10 offset1">
                     <div class="row ">
-                        <div class="span10">
+                        <div class="span10" style="text-align: justify">
                             <h2>Tran Hai Nam</h2>
                             <ul>
-                                <li>Full Vietnamese name: Trần Hải Nam</li>
-                                <li>PhD student, Lab-STICC, University of Western Brittany, Brest, France</li>
-                                <li>Research Interest:
-                                <ul>
-                                    <li>Real time systems</li>
-                                    <li>Distrubuted Computing</li>
-                                    <li>Object oriented programming languages</li>
-                                </ul>
-                                </li>
+                                <li><b>PhD student in computer sciences</b></li>
+                                Lab-STICC, University of Western Brittany, Brest, France
+
                                 <hr />
 
-                                <li>Email: hai-nam.tran@univ-brest.fr </li>
-                                <li>Website: <a href="http://namtran.apphb.com">http://namtran.apphb.com </a></li>
-                                <li>Université de Bretagne Occidentale, UFR Sciences et Techniques, Département Informatique<br />
+                                <li>Email: hai-nam [dot] tran [at] univ-brest [dot] fr </li>
+                                <li>Web Page: <a href="http://namtran.apphb.com">http://namtran.apphb.com </a></li>
+                                <li>Postal Address: Université de Bretagne Occidentale, UFR Sciences et Techniques, Département Informatique<br />
                                     20 avenue Le Gorgeu, C.S. 93837 - BP 809, 29238 Brest Cedex 3
                                 </li>
                                 <hr />
-                                <li>Doing research in the context the of <a href="http://beru.univ-brest.fr/~singhoff/cheddar/">Cheddar</a> project : a free real time scheduling analyzer
+                                <h4>Research activites</h4>
+                                <li>
+                                <b>PhD thesis: Real time scheduling and memory hiearchy</b><br/>
+                               
+                                Analyse the effect of memory hiearchy with real time system is the objectives of my research. 
+                                A real-time system is called critical when its dysfunction could lead to serious damages upon persons or environment. 
+                                The validity and preditability of such systems is crucial
+                                    <br />
+                                    <br />
+                                    Nowadays, the memory hiearchy is still a part that makes real time system unpredictable.
+                                    A simple example can be cache memory.
+                                    On the one hand, cache provides a performance boost to the system, narrows the gap between
+                                    processor and memory speed. On the other hand, it creates the cache related pre-emption delay - the
+                                    additional time to reload data evicted by the pre-empt task.
+                                    <br />
+                                    <br />
+                                    This work takes place within the <a href="http://beru.univ-brest.fr/~singhoff/cheddar/">Cheddar</a> project, started in semptember 2000 by professor 
+                                    <a href="http://beru.univ-brest.fr/~singhoff/">Frank Singhoff.</a>
+
                                 </li>
-                                <li>I'm a researcher (main duty) and also a web developer. Even though I have stopped to work as a web
-                                developer for a long time, I still want to practice. I made this website firstly
-                                for people can contact me. Secondly, I also experience knowledge about web design. This site is under construction. There are many things not working now. I'm sorry
-                                for that. 
-                                    
+                                <br/>
+                                <li><b>Application domain</b>
+                                    <ul>
+                                        <li>Embedded / real-time systems</li>
+                                        <li>Real-time scheduling theory</li>
+                                    </ul>
                                 </li>
+                                <br/>
+                                <li><b>Research Interest</b>
+                                    <ul>
+                                        <li>Real time systems</li>
+                                        <li>Distrubuted computing</li>
+                                        <li>Object oriented programming languages</li>
+                                        <li>Modelling languages and design patterns</li>
+                                        <li>Software engineering</li>
+                                    </ul>
+                                </li>
+                                <br/>
+                                <li>A short resume is avalaible <a href="/Page/CV.aspx">here</a>
+                                </li>
+
+                                <hr />
+
+                                <li>Keywords: tran hai nam, ubo, cheddar project, real-time systems, real-time scheduling</li>
+
                             </ul>
                         </div>
                     </div>
